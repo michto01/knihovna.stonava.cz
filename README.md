@@ -9,4 +9,4 @@ Licencováno pod licencí [CC0 1.0 Universal](LICENSE) a/nebo [MIT](LICENSE.MIT)
 Jejich plné znení je dostupné na adresách: 
 
 - https://creativecommons.org/publicdomain/zero/1.0/
-- https://https://mit-license.org/
+- https://mit-license.org/
