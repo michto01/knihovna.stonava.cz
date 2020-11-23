@@ -1,0 +1,170 @@
+<template>
+    <footer class="p-8 font-sans text-base text-white bg-blue-900 dark:bg-navy-700">
+        <div class="container flex flex-wrap mx-auto text-white">
+            <div class="w-max md:w-1/3">
+                <div class="h-card vcard">
+                    <div class="">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <span class="inline-flex flex-col w-max">
+                            <a class="flex-1 inline font-mono font-semibold font-white p-name fn org u-url" href="https://stonava.knihovna.cz">{{$static.prismicio.footer.edges[0].node.org[0].fn}}</a>
+                            <p class="flex-1 italic text-blue-300 note">{{$static.prismicio.footer.edges[0].node.org[0].note}}</p>
+                        </span>
+                    </div>
+                    <address class="py-1 not-italic p-adr adr">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <span class="inline-flex flex-col w-max">
+                            <span class="flex-1 p-street-address street-address">Stonava č. p. 825</span>
+                            <span class="flex-1 block">
+                                <span class="pr-1 w-max p-postal-code postal-code">735 34</span> 
+                                <span class="pr-1 w-max">
+                                    <span class="uppercase p-locality locality">Stonava</span>
+                                    <span class="">,</span>
+                                </span>
+                            </span>
+                            <span class="flex-1 p-country-name country-name">Česká republika</span>
+                        </span>
+                    </address>
+                    <div class="pb-2 footer-geo">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <span class="inline-flex flex-col w-max">
+                            <a href="https://mapy.cz/s/kabumehudo" aria-label="Otevřít mapu na mapy.cz" target="_blank" rel="nofollow">
+                                <span class="flex-1 p-geo geo">
+                                    <abbr class="block pr-2 font-mono text-blue-600 no-underline p-latitude latitude" title="49.81706686002181">N 49° 49'01.4"</abbr>
+                                    <abbr class="block font-mono text-blue-600 no-underline p-longitude longitude" title="18.52542109858042">E 18° 31'31.5"</abbr>
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="pt-4">
+                        <!-- HeroIcon: Phone -->
+                        <abbr class="pr-2 text-blue-300 type" title="home">
+                            <svg alt="Alternativní telefonní číslo - pevná linka" class="inline w-6 h-6 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </abbr>
+                        <div class="inline-flex flex-col w-max">
+                            <div class="flex-1 tel">
+                                <a href="tel:00420596422051" class="font-mono text-white">596 422 051</a>
+                            </div>
+                            <div class="flex-1 tel">
+                                <a href="tel:00420558849525" class="font-mono text-blue-300">558 849 525</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="email">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <span class="value"><a href="mailto:mkston@rkka.cz" class="font-mono text-white">mkston@rkka.cz</a></span>
+                    </div>
+                </div>
+                <div class="pt-4 footer-library-info">
+                    <div class="py-1">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1zm3 1a1 1 0 012 0v3a1 1 0 11-2 0v-3zm5-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <div class="inline-flex flex-col w-max">
+                            <div class="flex-1 sigla">
+                                <span class="pr-2 text-blue-300">Sigla:</span>
+                                <span class="font-mono font-semibold select-all">KAG515</span>
+                            </div>
+                            <div class="flex-1 ec-mk-cr">
+                                <span class="pr-2 text-blue-300">Evid. č. MK ČR:</span>
+                                <span class="font-mono font-semibold select-all">1953</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-1">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                        </span>
+                        <div class="inline-flex flex-col w-max">
+                            <div class="flex-1 kf">
+                                <span class="pr-2 text-blue-300">Knihovní fond:</span>
+                                <span class="font-mono font-regular">13 186</span>
+                            </div>
+                            <div class="flex-1 kf-cz">
+                                <span class="pr-2 text-gray-400">KF polsky:</span>
+                                <span class="font-mono font-regular">4 529</span>
+                            </div>
+                            <div class="flex-1 kf-pl">
+                                <span class="pr-2 text-gray-400">KF český: </span>
+                                <span class="font-mono font-regular">8 657</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-1">
+                        <span class="pr-2 text-blue-300">
+                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>
+                        </span>
+                        <div class="inline-flex flex-col w-max">
+                            <div class="flex-1 pf">
+                                <span class="pr-2 text-blue-300">Periodika:</span>
+                                <span class="font-mono font-regular">37</span>
+                            </div>
+                            <div class="flex-1 pf-cz">
+                                <span class="pr-2 text-gray-400">polská:</span>
+                                <span class="font-mono font-regular">29</span>
+                            </div>
+                            <div class="flex-1 pf-pl">
+                                <span class="pr-2 text-gray-400">česká: </span>
+                                <span class="font-mono font-regular">&nbsp;8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-4 mx-auto -mb-4 text-center">
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs" class="block py-1">
+                    <g-image alt="Licence Creative Commons" 
+                         class="inline w-auto h-6" 
+                         src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                </a>
+                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Webové stránky</span>, jejiž autorem je 
+                    <a xmlns:cc="http://creativecommons.org/ns#" 
+                       href="https://knihovna.stonava.cz" 
+                       property="cc:attributionName" rel="cc:attributionURL">{{$static.prismicio.footer.edges[0].node.org[0].fn}}</a>, 
+                podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs">Creative Commons Uveďte původ-Zachovejte licenci 4.0 Mezinárodní </a>.
+
+            <p>{{$static.prismicio.footer.edges[0].node.org[0].fn}} &copy; 2020</p>
+        </div>
+    </footer>
+</template>
+
+<style>
+.geo abbr {
+  @apply block text-blue-600 font-mono pr-2;
+  @apply no-underline !important;
+}
+</style>
+
+<static-query>
+query {
+  prismicio {
+    footer: allFooters(lang: "pl") {
+    	edges {
+        node {
+          org {
+            fn
+            note
+          }
+        }
+      }
+    }
+  }
+}
+</static-query>
+
+<script>
+export default {
+}
+</script>

@@ -1,0 +1,16 @@
+{
+    "languages" : [
+        { 
+            "slug": "cs-cz",
+            "name": "Čeština"
+        },
+        {
+            "slug": "pl",
+            "name": "Polski"
+        }
+    ],
+    "sitename" : {
+        "cs-cz" : "Místní knihovna Stonava",
+        "pl" : "Miejscowa Biblioteka Stonawa"
+    }
+}
