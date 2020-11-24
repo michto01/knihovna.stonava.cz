@@ -5,8 +5,12 @@
 Redesign webových stránek pro místní knihovnu v obci Stonava.
 
 # Licence
-Licencováno pod licencí [CC0 1.0 Universal](LICENSE) a/nebo [MIT](LICENSE.MIT). 
+Kód je licencován pod licencí [CC0 1.0 Universal](LICENSE) a/nebo [MIT](LICENSE.MIT). 
 Jejich plné znení je dostupné na adresách: 
 
 - https://creativecommons.org/publicdomain/zero/1.0/
 - https://mit-license.org/
+
+Obsah webových stránek podléhá licenci [Creative Commons Uveďte původ 4.0 Mezinárodní](http://creativecommons.org/licenses/by/4.0/deed.cs).
+
+Místní knihovna Stonava © 2020. Některá práva vyhrazena.

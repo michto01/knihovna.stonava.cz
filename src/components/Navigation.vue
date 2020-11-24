@@ -1,15 +1,30 @@
 <template>
-  <div class="w-full bg-green-800 dark:bg-coal-900">
+  <header class="w-full">
+     <div class="w-full bg-green-800 dark:bg-coal-900">
+    <!-- MAIN navigation content -->
+    <portal :to="navigationStyle">
+      <ul class="flex flex-col items-stretch w-full p-1 space-y-1 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
+        <li class=menu-item><g-link to="/">Domů</g-link></li>
+        <li class=menu-item><g-link to="/about/">O nás</g-link></li>
+        <li class=menu-item><a href="#">Projects</a></li>
+        <li class=menu-item><a href="#">Calendar</a></li>
+      </ul>
+    </portal>
 
-  <portal :to="navigationStyle">
-    <ul class="flex flex-col items-stretch w-full p-1 space-y-1 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
-      <li class=menu-item><g-link to="/" class>Domůx</g-link></li>
-      <li class=menu-item><g-link to="/about/" class>O nás</g-link></li>
-      <li class=menu-item><a href="#" class>Projects</a></li>
-      <li class=menu-item><a href="#" class>Calendar</a></li>
-    </ul>
-  </portal>
-
+    <div class="flex items-center flex-shrink-0">
+      <a href="/" alt="Domů" class="visited:text-gray-300">
+        <div class="block w-auto h-10 sm:hidden lg:hidden">
+          <g-image class="inline w-auto h-10" src="~/@assets/images/logo@3x.png" alt="Logo" />
+          <span class="block font-semibold text-gray-300">Místní knihovna <span class="block text-gray-100 font-bold;">Stonava</span></span>
+        </div>
+        <!--g-image class="hidden w-auto h-10 sm:block lg:hidden" alt="Logo" src="~/@assets/images/logo@3x.png"/-->
+        <div class="hidden w-auto h-10 sm:block">
+          <g-image class="inline w-auto h-10" src="~/@assets/images/logo@3x.png" alt="Logo" />
+          <span class="block text-teal-300 brand">Místní knihovna <span class="block brand-alt">Stonava</span></span>
+        </div>
+      </a>
+    </div>
+  
     <nav class="w-full" aria-label="Nastavení stránky">
       <div class="px-2 mx-auto md:block sm:px-6 lg:px-8">
         <div class="max-w-7xl">
@@ -24,7 +39,7 @@
                 <a href="#pl" tabindex="2" aria-label="Zmień język na polski." class=''><country-flag country='pl' size='small'/></a>
               </div>
               <div class="h-8 p-2">
-                <theme-switcher :themeDark="darkMode" @themeChanged="updateTheme"/>
+                <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
               </div>
           </div>
         </div>
@@ -47,19 +62,6 @@
             </button>
           </div>
           <div class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-            <div class="flex items-center flex-shrink-0">
-              <a href="/" alt="Domů">
-                <div class="block w-auto h-10 sm:hidden lg:hidden">
-                  <g-image class="inline w-auto h-10" src="~/@assets/images/logo@3x.png" alt="Logo" />
-                  <span class="brand">Místní knihovna <span class="brand-alt">Stonava</span></span>
-                </div>
-                <g-image class="hidden w-auto h-10 sm:block lg:hidden" alt="Logo" src="~/@assets/images/logo@3x.png"/>
-                <div class="hidden w-auto h-10 lg:block">
-                  <g-image class="inline w-auto h-10" src="~/@assets/images/logo@3x.png" alt="Logo" />
-                  <span class="brand">Místní knihovna <span class="brand-alt">Stonava</span></span>
-                </div>
-              </a>
-            </div>
             <div class="hidden w-full sm:block sm:ml-6">
               <div class="space-x-4">
                 <portal-target name="normal" :disabled="isOpen" slim/>
@@ -93,18 +95,10 @@
       </div>
     </div>
   </div>
+  </header>
 </template>
 
 <style>
-.brand {
-  font-size: 1.1em;
-  @apply text-gray-300 font-semibold;
-}
-
-.brand-alt {
-  @apply text-gray-100 font-bold;
-}
-
 .menu-item {
   @apply text-base text-gray-300 font-medium;
   @apply block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:border-transparent;
@@ -112,25 +106,40 @@
 </style>
 
 <script>
+import breakpointHelper from 'breakpoint-helper';
+import resolveConfig from 'tailwindcss/resolveConfig'
+import config from '../../tailwind.config.js';
+
 import CountryFlag from 'vue-country-flag'
 import ThemeSwitcher from './ThemeSwitcher.vue';
 import Search from './Search.vue';
 
+const fullConfig = resolveConfig(config);
+const bph = breakpointHelper(fullConfig.theme.screens)
+
 export default {
+
   components : {
     CountryFlag,
     ThemeSwitcher,
     Search
   },
   created() {
-    const preffered = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.darkMode = JSON.parse(localStorage.getItem("theme-dark")) || preffered || false;
+    bph.listen('sm', ({ matches }) => {
+      console.log("boom ..")
+      this.isOpen = false;
+    });
   },
   data() {
     return {
       isOpen: false,
-      darkMode: false,
       navigationStyle: "normal",
+    }
+  },
+  props: {
+    darkMode: {
+      type: String,
+      required: true,
     }
   },
   watch: {
@@ -140,7 +149,6 @@ export default {
   },
   methods : {
     updateTheme: function(value) {
-      this.darkMode = value
       this.$emit('themeChanged', value)
     }
   }

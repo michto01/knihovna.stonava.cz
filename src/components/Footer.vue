@@ -1,13 +1,15 @@
 <template>
-    <footer class="p-8 font-sans text-base text-white bg-blue-900 dark:bg-navy-700">
-        <div class="container flex flex-wrap mx-auto text-white">
+    <footer class="w-full font-sans text-base text-white bg-blue-800 dark:bg-navy-700">
+        <div class="flex flex-wrap p-8 mx-auto text-white">
             <div class="w-max md:w-1/3">
-                <div class="h-card vcard">
+                <div class="text-sm h-card vcard">
                     <div class="">
                         <span class="pr-2 text-blue-300">
-                            <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                            <svg class="inline w-6 h-6 mx-1"  clip-rule="evenodd" fill-rule="evenodd" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"></path>
+                            </svg>
                         </span>
-                        <span class="inline-flex flex-col w-max">
+                        <span class="inline-flex flex-col text-sm w-max">
                             <a class="flex-1 inline font-mono font-semibold font-white p-name fn org u-url" href="https://stonava.knihovna.cz">{{$static.prismicio.footer.edges[0].node.org[0].fn}}</a>
                             <p class="flex-1 italic text-blue-300 note">{{$static.prismicio.footer.edges[0].node.org[0].note}}</p>
                         </span>
@@ -65,7 +67,7 @@
                         <span class="value"><a href="mailto:mkston@rkka.cz" class="font-mono text-white">mkston@rkka.cz</a></span>
                     </div>
                 </div>
-                <div class="pt-4 footer-library-info">
+                <div class="pt-4 text-sm footer-library-info">
                     <div class="py-1">
                         <span class="pr-2 text-blue-300">
                             <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1zm3 1a1 1 0 012 0v3a1 1 0 11-2 0v-3zm5-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
@@ -81,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="py-1">
+                    <!--div class="py-1">
                         <span class="pr-2 text-blue-300">
                             <svg class="inline w-6 h-6 mx-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
                         </span>
@@ -118,12 +120,12 @@
                                 <span class="font-mono font-regular">&nbsp;8</span>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                 </div>
             </div>
         </div>
 
-        <div class="container pt-4 mx-auto -mb-4 text-center">
+        <div class="w-full py-4 mx-auto -mb-4 text-xs text-center bg-blue-900 dark:bg-navy-800">
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs" class="block py-1">
                     <g-image alt="Licence Creative Commons" 
                          class="inline w-auto h-6" 
@@ -133,16 +135,16 @@
                     <a xmlns:cc="http://creativecommons.org/ns#" 
                        href="https://knihovna.stonava.cz" 
                        property="cc:attributionName" rel="cc:attributionURL">{{$static.prismicio.footer.edges[0].node.org[0].fn}}</a>, 
-                podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs">Creative Commons Uveďte původ-Zachovejte licenci 4.0 Mezinárodní </a>.
+                podléhají licenci <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.cs">Creative Commons Uveďte původ 4.0 Mezinárodní </a>.
 
-            <p>{{$static.prismicio.footer.edges[0].node.org[0].fn}} &copy; 2020</p>
+            <p>{{$static.prismicio.footer.edges[0].node.org[0].fn}} &copy; 2020. Některá práva vyhrazena.</p>
         </div>
     </footer>
 </template>
 
 <style>
 .geo abbr {
-  @apply block text-blue-600 font-mono pr-2;
+  @apply block text-teal-400 font-mono pr-2;
   @apply no-underline !important;
 }
 </style>

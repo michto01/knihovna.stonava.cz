@@ -7,6 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "breakpoint-helper": "^1.0.2",
     "gridsome": "^0.7.0",
     "portal-vue": "^2.1.7",
     "vue-country-flag": "^2.0.2"
