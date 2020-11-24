@@ -6,8 +6,9 @@
       <ul class="flex flex-col items-stretch w-full p-1 space-y-1 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
         <li class=menu-item><g-link to="/">Domů</g-link></li>
         <li class=menu-item><g-link to="/about/">O nás</g-link></li>
-        <li class=menu-item><a href="#">Projects</a></li>
-        <li class=menu-item><a href="#">Calendar</a></li>
+        <li class=menu-item><g-link to="/cs/info/pravni-upozorneni/">Právní upozornění</g-link></li>
+        <li class=menu-item><a href="#">Akce</a></li>
+        <li class=menu-item><a href="#">Jinéiné</a></li>
       </ul>
     </portal>
 
@@ -28,25 +29,25 @@
     <nav class="w-full" aria-label="Nastavení stránky">
       <div class="px-2 mx-auto md:block sm:px-6 lg:px-8">
         <div class="max-w-7xl">
-          <ClientOnly>
             <search />
-          </ClientOnly>
         </div>
         <div class="">
           <div class="flex flex-row-reverse flex-wrap items-center h-12 justify-items-auto">
-            <ClientOnly>
               <div class="h-8 p-2">
-                <a href="#cs" tabindex="3" aria-label="Změn jazyk na češtinu." class='px-1 border border-transparent shadow-xs hover:outline-none hover:ring-2 hover:ring-purple-600 hover:border-transparent'><country-flag country='cz' size='small'/></a>
+                <a href="#cs" aria-label="Změn jazyk na češtinu." class='px-1 border border-transparent shadow-xs hover:outline-none hover:ring-2 hover:ring-purple-600 hover:border-transparent'>
+                  <!-- country-flag country='cz' size='small'/ -->
+                  Čeština
+                </a>
               </div>
               <div class="h-8 p-2">
-                <a href="#pl" tabindex="2" aria-label="Zmień język na polski." class=''>
-                  <country-flag country='pl' size='small'/>
+                <a href="#pl" aria-label="Zmień język na polski." class=''>
+                  <!--country-flag country='pl' size='small'/-->
+                  Polski
                 </a>
               </div>
               <div class="h-8 p-2">
                   <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
               </div>
-            </ClientOnly>
           </div>
         </div>
       </div>
@@ -123,17 +124,16 @@ const bph = breakpointHelper(fullConfig.theme.screens)
 
 export default {
   components : {
-    CountryFlag: () =>
+    /*CountryFlag: () =>
         import ('vue-country-flag/')
         .then(m => m.CountryFlag)
-        .catch(),
+        .catch(),*/
     ThemeSwitcher,
     Search
   },
   created() {
     if (!process.isClient) return;
     bph.listen('sm', ({ matches }) => {
-      console.log("boom ..")
       this.isOpen = false;
     });
   },
