@@ -28,19 +28,25 @@
     <nav class="w-full" aria-label="Nastavení stránky">
       <div class="px-2 mx-auto md:block sm:px-6 lg:px-8">
         <div class="max-w-7xl">
-          <search />
+          <ClientOnly>
+            <search />
+          </ClientOnly>
         </div>
         <div class="">
           <div class="flex flex-row-reverse flex-wrap items-center h-12 justify-items-auto">
+            <ClientOnly>
               <div class="h-8 p-2">
                 <a href="#cs" tabindex="3" aria-label="Změn jazyk na češtinu." class='px-1 border border-transparent shadow-xs hover:outline-none hover:ring-2 hover:ring-purple-600 hover:border-transparent'><country-flag country='cz' size='small'/></a>
               </div>
               <div class="h-8 p-2">
-                <a href="#pl" tabindex="2" aria-label="Zmień język na polski." class=''><country-flag country='pl' size='small'/></a>
+                <a href="#pl" tabindex="2" aria-label="Zmień język na polski." class=''>
+                  <country-flag country='pl' size='small'/>
+                </a>
               </div>
               <div class="h-8 p-2">
-                <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
+                  <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
               </div>
+            </ClientOnly>
           </div>
         </div>
       </div>
@@ -110,21 +116,22 @@ import breakpointHelper from 'breakpoint-helper';
 import resolveConfig from 'tailwindcss/resolveConfig'
 import config from '../../tailwind.config.js';
 
-import CountryFlag from 'vue-country-flag'
-import ThemeSwitcher from './ThemeSwitcher.vue';
+import ThemeSwitcher from  './ThemeSwitcher.vue';
 import Search from './Search.vue';
-
 const fullConfig = resolveConfig(config);
 const bph = breakpointHelper(fullConfig.theme.screens)
 
 export default {
-
   components : {
-    CountryFlag,
+    CountryFlag: () =>
+        import ('vue-country-flag/')
+        .then(m => m.CountryFlag)
+        .catch(),
     ThemeSwitcher,
     Search
   },
   created() {
+    if (!process.isClient) return;
     bph.listen('sm', ({ matches }) => {
       console.log("boom ..")
       this.isOpen = false;

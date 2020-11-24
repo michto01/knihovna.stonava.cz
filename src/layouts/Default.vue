@@ -4,7 +4,7 @@
       <!--div style="width: 100vw; height: 150vh;" class="fixed bg-red-400 -z-100"></div-->
       <!--Alert /-->
       
-      <Navigation @themeChanged="themeChanged" :darkMode="isDark"/> 
+      <Navigation @themeChanged="themeChanged" :darkMode="isDark" /> 
       <main class="flex-grow max-w-2xl p-4 mx-auto">
         <slot/>
           <div id="o-knihovne"></div>
@@ -42,6 +42,7 @@ export default {
   },
   computed: {
     darkModeClass() {
+      if (!process.isClient) return;
       if (this.isDark === 'native') {
           const preffered = window.matchMedia('(prefers-color-scheme: dark)').matches;
           return preffered ? "dark" : "light"
@@ -51,11 +52,13 @@ export default {
   },
   methods: {
     themeChanged : function(dark) {
+      if (!process.isClient) return;
       localStorage.setItem('theme-dark', JSON.stringify(dark));
       this.isDark = dark;
     }
   },
   created() {
+    if (!process.isClient) return;
     const stored = JSON.parse(localStorage.getItem("theme-dark"));
     if (stored != null) {
       this.isDark = stored;
