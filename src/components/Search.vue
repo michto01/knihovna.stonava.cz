@@ -5,15 +5,11 @@
                 <!-- Fields for katalog.rkka.cz -->
                 <input type="hidden" name="fn" value="searchform">
                 <input type="hidden" name="fa" value="prepare4Search">
-                <!--input type="hidden" name="fc" value="00000FE0"-->
                 <input type="hidden" name="fc" value="00000468">
-                <input type="hidden" name="fo" ><!--value="prepare4Search"-->
+                <input type="hidden" name="fo" >
                 <input type="hidden" name="fs" value="5FA90E918F304B8AB2A970FE229156C6">
-                <!--input type="hidden" name="dwcall" value="ajax"-->
-                <!--input type="hidden" name="aa" value="dwstick"-->
                 <input type="hidden" name="cmblb_RKKA" value="S#">
                 <input type="hidden" name="googlecombo" value="allwords">
-                
             </div>
             
             <div class="relative text-gray-600 rounded focus-within:text-gray-400 focus-within:bg-gray-400">
@@ -31,7 +27,7 @@
                     autocomplete="off"
                 >
                 <span class="absolute inset-y-0 right-0 flex items-center pr-1">
-                    <button type="submit" class="p-1 focus:outline-none focus:shadow-outline" tabindex="-1">
+                    <button aria-label="Hledat" type="submit" class="p-1 focus:outline-none focus:shadow-outline" tabindex="-1">
                     <svg  class="w-6 h-6 text-green-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </button>
                 </span>

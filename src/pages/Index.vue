@@ -12,6 +12,7 @@
     <h1 class="text-2xl font-semibold">Přihlášení do knihovny</h1>
     <p>Prosím vyplňte své přihlašovací údaje do katalogu </p>
     <PatronLogin-Dawinci />
+    <opac-new-records-external />
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
@@ -21,14 +22,46 @@
 </template>
 
 <script>
+import OpacNewRecordsExternal from '../components/OpacNewRecordsExternal.vue'
 import PatronLoginDawinci from '../components/PatronLoginDawinci.vue'
 
 export default {
   components: {
     PatronLoginDawinci,
+    OpacNewRecordsExternal,
   },
-  metaInfo: {
-    title: 'Knihovna Stonava'
+   metaInfo() {
+    const title = 'Knihovna Stonava';
+    const description = 'Půjčování knih, periodik, pořádání kulturních akcí.';
+    return {
+      title: title,
+      meta: [
+        {
+          name: 'description',
+          content: description
+        },
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: title,
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: title,
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: description,
+        },
+        {
+          key: 'twitter:description',
+          name: 'twitter:description',
+          content: description,
+        },
+      ]
+    }
   }
 }
 </script>
