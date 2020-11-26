@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/:lang/katalog", "destination": "https://opacnew.rkka.cz", "permanent":true },
+    { "source": "/cs/konto-ctenare", "destination": "https://opacnew.rkka.cz/?" }
+  ]
+}

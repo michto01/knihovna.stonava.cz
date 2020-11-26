@@ -24,11 +24,11 @@
                     name="googleedit" 
                     class="w-full py-2 pl-24 pr-8 text-white placeholder-green-500 placeholder-opacity-50 bg-green-900 rounded sm:text-sm dark:placeholder-gray-400 focus:placeholder-green-800 dark:bg-gray-600 focus:outline-none dark:focus:bg-white focus:bg-white focus:text-gray-900" 
                     :placeholder="placeholder" 
-                    autocomplete="off"
-                >
+                    autocomplete="off">
                 <span class="absolute inset-y-0 right-0 flex items-center pr-1">
-                    <button aria-label="Hledat" type="submit" class="p-1 focus:outline-none focus:shadow-outline" tabindex="-1">
-                    <svg  class="w-6 h-6 text-green-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <button aria-label="Hledat" type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                        <svg role="img" width="1em" height="1em" class="w-6 h-6 text-green-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <label class="sr-only">&nbsp;Hledat</label>
                     </button>
                 </span>
             </div>

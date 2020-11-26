@@ -10,7 +10,7 @@
           <label for="library-card-id" class="mb-1 text-xs tracking-wide text-red-900 sm:text-sm">Číslo čtenářského průkazu:</label>
           <div class="relative">
             <div class="absolute top-0 left-0 inline-flex items-center justify-center w-10 h-full text-red-400">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <svg role="img"  width="1em" height="1em" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
               </svg>
             </div>
@@ -22,7 +22,7 @@
           <label for="library-card-password" class="mb-1 text-xs tracking-wide text-red-900 sm:text-sm">Heslo:</label>
           <div class="relative">
             <div class="absolute top-0 left-0 inline-flex items-center justify-center w-10 h-full text-red-400">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <svg role="img" width="1em" height="1em" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
               </svg>
             </div>
@@ -31,10 +31,10 @@
           </div>
         </div>
         <div class="">
-            <button type="submit" class="text-center font-sans leading-tight ring-inset px-4 py-2.5 font-semibold text-red-100 bg-red-700 rounded-md focus:shadow-outline">
-                <div class="flex flex-row">
+            <button aria-labelledby="dawinci-login-button-label" type="submit" class="text-center font-sans leading-tight ring-inset px-4 py-2.5 font-semibold text-red-100 bg-red-700 rounded-md focus:shadow-outline">
+                <div id="dawinci-login-button-label" class="flex flex-row">
                     <span class="mr-2">Přihlásit se do systému</span>
-                    <svg class="inline w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg role="img" width="1em" height="1em" class="inline w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                         <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
                     </svg>

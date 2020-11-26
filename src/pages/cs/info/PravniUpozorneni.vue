@@ -100,7 +100,7 @@ h3 {
     @apply text-2xl font-bold text-gray-800 dark:text-gray-100 mt-1 mb-3;
 }
 p {
-    @apply mt-2 mb-3 text-justify;
+    @apply mt-2 mb-3;
 }
 blockquote {
     @apply pl-3 py-1 bg-green-100 border-l-4 border-green-600 text-green-900;

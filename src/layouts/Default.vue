@@ -1,17 +1,29 @@
 <template>
   <div :class="darkModeClass">
+    <nav class="sr-only" aria-label="Rychlá navigace">
+      <h3>Rychlá navigace</h3>
+      <ul class="sr-only">
+        <li><a href="#navigation">Přejít do navigace</a></li>
+        <li><a href="#content">Přejít na obsah</a></li>
+        <li><a href="#footer">Přejít do zápatí</a></li>
+      </ul>
+      <hr class="sr-only">
+    </nav>
+
     <div class="flex flex-col w-full min-h-screen bg-gray-50 text-coal-800 dark:bg-coal-900 dark:bg-opacity-75">
       <!--div style="width: 100vw; height: 150vh;" class="fixed bg-red-400 -z-100"></div-->
       <!--Alert /-->
-      
-      <Navigation @themeChanged="themeChanged" :darkMode="isDark" /> 
-      <main class="flex-grow max-w-2xl p-4 mx-auto">
-        <slot/>
+      <Header @themeChanged="themeChanged" :darkMode="isDark" />
+      <hr class="sr-only">
+      <MainNavigation />
+      <hr class="sr-only">
+      <main id="content" class="flex-grow max-w-2xl p-4 mx-auto">
+        <slot />
           <div id="o-knihovne"></div>
           <div id="projekty"></div>
           <div id="vyveska"></div>
       </main>
-      <Footer />
+      <Footer id="footer" />
     </div>
   </div>
 </template>
@@ -23,15 +35,17 @@ query {
   }
 }
 </static-query>
-
+ain
 <script>
+import Header from './fragments/Header.vue'
+import MainNavigation from './fragments/MainNavigation.vue'
+import Footer from './fragments/Footer.vue'
 import Alert from '~/components/Alert.vue'
-import Footer from '~/components/Footer.vue'
-import Navigation from '~/components/Navigation.vue'
 
 export default {
   components: {
-    Navigation,
+    Header,
+    MainNavigation,
     Footer,
     Alert
   },

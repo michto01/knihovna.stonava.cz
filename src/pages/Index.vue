@@ -12,7 +12,7 @@
     <h1 class="text-2xl font-semibold">Přihlášení do knihovny</h1>
     <p>Prosím vyplňte své přihlašovací údaje do katalogu </p>
     <PatronLogin-Dawinci />
-    <opac-new-records-external />
+    <!--opac-new-records-external /-->
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
