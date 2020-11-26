@@ -14,7 +14,7 @@
     <nav class="w-full" aria-label="Nastavení stránky">
       <h3 class="sr-only">Nastavení stránky</h3>
       <div class="px-2 mx-auto md:block sm:px-6 lg:px-8">
-        <div class="max-w-7xl">
+        <div class="max-w-xl">
             <Search />
         </div>
         <div class="">
@@ -102,7 +102,7 @@ export default {
         window.a11y_css = !window.a11y_css;
       }
       Array.from(document.styleSheets).forEach(s => s.disabled = window.a11y_css);
-      this.a11y_status_string = window.a11y_css ? 'Vypnout' : 'Zapnout'; 
+      this.a11y_status_string = window.a11y_css ? 'Zapnout' : 'Vypnout'; 
     }
   }
 }

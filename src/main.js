@@ -1,17 +1,20 @@
 // Types imports
-import { ClientApiConstructor } from './types';
 
 // CSS
-import '~/global.css';
+import '~/@assets/global.css';
 
 // Layout imports
 import DefaultLayout from '~/layouts/Default.vue';
 import PortalVue from 'portal-vue';
 
-
-const client: ClientApiConstructor = (Vue, { head }) => {
+export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('Layout', DefaultLayout);
   Vue.use(PortalVue);
+
+  if (isClient) {
+    appOptions.i18n.setLocaleMessage('cs-CZ', require('./locales/cs.json'))
+    appOptions.i18n.setLocaleMessage('pl-CZ', require('./locales/pl.json'))
+  }
   
   head.bodyAttrs = {
     class: 'leading-normal antialiased overflow-x-hidden overflow-y-scroll',
@@ -27,13 +30,12 @@ const client: ClientApiConstructor = (Vue, { head }) => {
 
   head.meta?.push({
     name: 'keywords',
-    content:
-      'Gridsome,Vue,Tailwind,Tailwind CSS,JavaScript,HTML,CSS,Vue.js,VueJS',
+    content: 'Knihovna,Stonava,Místní knihovna,KAG515,Dolany,Půjčování knih,OPAC,Regionální knihovna Karviná',
   })
 
   head.meta?.push({
     name: 'description',
-    content: 'Gridsome Portfolio Starter',
+    content: 'Webové stránky knihovny ve Stonavě',
   })
 
   head.meta?.push({
@@ -42,4 +44,3 @@ const client: ClientApiConstructor = (Vue, { head }) => {
   })
 };
 
-export default client;

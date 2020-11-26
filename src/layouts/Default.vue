@@ -1,11 +1,11 @@
 <template>
   <div :class="darkModeClass">
-    <nav class="sr-only" aria-label="Rychlá navigace">
-      <h3>Rychlá navigace</h3>
+    <nav class="sr-only" :aria-label="$t('label.a11y.quick_access')">
+      <h3>{{$t('label.a11y.quick_access')}}</h3>
       <ul class="sr-only">
-        <li><a href="#navigation">Přejít do navigace</a></li>
-        <li><a href="#content">Přejít na obsah</a></li>
-        <li><a href="#footer">Přejít do zápatí</a></li>
+        <li><a href="#navigation">{{$t('label.a11y.jump_navigation')}}</a></li>
+        <li><a href="#content">{{$t('label.a11y.jump_content')}}</a></li>
+        <li><a href="#footer">{{$t('label.a11y.jump_footer')}}</a></li>
       </ul>
       <hr class="sr-only">
     </nav>
@@ -35,7 +35,7 @@ query {
   }
 }
 </static-query>
-ain
+
 <script>
 import Header from './fragments/Header.vue'
 import MainNavigation from './fragments/MainNavigation.vue'

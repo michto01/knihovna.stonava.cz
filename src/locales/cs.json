@@ -1,0 +1,10 @@
+{
+    "label" : {
+        "a11y" : {
+            "quick_access" : "Rychlá navigace",
+            "jump_navigation" : "Přejít na navigaci",
+            "jump_content" : "Přejít na obsah",
+            "jump_footer" : "Přejít do zápatí"
+        }
+    }
+}

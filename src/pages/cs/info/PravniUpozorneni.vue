@@ -39,7 +39,7 @@
             </p>
 
             <p >
-                Záměrem tohoto prohlášení není omezit odpovědnost Evropské komise v případě porušení platných 
+                Záměrem tohoto prohlášení není omezit odpovědnost Místní knihovny Stonava v případě porušení platných 
                 právních předpisů ani vyloučit její odpovědnost v záležitostech, ve kterých ji podle těchto 
                 předpisů vyloučit nelze.
             </p>
