@@ -30,12 +30,12 @@ module.exports = {
     {
       use: 'gridsome-plugin-typescript',
     },
-    {
-      use: '@gridsome/plugin-sitemap',
-      options: {
-        exclude: ['/to-exclude', '/es/*']
-      }
-    },
+    // {
+    //   use: '@gridsome/plugin-sitemap',
+    //   options: {
+    //     exclude: ['/to-exclude', '/es/*']
+    //   }
+    // },
     {
       use: "gridsome-plugin-i18n",
       options: {
