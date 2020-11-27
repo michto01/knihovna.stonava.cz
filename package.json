@@ -13,6 +13,7 @@
     "gridsome-plugin-algolia": "^2.1.4",
     "gridsome-plugin-i18n": "^1.6.0",
     "portal-vue": "^2.1.7",
+    "v-hotkey": "^0.8.0",
     "vue-country-flag": "^2.0.2"
   },
   "devDependencies": {

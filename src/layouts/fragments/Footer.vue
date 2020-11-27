@@ -6,7 +6,7 @@
         <div class="text-sm h-card vcard">
           <div class="">
             <span class="pr-2 text-blue-300">
-              <svg role="img" width="1em" height="1em" class="inline w-6 h-6 mx-1" clip-rule="evenodd" fill-rule="evenodd" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg role="presentation" width="1em" height="1em" class="inline w-6 h-6 mx-1" clip-rule="evenodd" fill-rule="evenodd" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"></path>
               </svg>
             </span>
@@ -19,7 +19,7 @@
           </div>
           <address class="py-1 not-italic p-adr adr" aria-label="Adresa knihovny">
             <span class="pr-2 text-blue-300">
-              <svg role="img" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill="currentColor" clip-rule="evenodd" fill-rule="evenodd" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg role="presentation" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill="currentColor" clip-rule="evenodd" fill-rule="evenodd" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"></path>
               </svg>
             </span>
@@ -39,7 +39,7 @@
           </address>
           <div class="pb-2 footer-geo">
             <span class="pr-2 text-blue-300" aria-hidden="true">
-              <svg role="img" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill="currentColor" fill-rule="evenodd" viewBox="0 0 20 20" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+              <svg role="presentation" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill="currentColor" fill-rule="evenodd" viewBox="0 0 20 20" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"></path>
               </svg>
             </span>
@@ -62,7 +62,7 @@
             <!-- HeroIcon: Phone -->
             <abbr class="pr-2 text-blue-300 type" title="home" aria-label="telefonní číslo">
               <svg
-                role="img"
+                role="presentation"
                 width="1em" height="1em"
                 class="inline w-6 h-6 mx-1"
                 viewBox="0 0 24 24"
@@ -94,7 +94,7 @@
 
           <div class="email">
             <span class="pr-2 text-blue-300">
-              <svg role="img" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg role="presentation" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"></path>
               </svg>
             </span>
@@ -104,7 +104,7 @@
         <div class="pt-4 text-sm footer-library-info">
           <div class="py-1">
             <span class="pr-2 text-blue-300">
-              <svg role="img" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill-rule="evenodd" fill="currentColor" viewBox="0 0 20 20" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+              <svg role="presentation" width="1em" height="1em" class="inline w-6 h-6 mx-1" fill-rule="evenodd" fill="currentColor" viewBox="0 0 20 20" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1zm3 1a1 1 0 012 0v3a1 1 0 11-2 0v-3zm5-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z"></path>
               </svg>
             </span>
@@ -130,10 +130,11 @@
           class="inline w-auto h-6"
           src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
       </a>
-      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Webové stránky</span>, jejiž autorem je
-      <a xmlns:cc="http://creativecommons.org/ns#" href="https://knihovna.stonava.cz" property="cc:attributionName" rel="cc:attributionURL">{{ $static.prismicio.footer.edges[0].node.org[0].fn }}</a>, podléhají licenci
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.cs">Creative Commons Uveďte původ 4.0 Mezinárodní</a>.
-
+      <p>
+        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Webové stránky</span>, jejiž autorem je
+        <a xmlns:cc="http://creativecommons.org/ns#" href="https://knihovna.stonava.cz" property="cc:attributionName" rel="cc:attributionURL">{{ $static.prismicio.footer.edges[0].node.org[0].fn }}</a>, podléhají licenci
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.cs">Creative Commons Uveďte původ 4.0 Mezinárodní</a>.
+      </p>
       <p>
         {{ $static.prismicio.footer.edges[0].node.org[0].fn }} &copy; 2020.
         Některá práva vyhrazena.

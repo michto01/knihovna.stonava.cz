@@ -6,14 +6,19 @@ import '~/@assets/global.css';
 // Layout imports
 import DefaultLayout from '~/layouts/Default.vue';
 import PortalVue from 'portal-vue';
+import VueHotkey from 'v-hotkey';
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('Layout', DefaultLayout);
   Vue.use(PortalVue);
+  Vue.use(VueHotkey);
+
+  router.options.linkActiveClass = 'is-active';
+  router.options.linkExactActiveClass = 'is-exact';
 
   if (isClient) {
-    appOptions.i18n.setLocaleMessage('cs-CZ', require('./locales/cs.json'))
-    appOptions.i18n.setLocaleMessage('pl-CZ', require('./locales/pl.json'))
+    appOptions.i18n.setLocaleMessage('cs-CZ', require('./locales/cs.json'));
+    appOptions.i18n.setLocaleMessage('pl-CZ', require('./locales/pl.json'));
   }
   
   head.bodyAttrs = {

@@ -1,5 +1,9 @@
 <template>
   <div :class="darkModeClass">
+    <!--div style="width: 100vw; height: 150vh;" class="fixed bg-red-400 -z-100">
+      <Alert />
+    </div-->
+
     <nav class="sr-only" :aria-label="$t('label.a11y.quick_access')">
       <h3>{{$t('label.a11y.quick_access')}}</h3>
       <ul class="sr-only">
@@ -7,16 +11,12 @@
         <li><a href="#content">{{$t('label.a11y.jump_content')}}</a></li>
         <li><a href="#footer">{{$t('label.a11y.jump_footer')}}</a></li>
       </ul>
-      <hr class="sr-only">
+      <hr role=separator class="sr-only">
     </nav>
 
     <div class="flex flex-col w-full min-h-screen bg-gray-50 text-coal-800 dark:bg-coal-900 dark:bg-opacity-75">
-      <!--div style="width: 100vw; height: 150vh;" class="fixed bg-red-400 -z-100"></div-->
-      <!--Alert /-->
-      <Header @themeChanged="themeChanged" :darkMode="isDark" />
-      <hr class="sr-only">
-      <MainNavigation />
-      <hr class="sr-only">
+      <TopbarNavigation @themeChanged="themeChanged" :darkMode="isDark" />
+      <Header />
       <main id="content" class="flex-grow max-w-2xl p-4 mx-auto">
         <slot />
           <div id="o-knihovne"></div>
@@ -38,14 +38,14 @@ query {
 
 <script>
 import Header from './fragments/Header.vue'
-import MainNavigation from './fragments/MainNavigation.vue'
+import TopbarNavigation from './fragments/TopbarNavigation.vue'
 import Footer from './fragments/Footer.vue'
 import Alert from '~/components/Alert.vue'
 
 export default {
   components: {
     Header,
-    MainNavigation,
+    TopbarNavigation,
     Footer,
     Alert
   },

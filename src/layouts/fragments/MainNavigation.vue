@@ -3,24 +3,21 @@
   <div class="w-full">
     <!-- MAIN navigation content>=> will jump to correct location on DOM load -->
     <portal :to="navigationStyle">
-      <div>
-        <ul class="flex flex-col items-stretch w-full p-1 space-y-1 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
-          <li class=menu-item><g-link to="/">Domů</g-link></li>
-          <li class=menu-item><g-link to="/about/">O nás</g-link></li>
-          <li class=menu-item><g-link to="/cs/info/pravni-upozorneni/">Právní upozornění</g-link></li>
-          <li class=menu-item><a href="#">Akce</a></li>
-          <li class=menu-item><a href="#">Jiné</a></li>
-        </ul>
-      </div>
+      <ul class="flex flex-col items-stretch w-full h-full p-2 space-y-1 sm:space-y-0 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
+        <li class="menu-item"><g-link to="/" exact>Domů</g-link></li>
+        <li class=menu-item><g-link to="/about/">O nás</g-link></li>
+        <li class=menu-item><g-link to="/cs/info/pravni-upozorneni/">Právní upozornění</g-link></li>
+        <li class=menu-item><a href="#">Akce</a></li>
+        <li class=menu-item><a href="#">Jiné</a></li>
+      </ul>
     </portal>
     <!-- MAIN navigation content -->
 
-    <div class="w-full bg-green-800 dark:bg-coal-900">
-      <nav class="bg-green-700 dark:bg-coal-800">
+    <div class="w-full bg-yellow-400 dark:bg-coal-900">
+      <nav class="bg-yellow-400 dark:bg-coal-800">
         <h3 class="sr-only">Hlavní menu</h3>
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="relative flex items-center justify-between h-12">
-
+          <div class="relative flex items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button-->
               <button @click.prevent="isOpen = !isOpen" class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
@@ -33,10 +30,10 @@
                 </svg>
               </button>
             </div>
-            <div class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
+            <div class="flex items-center justify-center flex-1 h-full sm:items-stretch sm:justify-start">
               <div class="hidden w-full sm:block sm:ml-6">
-                <div class="space-x-4">
-                  <portal-target name="normal" :disabled="isOpen" slim/>
+                <div class="w-full h-full space-x-4">
+                  <portal-target class="w-full h-full" name="normal" :disabled="isOpen" slim/>
                 </div>
               </div>
             </div>
@@ -70,10 +67,25 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .menu-item {
-  @apply text-base text-gray-300 font-medium;
-  @apply block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:border-transparent;
+  @apply text-base text-navy-800 font-medium h-full;
+  @apply block hover:text-white hover:bg-yellow-700 focus:border-transparent;
+}
+.menu-item:hover {
+  @apply underline;
+  @apply bg-yellow-500;
+}
+
+.menu-item a {
+  @apply h-full;
+}
+
+/*.is-active {}*/
+
+.is-active.is-exact {
+  @apply text-base text-navy-900 font-extrabold underline;
+  @apply hover:text-white;
 }
 </style>
 
