@@ -3,18 +3,20 @@
   <div class="w-full">
     <!-- MAIN navigation content>=> will jump to correct location on DOM load -->
     <portal :to="navigationStyle">
-      <ul class="flex flex-col items-stretch w-full h-full p-2 space-y-1 sm:space-y-0 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
-        <li class="menu-item"><g-link to="/" exact>Domů</g-link></li>
-        <li class=menu-item><g-link to="/about/">O nás</g-link></li>
-        <li class=menu-item><g-link to="/cs/info/pravni-upozorneni/">Právní upozornění</g-link></li>
-        <li class=menu-item><a href="#">Akce</a></li>
-        <li class=menu-item><a href="#">Jiné</a></li>
+      <ul class="flex flex-col items-stretch w-full h-full space-y-1 sm:space-y-0 place-items-stretch justify-items-stretch sm:place-content-evenly sm:flex-row">
+        <li class="menu-item" :class="{'is-active': subIsActiveExact('/')}">
+          <g-link to="/" exact>Domů</g-link>
+        </li>
+        <li class="menu-item" :class="{'is-active': subIsActive('/about')}"><g-link to="/about/">O nás</g-link></li>
+        <li class="menu-item" :class="{'is-active': subIsActive('/cs/info/pravni-upozorneni/')}"><g-link to="/cs/info/pravni-upozorneni/">Právní upozornění</g-link></li>
+        <li class="menu-item" :class="{'is-active': subIsActive('#')}"><a href="#">Akce</a></li>
+        <li class="menu-item" :class="{'is-active': subIsActive('#')}"><a href="#">Jiné</a></li>
       </ul>
     </portal>
     <!-- MAIN navigation content -->
 
-    <div class="w-full bg-yellow-400 dark:bg-coal-900">
-      <nav class="bg-yellow-400 dark:bg-coal-800">
+    <div class="w-full">
+      <nav class="">
         <h3 class="sr-only">Hlavní menu</h3>
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between">
@@ -69,23 +71,28 @@
 
 <style scoped>
 .menu-item {
-  @apply text-base text-navy-800 font-medium h-full;
-  @apply block hover:text-white hover:bg-yellow-700 focus:border-transparent;
+  @apply box-border text-base text-navy-800 font-medium h-full;
+  @apply block hover:text-white py-2 px-2;
+  @apply border-b-4 border-transparent;
+  @apply focus-within:ring-4 rounded-t;   
 }
 .menu-item:hover {
-  @apply underline;
-  @apply bg-yellow-500;
+  @apply box-border;
+  @apply border-b-4 border-yellow-900 border-opacity-20;
+  @apply bg-green-600 bg-opacity-80 rounded-t;
 }
 
 .menu-item a {
-  @apply h-full;
+  @apply h-full focus:outline-none;
 }
 
 /*.is-active {}*/
 
-.is-active.is-exact {
-  @apply text-base text-navy-900 font-extrabold underline;
-  @apply hover:text-white;
+.menu-item.is-active {
+  @apply box-border;
+  @apply border-b-4 border-yellow-900 border-opacity-20;
+  @apply bg-green-600 bg-opacity-80 rounded-t;
+  @apply text-green-50;
 }
 </style>
 
@@ -113,6 +120,19 @@ export default {
       isOpen: function() {
          this.navigationStyle = this.isOpen ? "mobile" : "normal";
       }
+  },
+  methods: {
+    subIsActiveExact(input) {
+      console.log(input, this.$route.path, input == this.$route.path)
+      this.$route.path == input;
+    },
+    subIsActive(input) {
+      const paths = Array.isArray(input) ? input : [input];
+    
+      return paths.some(path => {
+    	  return this.$route.path.indexOf(path) === 0 // current path starts with this path string
+    	})
+    }
   }
 }
 </script>
