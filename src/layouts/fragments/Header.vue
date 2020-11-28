@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full bg-yellow-400 dark:bg-coal-900 hero">
+  <header class="w-full dark:bg-coal-900 hero">
     <div class="px-2 mx-auto sm:py-3 max-w-7xl sm:px-6 lg:px-8 lg:py-6">
       <div class="flex flex-col items-center sm:flex-row justify-items-center">
         <div class="content-center rounded focus:outline-none wrapper-logo hover:ring-4 hover:ring-yellow-600 hover:ring-opacity-90 hover:ring-offest-2 focus-within:ring-4 focus-within:ring-yellow-600 focus-within:ring-opacity-75 focus-within:ring-offest-2">

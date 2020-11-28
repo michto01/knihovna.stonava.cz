@@ -18,7 +18,7 @@
     <div class="w-full">
       <nav class="">
         <h3 class="sr-only">Hlavní menu</h3>
-        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="px-2 mx-auto bg-yellow-400 rounded-full max-w-7xl sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button-->
@@ -40,22 +40,22 @@
               </div>
             </div>
             <!-- AFTER icons -->
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <!--div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button class="hidden p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white md:block">
                 <span class="sr-only">View notifications</span>
-                <!-- Heroicon name: bell -->
+                <! -- Heroicon name: bell -- >
                 <svg role="img" width="1em" height="1em" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                 </svg>
               </button>
               <button class="hidden p-1 m-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white md:block" id="search-menu" aria-haspopup="true">
                 <span class="sr-only">Open user menu</span>
-                <!-- Heroicon name: search -->
+                <! -- Heroicon name: search -- >
                 <svg role="img" width="1em" height="1em" class="w-6 h-6 rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </button>
-            </div>
+            </div-->
           </div>
         </div>
 
@@ -79,7 +79,7 @@
 .menu-item:hover {
   @apply box-border;
   @apply border-b-4 border-yellow-900 border-opacity-20;
-  @apply bg-green-600 bg-opacity-80 rounded-t;
+  @apply bg-opacity-80 rounded-t;
 }
 
 .menu-item a {
@@ -91,7 +91,7 @@
 .menu-item.is-active {
   @apply box-border;
   @apply border-b-4 border-yellow-900 border-opacity-20;
-  @apply bg-green-600 bg-opacity-80 rounded-t;
+  @apply bg-opacity-80 rounded-t;
   @apply text-green-50;
 }
 </style>
