@@ -1,11 +1,11 @@
 <template>
   <header class="w-full dark:bg-coal-900 hero">
-    <div class="px-2 mx-auto sm:py-3 max-w-7xl sm:px-6 lg:px-8 lg:py-6">
+    <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-2">
       <div class="flex flex-col items-center sm:flex-row justify-items-center">
-        <div class="content-center rounded focus:outline-none wrapper-logo hover:ring-4 hover:ring-yellow-600 hover:ring-opacity-90 hover:ring-offest-2 focus-within:ring-4 focus-within:ring-yellow-600 focus-within:ring-opacity-75 focus-within:ring-offest-2">
+        <div class="content-center rounded focus:outline-none wrapper-logo focus-within:ring-4 focus-within:ring-yellow-600 focus-within:ring-opacity-75 focus-within:ring-offest-2">
           <a href="/" class="focus:outline-none">
             <div class="flex w-full h-full">
-              <g-image class="w-1/3 h-full" width="120" height="120" src="~/@assets/images/knihovna-stonava-logo.svg" :alt="description" />
+              <g-image class="w-1/4 h-full" width="120" height="120" src="~/@assets/images/knihovna-stonava-logo.svg" :alt="description" />
               <div class="flex-grow leading-none">
                 <p class="flex flex-col justify-center h-full">
                   <span class="inline font-sans text-base font-bold sm:block sm:text-2xl text-coal-700">{{$t('label.siteName.org')}}&nbsp;</span>
@@ -16,7 +16,7 @@
           </a>
         </div>
         <div class="flex-grow flex-shrink hero"></div>
-        <div class="flex flex-col justify-end max-w-4xl gap-1 md:gap-2 sm:flex-row md:flex-col">
+        <div class="flex flex-col justify-end max-w-4xl gap-1 space-x-1 space-y-1 md:gap-2 sm:flex-row md:flex-col">
             <Search />
             <div class="flex flex-row">
                 <div class="flex-grow flex-shrink"></div>
