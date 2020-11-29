@@ -58,15 +58,15 @@ export default {
     darkModeClass() {
       if (!process.isClient) return;
       if (this.isDark === 'native') {
-          const preffered = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          return preffered ? "dark" : "light"
+        const preffered = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return preffered ? "dark" : "light"
       }
       return this.isDark;
     }
   },
   methods: {
     themeChanged : function(dark) {
-      if (!process.isClient) return;
+      if (process.isServer) return;
       localStorage.setItem('theme-dark', JSON.stringify(dark));
       this.isDark = dark;
     },
@@ -77,7 +77,7 @@ export default {
     }
   },
   created() {
-    if (!process.isClient) return;
+    if (process.isServer) return;
     const stored = JSON.parse(localStorage.getItem("theme-dark"));
     if (stored != null) {
       this.isDark = stored;
@@ -85,4 +85,3 @@ export default {
   },
 }
 </script>
-

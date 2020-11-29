@@ -4,21 +4,24 @@
       <nav aria-labelby="page-settings">
         <h3 id="page-settings" class="sr-only">Nastavení stránky</h3>
           <div class="flex flex-wrap items-center justify-end">
-              <div class="flex flex-row items-end space-x-4 place-items-end">
-                  <h4 class="sr-only">Nastaví vizuálu</h4>
-                  <div class="">
-                      <button @click.prevent="a11y_toggleCSS">
-                        {{a11y_status_string}} kaskádové styly.
-                      </button>
-                  </div>
-                  <div class="h-full">
-                      <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
-                  </div>
+            <div class="flex flex-row items-end space-x-4 place-items-end">
+              <div class="place-self-start"> 
+                Otevírací doba
               </div>
-              <div>
-                <h4 class="sr-only">Jazyk</h4>
-                <LocaleSwitch />
+              <h4 class="sr-only">Nastaví vizuálu</h4>
+              <div class="">
+                <button @click.prevent="a11y_toggleCSS">
+                  {{a11y_status_string}} kaskádové styly.
+                </button>
               </div>
+              <div class="h-full">
+                <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
+              </div>
+            </div>
+            <div>
+              <h4 class="sr-only">Jazyk</h4>
+              <LocaleSwitch />
+            </div>
           </div>
       </nav>
     </div>

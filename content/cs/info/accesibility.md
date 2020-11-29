@@ -7,6 +7,8 @@ createdAt: "2020-11-25"
 modified: "2020-11-26"
 lang: 'cs'
 locale: 'cs-CZ'
+translations:
+    - pl-CZ : "zasady-bezpieczenstva" 
 ---
 
 Místní knihovna Stonava zveřejňuje podle § 8 [zákona č. 99/2019 Sb.](https://www.zakonyprolidi.cz/cs/2019-99), o přístupnosti internetových stránek a mobilních aplikací subjektů veřejného sektoru (dále jen “zákon”), toto prohlášení o přístupnosti.

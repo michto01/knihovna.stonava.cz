@@ -11,6 +11,6 @@ Jejich plné znení je dostupné na adresách:
 - https://creativecommons.org/publicdomain/zero/1.0/
 - https://mit-license.org/
 
-Obsah webových stránek podléhá licenci [Creative Commons Uveďte původ 4.0 Mezinárodní](http://creativecommons.org/licenses/by/4.0/deed.cs).
+Obsah webových stránek podléhá licenci [Creative Commons Uveďte původ 4.0 Mezinárodní](http://creativecommons.org/licenses/by/4.0/deed.cs) pokud není uvedeno jinak.
 
 Místní knihovna Stonava © 2020. Některá práva vyhrazena.
