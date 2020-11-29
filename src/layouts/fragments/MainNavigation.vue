@@ -5,14 +5,11 @@
     <portal :to="navigationStyle">
       <!-- items-stretch sm:place-content-evenly -->
       <ul class="flex flex-col w-full h-full space-y-1 sm:space-y-0 sm:space-x-4 place-items-end justify-items-end sm:flex-row">
-        <li class="menu-item" :class="{'is-active': subIsActiveExact('/')}">
-          <g-link to="/" exact>Domů</g-link>
-        </li>
-        <g-link ></g-link>
-        <li class="menu-item" :class="{'is-active': subIsActive('/about')}"><g-link :to="$tp('/about/')">O nás</g-link></li>
-        <li class="menu-item" :class="{'is-active': subIsActive('/cs/info/pravni-upozorneni/')}"><g-link to="/cs/info/pravni-upozorneni/">Právní upozornění</g-link></li>
-        <li class="menu-item" :class="{'is-active': subIsActive('#')}"><a href="#">Akce</a></li>
-        <li class="menu-item" :class="{'is-active': subIsActive('#')}"><a href="#">Jiné</a></li>
+        <li class="menu-item"><g-link :to="$tp('/')" class="block w-full h-full" exact>Domů</g-link></li>
+        <li class="menu-item"><g-link :to="$tp('/about/')" class="block w-full h-full">O nás</g-link></li>
+        <li class="menu-item"><g-link :to="$tp('/cs/info/pravni-upozorneni/')" class="block w-full h-full">Právní upozornění</g-link></li>
+        <li class="menu-item"><a href="#" class="block w-full h-full">Akce</a></li>
+        <li class="menu-item"><a href="#" class="block w-full h-full">Jiné</a></li>
       </ul>
     </portal>
     <!-- MAIN navigation content -->
@@ -56,25 +53,23 @@
 <style scoped>
 .menu-item {
   @apply box-border text-base text-navy-800 font-medium h-full;
-  @apply block hover:text-white pt-2 px-2;
-  @apply border-b-8 border-transparent;
-  @apply focus-within:ring-4;   
+  @apply block hover:text-white pt-2;
+  @apply focus-within:ring-4;
 }
 .menu-item:hover {
   @apply box-border;
-  @apply border-b-8 border-yellow-900 border-opacity-20;
+  /*@apply border-b-8 border-yellow-900 border-opacity-20;*/
   @apply bg-opacity-80;
 }
 
 .menu-item a {
-  @apply h-full focus:outline-none;
+  @apply h-full w-full focus:outline-none;
+  @apply border-b-8 border-transparent;
 }
-
-.menu-item.is-active {
-  @apply box-border;
+.menu-item .is-exact.is-active {
+  @apply h-full w-full focus:outline-none;
   @apply border-b-8 border-yellow-900 border-opacity-20;
-  @apply bg-opacity-80;
-  @apply text-green-50;
+  @apply box-border bg-opacity-80  text-green-50;
 }
 </style>
 

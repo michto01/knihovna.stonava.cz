@@ -32,10 +32,6 @@ import LocaleSwitch from '@/components/LocaleSwitch.vue'
 export default {
   name: 'TopbarNavigation',
   components : {
-    /*CountryFlag: () =>
-        import ('vue-country-flag/')
-        .then(m => m.CountryFlag)
-        .catch(),*/
     ThemeSwitcher,
     LocaleSwitch,
   },
