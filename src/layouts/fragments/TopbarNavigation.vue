@@ -1,41 +1,33 @@
 <template>
-    <nav class="w-full" aria-label="Nastavení stránky">
-      <h3 class="sr-only">Nastavení stránky</h3>
-      <div class="px-2 mx-auto md:block sm:px-6 lg:px-8">
-        <div class="flex flex-wrap items-center justify-end h-10">
-            <div class="flex flex-row items-end place-items-end">
-                <h4 class="sr-only">Nastaví vizuálu</h4>
-                <div class="p-2">
-                    <button @click.prevent="a11y_toggleCSS">
-                      {{a11y_status_string}} kaskádové styly.
-                    </button>
-                </div>
-                <div class="p-2">
-                    <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
-                </div>
-            </div>
-            <div>
-              <h4 class="sr-only">Jazyk</h4>
-              <div class="h-8 p-2">
-                <a href="/cs/" aria-label="Změn jazyk na češtinu." class='block w-full px-4 py-2 font-medium text-gray-700 whitespace-no-wrap transition duration-300 ease-in-out hover:bg-gray-100 hover:text-gray-900 focus:text-gray-900 focus:shadow-outline'>
-                  <!-- country-flag country='cz' size='small'/ -->
-                  Čeština
-                </a>
+  <div class="w-full">
+    <div class="px-2 mx-auto border-b-2 md:block sm:px-6 lg:px-8">
+      <nav aria-labelby="page-settings">
+        <h3 id="page-settings" class="sr-only">Nastavení stránky</h3>
+          <div class="flex flex-wrap items-center justify-end">
+              <div class="flex flex-row items-end space-x-4 place-items-end">
+                  <h4 class="sr-only">Nastaví vizuálu</h4>
+                  <div class="">
+                      <button @click.prevent="a11y_toggleCSS">
+                        {{a11y_status_string}} kaskádové styly.
+                      </button>
+                  </div>
+                  <div class="h-full">
+                      <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
+                  </div>
               </div>
-              <div class="h-8 p-2">
-                <a href="/pl/" aria-label="Zmień język na polski." class=''>
-                  <!--country-flag country='pl' size='small'/-->
-                  Polski
-                </a>
+              <div>
+                <h4 class="sr-only">Jazyk</h4>
+                <LocaleSwitch />
               </div>
-            </div>
-        </div>
-      </div>
-    </nav>
+          </div>
+      </nav>
+    </div>
+  </div>
 </template>
 
 <script>
 import ThemeSwitcher from  '@/components/ThemeSwitcher.vue';
+import LocaleSwitch from '@/components/LocaleSwitch.vue'
 
 export default {
   name: 'TopbarNavigation',
@@ -45,6 +37,7 @@ export default {
         .then(m => m.CountryFlag)
         .catch(),*/
     ThemeSwitcher,
+    LocaleSwitch,
   },
   data() {
     return {

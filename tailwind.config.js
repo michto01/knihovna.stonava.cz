@@ -20,6 +20,8 @@ module.exports = {
       ringColor: ['hover'],
       ringWidth: ['hover']
     },
+    transition: [ 'motion-safe'],
+    transform: ['motion-safe']
   },
   plugins: [],
 }
