@@ -1,4 +1,5 @@
 <template>
+<ClientOnly>
      <div x-on:click.away="open = false" class="relative" x-data="{ open: false }">
         <button 
           x-on:click="open = !open" 
@@ -32,16 +33,20 @@
           </div>
         </div>
     </div>   
+</ClientOnly>
 </template>
 
 <script>
-import 'alpinejs';
 export default {
   data: function () {
     return {
       currentLocale: this.$i18n.locale.toString(),
       availableLocales: this.$i18n.availableLocales,
     }
+  },
+  mounted() {
+    if (this.$isServer) return;
+    window.Alpine = require('alpinejs');
   },
   methods: {
     locales (locale) {
