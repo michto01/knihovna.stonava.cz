@@ -20,7 +20,7 @@
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
-    "autoprefixer": "^10.0.2",
+    "autoprefixer": "^10.0.4",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-rss": "^1.2.0",
     "gridsome-plugin-tailwindcss": "^4.1.0",
