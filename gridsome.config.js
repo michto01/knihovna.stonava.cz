@@ -56,15 +56,23 @@ module.exports = {
           'cs-CZ': require('./src/locales/cs.json'),
           'pl-CZ': require('./src/locales/pl.json'),
         },
+        routes: require('./routes.js')
       } 
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/**/*.md',
+        path: 'content/*/info/**/*.md',
         typeName: 'Info',
       }
-    }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/*/project/**/*.md',
+        typeName: 'Project',
+      }
+    }, 
   ],
   transformers: {
     remark: {

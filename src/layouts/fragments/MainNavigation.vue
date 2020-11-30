@@ -6,10 +6,11 @@
       <!-- items-stretch sm:place-content-evenly -->
       <ul class="flex flex-col w-full h-full space-y-1 sm:space-y-0 sm:space-x-4 place-items-end justify-items-end sm:flex-row">
         <li class="menu-item"><g-link :to="$tp('/')" class="block w-full h-full" exact>Domů</g-link></li>
-        <li class="menu-item"><g-link :to="$tp('/about/')" class="block w-full h-full">O nás</g-link></li>
-        <li class="menu-item"><g-link :to="$tp('/cs/info/pravni-upozorneni/')" class="block w-full h-full">Právní upozornění</g-link></li>
-        <li class="menu-item"><a href="#" class="block w-full h-full">Akce</a></li>
-        <li class="menu-item"><a href="#" class="block w-full h-full">Jiné</a></li>
+        <li class="menu-item"><g-link :to="$tp('/about/')" class="block w-full h-full">Knihovna</g-link></li>
+        <li class="menu-item"><g-link :to="$tp('/cs/info/pravni-upozorneni/')" class="block w-full h-full">Projekty</g-link></li>
+        <li class="menu-item"><a href="#" class="block w-full h-full">Události</a></li>
+        <li class="menu-item"><a href="#" class="block w-full h-full">Kontakty</a></li>
+        <li class="menu-item"><a href="#" class="block w-full h-full">Další</a></li>
       </ul>
     </portal>
     <!-- MAIN navigation content -->
@@ -17,7 +18,7 @@
     <div class="w-full">
       <nav class="">
         <h3 class="sr-only">Hlavní menu</h3>
-        <div class="max-w-6xl mx-auto bg-yellow-400 lg:rounded-full md:px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto lg:rounded-full md:px-4 sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button-->
@@ -53,23 +54,24 @@
 <style scoped>
 .menu-item {
   @apply box-border text-base text-navy-800 font-medium h-full;
-  @apply block hover:text-white pt-2;
+  @apply block pt-1 ; /*hover:bg-coal-200;*/
   @apply focus-within:ring-4;
 }
 .menu-item:hover {
   @apply box-border;
-  /*@apply border-b-8 border-yellow-900 border-opacity-20;*/
+  /*@apply border-b-4 border-yellow-900 border-opacity-20;*/
   @apply bg-opacity-80;
 }
 
 .menu-item a {
   @apply h-full w-full focus:outline-none;
-  @apply border-b-8 border-transparent;
+  @apply hover:border-indigo-600 hover:border-opacity-70;
+  @apply border-b-4 border-transparent md:px-2 lg:px-4;
 }
 .menu-item .is-exact.is-active {
   @apply h-full w-full focus:outline-none;
-  @apply border-b-8 border-yellow-900 border-opacity-20;
-  @apply box-border bg-opacity-80  text-green-50;
+  @apply border-b-4 border-indigo-600; /* border-opacity-20;*/
+  @apply box-border bg-opacity-80  text-coal-800 font-bold;
 }
 </style>
 

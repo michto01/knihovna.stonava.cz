@@ -6,7 +6,7 @@
           <div class="flex flex-wrap items-center justify-end">
             <div class="flex flex-row items-end space-x-4 place-items-end">
               <div class="place-self-start"> 
-                Otevírací doba
+                Otevírací doba: pondělí - 9:00-11:00, 11:30-17:00; čtvrtek - 12:00-18:00
               </div>
               <h4 class="sr-only">Nastaví vizuálu</h4>
               <div class="">

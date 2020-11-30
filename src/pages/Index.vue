@@ -1,5 +1,13 @@
 <template>
   <Layout>
+
+    <ul>
+      <li v-for="edge in $page.projects.edges" :key="edge.node.id">
+        {{ edge.node.title }}
+      </li>
+    </ul>
+
+  
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
     <h1 class="font-bold text-gray-900 dark:text-white font-lg">Hello, world!</h1>
@@ -20,6 +28,23 @@
     </p>
   </Layout>
 </template>
+
+<page-query>
+query {
+  projects: allProject {
+   {
+      node {
+        id
+        name
+        locale
+        slogan
+        image
+        path
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import OpacNewRecordsExternal from '../components/OpacNewRecordsExternal.vue'
