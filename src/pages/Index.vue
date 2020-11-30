@@ -2,10 +2,12 @@
   <Layout>
     <div>
       <article class="flex flex-col w-full">
-        <section class="p-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36">
-            <h1 class="text-2xl font-bold">Ze života knihovny</h1>
+        <section class="py-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36">
+            <h1 class="text-4xl font-bold">Ze života knihovny</h1>
             <div class="flex flex-col gap-4 px-4 lg:flex-row lg:p-10 lg:gap-8">
               <main class="md:flex-grow lg:max-w-2/3">
+              <h2 class="pb-2 text-2xl font-semibold text-indigo-900">Blog</h2>
+              <!-- Blog carousel -->
               <div class="relative">
                 <ul class="flex flex-col justify-center gap-4 sm:flex-row">
                   <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="relative items-center flex-grow block w-full p-4 overflow-hidden bg-white rounded-t-lg shadow-lg md:w-2/5 rounded-2xl" style="min-height: 19rem;">
@@ -25,27 +27,46 @@
                   <span class="block" style="transform: scale(1);">&#x279c;</span>
                 </button>
               </div>
+              <!-- Top news carousel -->
+              <h2 class="py-4 text-2xl font-semibold text-indigo-900">Události</h2>
+              <div>
+                  <ul class="flex flex-col justify-center w-full gap-2">
+                    <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="block p-4 rounded shadow-sm bg-coal-50">
+                      <h2 class='font-extrabold text-md'>{{ edge.node.title[0].text }}</h2>
+                      <div>{{ edge.node.short }}</div>
+                    </li>
+                  </ul>
+                </div>
+              <div>
+              </div>
               </main>
-              <aside class="p-4 bg-indigo-100 rounded-lg shadow-lg md:min-w-2/5">
-                <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-                <h1 class="text-2xl font-semibold">Přihlášení do knihovny</h1>
-                <p>Prosím vyplňte své přihlašovací údaje do katalogu </p>
-                <PatronLogin-Dawinci />
-
-                <div>
-                  <h3 class="text-xl font-bold text-indigo-900">Otevírací hodiny</h3>
+              <aside id="library-quick-access" class="flex flex-col gap-4 ">
+                <div class="p-4 bg-indigo-100 rounded-lg shadow-lg">
+                  <h1 class="text-2xl font-bold text-indigo-900">Knihovna Stonava</h1>
+                  <p></p>
+                  <div>
+                    <h3 class="text-base font-bold text-indigo-900">Otevírací hodiny</h3>
+                    <div class="px-4">
+                      <p>Pondělí: <span>9.30-11.00</span>, <span>12.00-18.00</span></p>
+                      <p>Čtvrtek: <span>12.00-18</span></p>
+                    </div>
+                  </div>
+                  <!--p class="text-navy-800">Prosím vyplňte své přihlašovací údaje do katalogu </p-->
+                  <div>
+                    <h3 class="text-base font-bold text-indigo-900">Otevírací hodiny</h3>
+                  </div>
+                  <div>
+                    <h3 class="text-base font-bold text-indigo-900">Užitečné odkazy</h3>
+                    <ul class="px-4 home-links">
+                      <li><a href="https://gridsome.org/docs/" target="_blank" rel="noopener noreferrer">Gridsome Docs</a></li>
+                      <li><a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                      <li><a href="https://sknizkoudozivota.cz" target="_blank" rel="noopener noreferrer">S knížkou do života</a></li>
+                      <li><a href="https://stonava.cz" target="_blank" rel="noopener noreferrer">Obec Stonava</a></li>
+                      <li><a href="https://rkka.cz" target="_blank" rel="noopener noreferrer">Regionální knihovna Karviná</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 class="text-xl font-bold text-indigo-900">Otevírací hodiny</h3>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-indigo-900">Užitečné odkazy</h3>
-                  <p class="home-links">
-                    <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-                    <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-                  </p>
-                </div>
+                <PatronLogin-Dawinci class="w-2/3 shadow-lg" />
               </aside>
             </div>
         </section>
@@ -53,9 +74,9 @@
           <h1 class="pb-4 text-2xl font-bold text-center">Vyvěska</h1>
           <div>
             <ul class="flex flex-col justify-center w-full gap-4 sm:flex-row">
-              <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 rounded shadow-sm bg-coal-50">
-                <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
-                <div>{{ edge.node.path }}</div>
+              <li v-for="edge in $static.projects.edges" :key="edge.node.title" class="block p-4 rounded shadow-sm bg-coal-50">
+                <h2 class='font-extrabold text-md'>{{ edge.node.title }}</h2>
+                <div>{{ edge.node.short }}</div>
               </li>
             </ul>
           </div>
@@ -121,6 +142,44 @@ query {
 }
 </static-query>
 
+<page-query>
+query Events {
+  prismicio {
+    events: allEvents {
+      edges {
+        node {
+          title
+          short
+          meta: _meta {
+            lang
+            uid
+            lastPublicationDate
+          }
+          created
+        }
+      }
+    }
+  }
+}
+</page-query>
+
+<style scoped>
+
+.home-links {
+  @apply text-indigo-700;
+}
+.home-links a {
+    @apply underline;
+}
+.home-links a::after {
+    @apply underline;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    content: url("data:image/svg+xml,%3Csvg fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z'%3E%3C/path%3E%3Cpath d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z'%3E%3C/path%3E%3C/svg%3E")
+}
+</style>
+
 <script>
 import OpacNewRecordsExternal from '../components/OpacNewRecordsExternal.vue'
 import PatronLoginDawinci from '../components/PatronLoginDawinci.vue'
@@ -132,8 +191,13 @@ export default {
     OpacNewRecordsExternal,
     About,
   },
-  mounted() {
-    console.log(this.$page)
+  created() {
+    console.log(this.$page.prismicio.events.edges)
+  },
+  data() {
+    return {
+      locale: 'cs-cz'
+    }
   },
   metaInfo() {
     const title = 'Knihovna Stonava';
