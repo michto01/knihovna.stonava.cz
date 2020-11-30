@@ -3,7 +3,7 @@ name: 'Klub milovníků knihy'
 slogan: "Pravidelná setkávání milovníků literatury a knih."
 type: 'Všichni'
 category: ["Dospělí", "Klub", "Milovníci knih"]
-image: ''
+image: '/assets/images/reading_book.svg'
 canonical: 'bookclub'
 locale: 'cs-CZ'
 external:

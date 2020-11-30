@@ -17,7 +17,7 @@
     <div class="flex flex-col w-full min-h-screen bg-coal-50 text-coal-800 dark:bg-coal-900 dark:bg-opacity-75">
       <TopbarNavigation @themeChanged="themeChanged" :darkMode="isDark" />
       <Header />
-      <main id="content" class="flex-grow max-w-2xl p-4 mx-auto">
+      <main id="content" class="flex-grow "><!-- max-w-2xl p-4 mx-auto -->
         <slot />
           <div id="o-knihovne"></div>
           <div id="projekty"></div>

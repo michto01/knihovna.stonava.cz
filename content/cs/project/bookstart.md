@@ -3,7 +3,7 @@ name: 'Bookstart'
 slogan: "Čtení pro nejmenší společně s jejich rodiči"
 type: 'Děti 0-6 let'
 category: ["Děti", "Předškolní věk", "0-6 let", "Bookstart"]
-image: ''
+image: '/assets/images/tree_swing.svg'
 canonical: 'bookstart'
 locale: 'cs-CZ'
 external:
