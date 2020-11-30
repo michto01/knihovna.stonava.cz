@@ -70,8 +70,9 @@
 }
 .menu-item .is-exact.is-active {
   @apply h-full w-full focus:outline-none;
-  @apply border-b-4 border-indigo-600; /* border-opacity-20;*/
-  @apply box-border bg-opacity-80  text-coal-800 font-bold;
+  @apply border-b-4 border-indigo-600;
+  @apply text-indigo-600 font-bold;
+  @apply box-border bg-opacity-80 
 }
 </style>
 

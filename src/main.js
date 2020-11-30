@@ -26,7 +26,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     style: 'overscroll-behavior-x: none;'
   };
   head.htmlAttrs = {
-    class: 'bg-blue-900',
+    class: 'bg-indigo-900',
     id: 'main-theme'
   };
   head.bodyAttrs = {

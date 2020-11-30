@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full font-sans text-base text-white bg-blue-800 dark:bg-navy-700">
+  <footer class="w-full font-sans text-base text-white bg-indigo-800 dark:bg-navy-700">
     <hr class="sr-only">
     <div class="flex flex-wrap p-8 mx-auto text-white">
       <div class="w-max md:w-1/3">
@@ -60,7 +60,7 @@
           </div>
           <div class="pt-4">
             <!-- HeroIcon: Phone -->
-            <abbr class="pr-2 text-blue-300 type" title="home" aria-label="telefonní číslo">
+            <abbr class="pr-2 text-indigo-300 type" title="home" aria-label="telefonní číslo">
               <svg
                 role="presentation"
                 width="1em" height="1em"
@@ -123,7 +123,7 @@
       </div>
     </div>
 
-    <div class="w-full py-4 mx-auto -mb-4 text-xs text-center bg-blue-900 dark:bg-navy-800">
+    <div class="w-full py-4 mx-auto -mb-4 text-xs text-center bg-indigo-900 dark:bg-navy-800">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs" class="block py-1">
         <g-image
           alt="Licence Creative Commons"
