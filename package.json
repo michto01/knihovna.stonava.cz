@@ -28,7 +28,7 @@
     "gridsome-plugin-typescript": "^0.4.0",
     "gridsome-source-graphql-prismic": "^0.1.6",
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "autoprefixer": "^10.0.4",
+    "autoprefixer": "^10.1.0",
     "postcss": "^8.1.14",
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
