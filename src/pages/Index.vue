@@ -2,7 +2,7 @@
   <Layout>
     <div>
       <article class="flex flex-col w-full">
-        <section class="py-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36">
+        <section class="py-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36 lg:pt-16">
             <h1 class="text-4xl font-bold">Ze života knihovny</h1>
             <div class="flex flex-col gap-4 px-4 lg:flex-row lg:p-10 lg:gap-8">
               <main class="md:flex-grow lg:max-w-2/3">
@@ -58,11 +58,11 @@
                   <div>
                     <h3 class="text-base font-bold text-indigo-900">Užitečné odkazy</h3>
                     <ul class="px-4 home-links">
-                      <li><a href="https://gridsome.org/docs/" target="_blank" rel="noopener noreferrer">Gridsome Docs</a></li>
-                      <li><a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                      <li><a href="https://sknizkoudozivota.cz" target="_blank" rel="noopener noreferrer">S knížkou do života</a></li>
-                      <li><a href="https://stonava.cz" target="_blank" rel="noopener noreferrer">Obec Stonava</a></li>
-                      <li><a href="https://rkka.cz" target="_blank" rel="noopener noreferrer">Regionální knihovna Karviná</a></li>
+                      <li><a href="//gridsome.org/docs/" target="_blank" rel="noopener noreferrer">Gridsome Docs</a></li>
+                      <li><a href="//github.com/gridsome/gridsome" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                      <li><a href="//sknizkoudozivota.cz" target="_blank" rel="noopener noreferrer">S knížkou do života</a></li>
+                      <li><a href="//stonava.cz" target="_blank" rel="noopener noreferrer">Obec Stonava</a></li>
+                      <li><a href="//rkka.cz" target="_blank" rel="noopener noreferrer">Regionální knihovna Karviná</a></li>
                     </ul>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ query {
 <page-query>
 query Events {
   prismicio {
-    events: allEvents {
+    events: allEvents(sortBy: meta_lastPublicationDate_DESC, first: 2) {
       edges {
         node {
           title

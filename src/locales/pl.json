@@ -10,6 +10,22 @@
             "jump_navigation" : "Przejdź do sekcji nawigacja",
             "jump_content" : "Przejdź do sekcji treść",
             "jump_footer" : "Przejdź do sekcji stopka"
+        },
+
+        "styles": {
+            "css": "style",
+            "on": "Włącz",
+            "off": "Wyłącz",
+            "active": "Aktywny motyw",
+            "native": "systemowy",
+            "light": "jasny",
+            "dark": "ciemny"
+        },
+
+        "settings": {
+            "page": "Ustawienia stronicy",
+            "apperance": "Ustawienia wizualne",
+            "language": "Język"
         }
     },
 
@@ -17,5 +33,16 @@
         "home" : "/",
         "about" : "/about/"
     },
-    "/about/" : "/pl/about/"
+    "/about/" : "/pl/about/",
+
+    "days": {
+        "monday": "poniedziałek",
+        "tuesday": "wtorek",
+        "wednesday": "środa",
+        "thursday": "czwartek",
+        "friday": "piątek",
+        "saturday": "sobota",
+        "sunday": "niedziela"
+    },
+    "opening-hours": "Godziny otwarcia"
 }
