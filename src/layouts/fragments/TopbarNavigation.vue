@@ -7,7 +7,7 @@
             <p class="flex-grow flex-shrink hidden text-sm font-semibold sm:block"> 
                 {{$t('opening-hours')}}: <span class="font-normal">pondělí - 9:00-11:00, 11:30-17:00; čtvrtek - 12:00-18:00</span>
             </p>
-            <div class="flex flex-row gap-x-4">
+            <div class="flex flex-row space-x-4">
               <h4 class="sr-only">{{ $t('label.settings.apperance') }}</h4>
               <div class="">
                 <button @click.prevent="a11y_toggleCSS">

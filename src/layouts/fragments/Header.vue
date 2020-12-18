@@ -16,7 +16,7 @@
           </a>
         </div>
         <div class="flex-grow flex-shrink hero"></div>
-        <div class="flex flex-col justify-end max-w-4xl gap-1 space-x-1 space-y-1 md:gap-2 sm:flex-row md:flex-col">
+        <div class="flex flex-col justify-end max-w-4xl space-x-1 space-y-1 md:space-x-2 md:space-y-2 sm:flex-row md:flex-col">
             <Search />
             <div class="flex flex-row">
                 <div class="flex-grow flex-shrink"></div>

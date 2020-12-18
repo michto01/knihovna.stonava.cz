@@ -4,12 +4,12 @@
       <article class="flex flex-col w-full">
         <section class="py-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36 lg:pt-16">
             <h1 class="text-4xl font-bold">Ze života knihovny</h1>
-            <div class="flex flex-col gap-4 px-4 lg:flex-row lg:p-10 lg:gap-8">
+            <div class="flex flex-col px-4 space-x-4 space-y-4 lg:flex-row lg:p-10 lg:space-x-8 lg:space-y-8">
               <main class="md:flex-grow lg:max-w-2/3">
               <h2 class="pb-2 text-2xl font-semibold text-indigo-900">Blog</h2>
               <!-- Blog carousel -->
               <div class="relative">
-                <ul class="flex flex-col justify-center gap-4 sm:flex-row">
+                <ul class="flex flex-col justify-center space-x-4 sm:flex-row">
                   <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="relative items-center flex-grow block w-full p-4 overflow-hidden bg-white rounded-t-lg shadow-lg md:w-2/5 rounded-2xl" style="min-height: 19rem;">
                     <div class="absolute inset-0 w-full h-full bg-red-200 rounded">
                       <g-image :src="edge.node.image" class="fit-cover" width="5rem" height="5rem" aria-hidden="true" alt></g-image>
@@ -30,7 +30,7 @@
               <!-- Top news carousel -->
               <h2 class="py-4 text-2xl font-semibold text-indigo-900">Události</h2>
               <div>
-                  <ul class="flex flex-col justify-center w-full gap-2">
+                  <ul class="flex flex-col justify-center w-full space-y-2">
                     <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="block p-4 rounded shadow-sm bg-coal-50">
                       <h2 class='font-extrabold text-md'>{{ edge.node.title[0].text }}</h2>
                       <div>{{ edge.node.short }}</div>
@@ -40,7 +40,7 @@
               <div>
               </div>
               </main>
-              <aside id="library-quick-access" class="flex flex-col gap-4 ">
+              <aside id="library-quick-access" class="flex flex-col space-y-4">
                 <div class="p-4 bg-indigo-100 rounded-lg shadow-lg">
                   <h1 class="text-2xl font-bold text-indigo-900">Knihovna Stonava</h1>
                   <p></p>
@@ -73,7 +73,7 @@
         <section id="news" class="py-4">
           <h1 class="pb-4 text-2xl font-bold text-center">Vyvěska</h1>
           <div>
-            <ul class="flex flex-col justify-center w-full gap-4 sm:flex-row">
+            <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
               <li v-for="edge in $static.projects.edges" :key="edge.node.title" class="block p-4 rounded shadow-sm bg-coal-50">
                 <h2 class='font-extrabold text-md'>{{ edge.node.title }}</h2>
                 <div>{{ edge.node.short }}</div>
@@ -83,7 +83,7 @@
         </section>
          <section id="library" class="py-4 bg-green-200">
           <h1 class="pb-4 text-2xl font-bold text-center">Knihovna Stonava</h1>
-          <ul class="flex flex-col justify-center w-full gap-4 sm:flex-row">
+          <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
             <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 bg-white rounded shadow-sm">
               <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
               <div>{{ edge.node.path }}</div>
@@ -92,16 +92,16 @@
         </section>
         <section id="recomendations" class="py-4">
           <h1 class="pb-4 text-2xl font-bold text-center">Doporučujeme</h1>
-          <ul class="flex flex-col justify-center w-full gap-4 sm:flex-row">
+          <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
             <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 rounded shadow-sm bg-coal-50">
               <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
               <div>{{ edge.node.path }}</div>
             </li>
           </ul>
         </section>
-        <section id="projects" class="py-4 bg-green-200">
+        <section id="projects" class="py-4 bg-green-200 sm:px-4">
           <h1 class="pb-4 text-2xl font-bold text-center">Projekty</h1>
-          <ul class="flex flex-col justify-center w-full gap-4 sm:flex-row">
+          <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
             <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 bg-white rounded shadow-sm">
               <div class="m-1 bg-red-200 rounded">
                 <g-image :src="edge.node.image" width="5em" height="5em" alt></g-image>
@@ -113,7 +113,7 @@
         </section>
         <section id="history" class="py-4">
           <h1 class="pb-4 text-2xl font-bold text-center">Historie</h1>
-          <ul class="flex flex-col justify-center w-full gap-4 sm:flex-row">
+          <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
             <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block w-1/4 p-4 rounded shadow-sm bg-coal-50">
               <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
               <div>{{ edge.node.path }}</div>
