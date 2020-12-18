@@ -33,13 +33,13 @@
               </button>
             </div>
             <div class="flex items-center justify-center flex-1 h-full sm:items-stretch sm:justify-start">
-              <div class="hidden w-full sm:block sm:ml-6">
-                <div class="w-full h-full space-x-4">
-                  <portal-target class="w-full h-full" name="normal" :disabled="isOpen" slim/>  
+              <div class="w-full sm:ml-6">
+                <div class="hidden w-full h-full space-x-4 sm:block">
+                  <portal-target class="w-full h-full" name="normal" :disabled="isOpen"/>  
                 </div>
                 <div v-if="isOpen" class="sm:hidden">
-                  <div class="px-2 pt-2 pb-3 space-y-1 bg-yellow-500 shadow-md">
-                    <portal-target name="mobile" :disabled="!isOpen" slim />
+                  <div class="p-2 pb-3 space-y-1 shadow-md">
+                    <portal-target name="mobile" :disabled="!isOpen" />
                   </div>
                 </div>
               </div>
@@ -50,31 +50,6 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.menu-item {
-  @apply box-border text-base text-navy-800 font-medium h-full;
-  @apply block pt-1 ; /*hover:bg-coal-200;*/
-  @apply focus-within:ring-4;
-}
-.menu-item:hover {
-  @apply box-border;
-  /*@apply border-b-4 border-yellow-900 border-opacity-20;*/
-  @apply bg-opacity-80;
-}
-
-.menu-item a {
-  @apply h-full w-full focus:outline-none;
-  @apply hover:border-indigo-600 hover:border-opacity-70;
-  @apply border-b-4 border-transparent md:px-2 lg:px-4;
-}
-.menu-item .is-exact.is-active {
-  @apply h-full w-full focus:outline-none;
-  @apply border-b-4 border-indigo-600;
-  @apply text-indigo-600 font-bold;
-  @apply box-border bg-opacity-80 
-}
-</style>
 
 <script>
 import breakpointHelper from 'breakpoint-helper';
@@ -116,3 +91,29 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.menu-item {
+  @apply box-border text-base text-navy-800 font-medium h-full;
+  @apply block pt-1 ; /*hover:bg-coal-200;*/
+  @apply focus-within:ring-4;
+}
+.menu-item:hover {
+  @apply box-border;
+  /*@apply border-b-4 border-yellow-900 border-opacity-20;*/
+  @apply bg-opacity-80;
+}
+
+.menu-item a {
+  @apply h-full w-full focus:outline-none;
+  @apply hover:border-indigo-600 hover:border-opacity-70;
+  @apply border-b-4 border-transparent md:px-2 lg:px-4;
+}
+
+.menu-item .is-exact.is-active {
+  @apply h-full w-full focus:outline-none;
+  @apply border-b-4 border-indigo-600;
+  @apply text-indigo-600 font-bold;
+  @apply box-border bg-opacity-80 
+}
+</style>

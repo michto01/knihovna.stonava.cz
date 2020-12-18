@@ -16,7 +16,7 @@
           </a>
         </div>
         <div class="flex-grow flex-shrink hero"></div>
-        <div class="flex flex-col justify-end max-w-4xl space-x-1 space-y-1 md:space-x-2 md:space-y-2 sm:flex-row md:flex-col">
+        <div class="flex flex-col justify-end max-w-4xl space-x-2 space-y-2 sm:flex-row md:flex-col">
             <Search />
             <div class="flex flex-row">
                 <div class="flex-grow flex-shrink"></div>
@@ -26,10 +26,7 @@
                    <div class="h-full px-4 py-2 font-sans font-semibold align-middle bg-red-600 rounded-full text-red-50">
                       <div id="dawinci-login-single" class="flex flex-row">
                           <span id="patron-zone-login" class="mr-2 align-middle">Konto čtenáře</span>
-                          <svg role="presentation" width="1em" height="1em" class="inline w-6 h-6 text-center text-red-300 align-middle" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-                              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
-                          </svg>
+                          <icon-external-link/>
                       </div>
                    </div>
                 </button>
@@ -39,7 +36,7 @@
     </div>
     <hr role=separator class="sr-only">
       <MainNavigation />
-    <hr class="sr-only">
+    <hr role=separator class="sr-only">
   </header>
 </template>
 
@@ -66,11 +63,13 @@
 <script>
 import Search from '@/components/Search.vue';
 import MainNavigation from './MainNavigation.vue'
+import IconExternalLink from '@/components/icons/IconExternalLink'
 
 export default {
   components : {
     Search,
-    MainNavigation
+    MainNavigation,
+    IconExternalLink
   },
   computed: {
     description() {
