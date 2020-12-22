@@ -37,10 +37,10 @@ query {
 </static-query>
 
 <script>
-import Header from './fragments/Header.vue'
-import TopbarNavigation from './fragments/TopbarNavigation.vue'
-import Footer from './fragments/Footer.vue'
-import Alert from '~/components/Alert.vue'
+import Header from './fragments/Header'
+import TopbarNavigation from './fragments/TopbarNavigation'
+import Footer from './fragments/Footer'
+import Alert from '~/components/Alert'
 
 export default {
   components: {

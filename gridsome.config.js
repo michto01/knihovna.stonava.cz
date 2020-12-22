@@ -50,7 +50,8 @@ module.exports = {
         },
         fallbackLocale: 'cs-CZ',
         defaultLocale: 'cs-CZ',
-        enablePathRewrite: true, // rewrite path with locale prefix, default: true
+        enablePathRewrite: true, //true, // rewrite path with locale prefix, default: true
+        enablePathGeneration: false,
         rewriteDefaultLanguage: false, // default: true
         messages: /*process.env.NODE_ENV === 'production' &&*/ {
           'cs-CZ': require('./src/locales/cs.json'),
@@ -78,5 +79,13 @@ module.exports = {
     remark: {
       // global remark options
     }
+  },
+  templates: {
+    Info: [
+      {
+        path: '/:lang/:slug',
+        component: './src/templates/InfoPage.vue'
+      }
+    ]
   }
 }

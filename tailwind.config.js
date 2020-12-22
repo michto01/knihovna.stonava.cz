@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors');
 
+
 module.exports = {
   purge: [
     './src/**/*.html',
@@ -23,5 +24,7 @@ module.exports = {
     transition: [ 'motion-safe'],
     transform: ['motion-safe']
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

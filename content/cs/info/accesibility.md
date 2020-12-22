@@ -1,14 +1,15 @@
 ---
+canonical: "accessibility"
+slug: "prohlaseni-o-pristupnosti"
 title: "Prohlášení o přístupnosti"
 description: "Prohlášení přístupnosti webových stránek Místní knihovny Stonava. Konformace ke standardům, vyjímky a jejich zdůvodnění."
 keywords: ['Accessibility', 'Legal', 'Právní informace', 'knihovna', 'Místní knihovna Stonava']
-slug: "prohlaseni-o-pristupnosti"
 createdAt: "2020-11-25"
 modified: "2020-11-26"
 lang: 'cs'
 locale: 'cs-CZ'
 translations:
-    - pl-CZ : "zasady-bezpieczenstva" 
+    - pl-CZ : "zasady-bezpieczenstwa" 
 ---
 
 Místní knihovna Stonava zveřejňuje podle § 8 [zákona č. 99/2019 Sb.](https://www.zakonyprolidi.cz/cs/2019-99), o přístupnosti internetových stránek a mobilních aplikací subjektů veřejného sektoru (dále jen “zákon”), toto prohlášení o přístupnosti.
@@ -62,20 +63,21 @@ Podnět může každý učinit vůči Místní knihovně Stonava, a to prostřed
 uvedených na stránce [Kontakty](/kontakty), nebo se může obrátit na administrátory internetových stránek níže.
 
 Podle § 10 písm. a) a § 11 zákona Ministerstvo vnitra kontroluje, zda povinný subjekt dodržuje povinnosti přístupnosti. Každý se může obrátit tedy i na Ministerstvo vnitra. Gestorem za tuto oblast je Odbor eGovernmentu Ministerstva vnitra:
-<blockquote>
-Ministerstvo vnitra, odbor eGovernmentu
-náměstí Hrdinů 1634/3, 140 21 Praha 4
-email: pristupnost@mvcr.cz
-</blockqoute>
 
-Přizpůsobení velikosti textu a klávesové zkratky na webových stránkách
+<blockquote>
+    <div>Ministerstvo vnitra, odbor eGovernmentu</div>
+    <div>náměstí Hrdinů 1634/3, 140 21 Praha 4</div>
+    <div>email: pristupnost@mvcr.cz</div>
+</blockquote>
+
+## Přizpůsobení velikosti textu a klávesové zkratky na webových stránkách
 Pokud je pro vás text obtížně čitelný, k jeho zvětšení můžete použít nástroje Vašeho prohlížeče. Design stránek je responzivní a obsah se přizpůsobí Vaší obrazovce.
 
-Velikost textu lze zvětšit klikem na tlačítko A+ na úvodu každého textu.
+<!--Velikost textu lze zvětšit klikem na tlačítko A+ na úvodu každého textu. -->
 
 V moderních prohlížečích lze text zvětšit současným zvolením `Ctrl`+`+` a zmenšít `Ctrl`+`-`. K původní velikosti se lze vrátit pomocí `Ctrl`+`0`, nebo `Ctrl`+`*`. V Safari na macOS použijte místo `Ctrl` klávesu `Command (⌘)`.
 
-Pro popis všech informací na tomto webu je použit značkovací jazyk `HTML 5`, pro popis vzhledu pak kaskádové `styly CSS`. Textový obsah stránek lze zobrazit i s vypnutými kaskádovými styly. Všechny velikosti jsou uvedeny v relativních jednotkách, je tedy možné podle potřeby zvětšit velikost písma. Všechny odkazy jsou v textu graficky zvýrazněné.
+Pro popis všech informací na tomto webu je použit značkovací jazyk `HTML 5`, pro popis vzhledu pak kaskádové `styly CSS 3+`. Textový obsah stránek lze zobrazit i s vypnutými kaskádovými styly. Všechny velikosti jsou uvedeny v relativních jednotkách, je tedy možné podle potřeby zvětšit velikost písma. Všechny odkazy jsou v textu graficky zvýrazněné.
 
 ## Kontakty na administrátory
-Pro kontaktování administratorů je možno využít email [mkston@rkka.cz](mailto:mkston@rkka.cz), nebo kontaktovat přímo na stránkách [projektu webových stránek](https://github.com/michto01/knihovna.stonava.cz).
+Pro kontaktování administratorů je možno využít email [mkston@rkka.cz](mailto:mkston@rkka.cz), nebo kontaktovat pomocí `Issues` přímo na stránkách [projektu webových stránek](https://github.com/michto01/knihovna.stonava.cz).
