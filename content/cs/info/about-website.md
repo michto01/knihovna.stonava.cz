@@ -1,7 +1,7 @@
 ---
 canonical: "about-website"
-slug: "o-webu"
-title: "O Webových stránkách knihovy"
+slug: "o-webovych-strankach"
+title: "O webových stránkách"
 description: "Informace o webových stránkách Místní knihovny Stonava."
 keywords: ['Web Místní knihovny Stonava', 'Stonava', 'knihovna', 'Github', 'OpenSource']
 createdAt: "2020-11-25"

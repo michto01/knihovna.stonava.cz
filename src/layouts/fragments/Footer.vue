@@ -1,7 +1,7 @@
 <template>
   <footer class="w-full font-sans text-base text-white bg-indigo-800 dark:bg-navy-700">
     <hr class="sr-only">
-    <div class="flex flex-wrap p-8 mx-auto text-white">
+    <div class="flex flex-col flex-wrap p-8 mx-auto text-white">
       <div class="w-max md:w-1/3">
         <div class="text-sm h-card vcard">
           <div class="">
@@ -121,6 +121,13 @@
           </div>
         </div>
       </div>
+      <div class="md:w-2/3">
+        <div v-for="edge in $static.info.edges" :key="edge.node.slug">
+          <a :href="'/cs/' + edge.node.slug">
+            {{ edge.node.title }}
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="w-full py-4 mx-auto -mb-4 text-xs text-center bg-indigo-900 dark:bg-navy-800">
@@ -164,9 +171,21 @@ query {
       }
     }
   }
+  info: allInfo {
+    edges {
+      node {
+        title
+        slug
+      }
+    }
+  }
 }
 </static-query>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this.$static.info.edges)
+  }
+};
 </script>

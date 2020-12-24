@@ -77,7 +77,16 @@ module.exports = {
   ],
   transformers: {
     remark: {
-      // global remark options
+      plugins: [
+        'remark-slug',
+        require('remark-gfm'),
+        /*require('remark-rehype'),
+        require('rehype-raw'),*/
+      ],
+      config: {
+        gfm : true,
+        footnotes: true
+      }
     }
   },
   templates: {
