@@ -1,0 +1,49 @@
+{
+    "lang" : "Čeština",
+    "label" : {
+        "siteName" : {
+            "org" : "Místní knihovna",
+            "loc" : "Stonava"
+        },
+
+        "a11y" : {
+            "quick_access" : "Rychlá navigace",
+            "jump_navigation" : "Přejít na navigaci",
+            "jump_content" : "Přejít na obsah",
+            "jump_footer" : "Přejít do zápatí"
+        },
+
+        "styles": {
+            "css": "styly",
+            "on": "Zapnout",
+            "off": "Vypnout",
+            "active": "Aktivní motiv",
+            "native": "systémový",
+            "light": "světlý",
+            "dark": "tmavý"
+        },
+
+        "settings": {
+            "page": "Nastavení stránky",
+            "apperance": "Nastavení vizuálu",
+            "language": "Jazyk"
+        }
+    },
+
+    "link": {
+        "home" : "/",
+        "about" : "/about/"
+    },
+    "/about/" : "/cs/about/",
+
+    "days": {
+        "monday": "pondělí",
+        "tuesday": "úterý",
+        "wednesday": "středa",
+        "thursday": "čtvrtek",
+        "friday": "pátek",
+        "saturday": "sobota",
+        "sunday": "neděle"
+    },
+    "opening-hours": "Otevírací hodiny"
+}

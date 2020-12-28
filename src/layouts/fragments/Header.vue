@@ -1,108 +1,85 @@
 <template>
-  <header class="w-full">
-    <div class="w-full bg-green-800 dark:bg-coal-900">
-    
-    <div class="flex items-center flex-shrink-0">
-      <a href="/" class="visited:text-gray-300">
-        <div class="block w-auto h-10">
-          <g-image class="inline w-auto h-20" width="30em" height="50em"  src="~/@assets/images/knihovna-stonava-logo.svg" alt="Logo" />
-          <span class="block font-semibold text-gray-300">Místní knihovna <span class="block text-gray-100 font-bold;">Stonava</span></span>
+  <header class="w-full shadow-lg dark:bg-coal-900 hero">
+    <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-2">
+      <div class="flex flex-col items-center sm:flex-row justify-items-center">
+        <div class="content-center rounded focus:outline-none wrapper-logo focus-within:ring-4 focus-within:ring-yellow-600 focus-within:ring-opacity-75 focus-within:ring-offest-2">
+          <a href="/" class="focus:outline-none">
+            <div class="flex w-full h-full">
+              <g-image class="w-1/4 h-full" width="120" height="120" src="~/@assets/images/knihovna-stonava-logo.svg" :alt="description" />
+              <div class="flex-grow leading-none">
+                <p class="flex flex-col justify-center h-full">
+                  <span class="inline font-sans text-base font-bold sm:block sm:text-2xl text-coal-700">{{$t('label.siteName.org')}}&nbsp;</span>
+                  <span class="text-coal-800 font-bold sm:text-xl text-sm;">{{$t('label.siteName.loc')}}</span>
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-
-    <nav class="w-full" aria-label="Nastavení stránky">
-      <h3 class="sr-only">Nastavení stránky</h3>
-      <div class="px-2 mx-auto md:block sm:px-6 lg:px-8">
-        <div class="max-w-7xl">
+        <div class="flex-grow flex-shrink hero"></div>
+        <div class="flex flex-col justify-end max-w-4xl space-x-2 space-y-2 sm:flex-row md:flex-col">
             <Search />
-        </div>
-        <div class="">
-          <div class="flex flex-wrap items-center h-12 justify-items-auto">
-              <div>
-                  <h4 class="sr-only">Nastaví vizuálu</h4>
-                  <div>
-                      <button @click.prevent="a11y_toggleCSS">
-                        {{a11y_status_string}} kaskádové styly.
-                      </button>
-                  </div>
-                  <div class="h-8 p-2">
-                      <ThemeSwitcher :theme="darkMode" @themeChanged="updateTheme"/>
-                  </div>
-              </div>
-              <div>
-                <h4 class="sr-only">Jazyk</h4>
-                <div class="h-8 p-2">
-                  <a href="#cs" aria-label="Změn jazyk na češtinu." class='px-1 border border-transparent shadow-xs hover:outline-none hover:ring-2 hover:ring-purple-600 hover:border-transparent'>
-                    <!-- country-flag country='cz' size='small'/ -->
-                    Čeština
-                  </a>
-                </div>
-                <div class="h-8 p-2">
-                  <a href="#pl" aria-label="Zmień język na polski." class=''>
-                    <!--country-flag country='pl' size='small'/-->
-                    Polski
-                  </a>
-                </div>
-              </div>
-          </div>
+            <div class="flex flex-row">
+                <div class="flex-grow flex-shrink"></div>
+                <button @click="goto_opac"
+                   class="flex-shrink-0 rounded-full focus:outline-none focus:ring-4 focus:ring-red-800 focus:ring-opacity-90 focus:ring-offest-2 hover:ring-4 hover:ring-red-100 hover:ring-opacity-75 hover:ring-offest-2" 
+                   aria-labelledby="patron-zone-login">
+                   <div class="h-full px-4 py-2 font-sans font-semibold align-middle bg-red-600 rounded-full text-red-50">
+                      <div id="dawinci-login-single" class="flex flex-row">
+                          <span id="patron-zone-login" class="mr-2 align-middle">Konto čtenáře</span>
+                          <icon-external-link/>
+                      </div>
+                   </div>
+                </button>
+            </div>
         </div>
       </div>
-    </nav>
     </div>
+    <hr role=separator class="sr-only">
+      <MainNavigation />
+    <hr role=separator class="sr-only">
   </header>
 </template>
 
-<style>
-.menu-item {
-  @apply text-base text-gray-300 font-medium;
-  @apply block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:border-transparent;
+<style scoped>
+/*
+.hero {
+  position: relative;
+  /*background: transparent;* /
 }
+.hero::before {
+  width: 100vw; height: 100%;
+  position: absolute;
+  content: "";
+  background-image: 
+    url('~@/@assets/images/bookshelf.svg'),
+    url('~@/@assets/images/bookshelf-element.svg'),
+    url('~@/@assets/images/bookshelf.svg');
+  background-repeat: no-repeat, space, no-repeat;
+  z-index: 2;
+}
+*/
 </style>
 
 <script>
-import ThemeSwitcher from  '@/components/ThemeSwitcher.vue';
 import Search from '@/components/Search.vue';
+import MainNavigation from './MainNavigation.vue'
+import IconExternalLink from '@/components/icons/IconExternalLink'
 
 export default {
   components : {
-    /*CountryFlag: () =>
-        import ('vue-country-flag/')
-        .then(m => m.CountryFlag)
-        .catch(),*/
-    ThemeSwitcher,
-    Search
+    Search,
+    MainNavigation,
+    IconExternalLink
   },
-  data() {
-    return {
-      a11y_status_string: 'Vypnout'
+  computed: {
+    description() {
+      return this.$t('label.siteName.org') + ' ' + this.$t('label.siteName.loc');
     }
   },
-  props: {
-    darkMode: {
-      type: String,
-      required: true,
-    }
-  },
-  mounted() {
-    if (this.$isServer) return;
-    if (window.a11_css == undefined) return;
-    this.a11y_toggleCSS(window.a11y_css);
-  },
-  methods : {
-    updateTheme: function(value) {
-      this.$emit('themeChanged', value);
-    },
-    a11y_toggleCSS() {
+  methods: {
+    goto_opac() {
       if (this.$isServer) return;
-
-      if (window.a11y_css == undefined) {
-        window.a11y_css = true;
-      } else {
-        window.a11y_css = !window.a11y_css;
-      }
-      Array.from(document.styleSheets).forEach(s => s.disabled = window.a11y_css);
-      this.a11y_status_string = window.a11y_css ? 'Vypnout' : 'Zapnout'; 
+      window.open("https://opacnew.rkka.cz/?fn=*login_userPswd&btnResName=ERR", "", ["noreferrer", "noopener"]);
     }
   }
 }

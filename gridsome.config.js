@@ -30,5 +30,71 @@ module.exports = {
     {
       use: 'gridsome-plugin-typescript',
     },
+    // {
+    //   use: '@gridsome/plugin-sitemap',
+    //   options: {
+    //     exclude: ['/to-exclude', '/es/*']
+    //   }
+    // },
+    {
+      use: "gridsome-plugin-i18n",
+      options: {
+        locales: [
+          // Languages follow the spec: language{2}-COUNTRY{2}
+          'cs-CZ',
+          'pl-CZ'
+        ],
+        pathAliases: {
+          'cs-CZ': 'cs',
+          'pl-CZ': 'pl'
+        },
+        fallbackLocale: 'cs-CZ',
+        defaultLocale: 'cs-CZ',
+        enablePathRewrite: true, //true, // rewrite path with locale prefix, default: true
+        enablePathGeneration: false,
+        rewriteDefaultLanguage: false, // default: true
+        messages: /*process.env.NODE_ENV === 'production' &&*/ {
+          'cs-CZ': require('./src/locales/cs.json'),
+          'pl-CZ': require('./src/locales/pl.json'),
+        },
+        routes: require('./routes.js')
+      } 
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/*/info/**/*.md',
+        typeName: 'Info',
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/*/project/**/*.md',
+        typeName: 'Project',
+      }
+    }, 
   ],
+  transformers: {
+    remark: {
+      plugins: [
+        'remark-slug',
+        require('remark-gfm'),
+        /*require('remark-rehype'),
+        require('rehype-raw'),*/
+      ],
+      config: {
+        gfm : true,
+        footnotes: true
+      }
+    }
+  },
+  templates: {
+    Info: [
+      {
+        path: '/:lang/:slug',
+        component: './src/templates/InfoPage.vue'
+      }
+    ]
+  }
 }

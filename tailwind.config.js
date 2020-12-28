@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors');
 
+
 module.exports = {
   purge: [
     './src/**/*.html',
@@ -16,7 +17,14 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringColor: ['hover'],
+      ringWidth: ['hover']
+    },
+    transition: [ 'motion-safe'],
+    transform: ['motion-safe']
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

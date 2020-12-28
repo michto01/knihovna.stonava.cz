@@ -1,23 +1,23 @@
 <template>
-  <div :class="darkModeClass">
-    <nav class="sr-only" aria-label="Rychlá navigace">
-      <h3>Rychlá navigace</h3>
-      <ul class="sr-only">
-        <li><a href="#navigation">Přejít do navigace</a></li>
-        <li><a href="#content">Přejít na obsah</a></li>
-        <li><a href="#footer">Přejít do zápatí</a></li>
+  <div :class="darkModeClass" @keydown.tab="a11yMenuVisible">
+    <div class>
+      <Alert />
+    </div>
+
+    <nav id="a11y-quickmenu" class="fixed sr-only" :aria-label="$t('label.a11y.quick_access')" @keydown.18.prevent="">
+      <h3>{{$t('label.a11y.quick_access')}}</h3>
+      <ul>
+        <li><a href="#navigation">{{$t('label.a11y.jump_navigation')}}</a></li>
+        <li><a href="#content">{{$t('label.a11y.jump_content')}}</a></li>
+        <li><a href="#footer">{{$t('label.a11y.jump_footer')}}</a></li>
       </ul>
-      <hr class="sr-only">
+      <hr role=separator class="sr-only">
     </nav>
 
-    <div class="flex flex-col w-full min-h-screen bg-gray-50 text-coal-800 dark:bg-coal-900 dark:bg-opacity-75">
-      <!--div style="width: 100vw; height: 150vh;" class="fixed bg-red-400 -z-100"></div-->
-      <!--Alert /-->
-      <Header @themeChanged="themeChanged" :darkMode="isDark" />
-      <hr class="sr-only">
-      <MainNavigation />
-      <hr class="sr-only">
-      <main id="content" class="flex-grow max-w-2xl p-4 mx-auto">
+    <div class="flex flex-col w-full min-h-screen bg-coal-50 text-coal-800 dark:bg-coal-900 dark:bg-opacity-75">
+      <TopbarNavigation @themeChanged="themeChanged" :darkMode="isDark" />
+      <Header />
+      <main id="content" class="flex-grow "><!-- max-w-2xl p-4 mx-auto -->
         <slot />
           <div id="o-knihovne"></div>
           <div id="projekty"></div>
@@ -35,17 +35,17 @@ query {
   }
 }
 </static-query>
-ain
+
 <script>
-import Header from './fragments/Header.vue'
-import MainNavigation from './fragments/MainNavigation.vue'
-import Footer from './fragments/Footer.vue'
-import Alert from '~/components/Alert.vue'
+import Header from './fragments/Header'
+import TopbarNavigation from './fragments/TopbarNavigation'
+import Footer from './fragments/Footer'
+import Alert from '~/components/Alert'
 
 export default {
   components: {
     Header,
-    MainNavigation,
+    TopbarNavigation,
     Footer,
     Alert
   },
@@ -58,21 +58,26 @@ export default {
     darkModeClass() {
       if (!process.isClient) return;
       if (this.isDark === 'native') {
-          const preffered = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          return preffered ? "dark" : "light"
+        const preffered = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return preffered ? "dark" : "light"
       }
       return this.isDark;
     }
   },
   methods: {
     themeChanged : function(dark) {
-      if (!process.isClient) return;
+      if (process.isServer) return;
       localStorage.setItem('theme-dark', JSON.stringify(dark));
       this.isDark = dark;
+    },
+    a11yMenuVisible() {
+    var menu = document.querySelector('#a11y-quickmenu')
+    menu.classList.toggle('sr-only')
+      console.log(menu)
     }
   },
   created() {
-    if (!process.isClient) return;
+    if (process.isServer) return;
     const stored = JSON.parse(localStorage.getItem("theme-dark"));
     if (stored != null) {
       this.isDark = stored;
@@ -80,4 +85,3 @@ export default {
   },
 }
 </script>
-
