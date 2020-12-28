@@ -123,7 +123,7 @@
       </div>
       <div class="md:w-2/3">
         <div v-for="edge in $static.info.edges" :key="edge.node.slug">
-          <a :href="'/cs/' + edge.node.slug">
+          <a :href="'/cs/info/' + edge.node.slug">
             {{ edge.node.title }}
           </a>
         </div>
@@ -185,7 +185,7 @@ query {
 <script>
 export default {
   mounted() {
-    console.log(this.$static.info.edges)
+    //console.log(this.$static.info.edges)
   }
 };
 </script>

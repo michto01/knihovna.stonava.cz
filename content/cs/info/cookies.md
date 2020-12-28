@@ -37,7 +37,7 @@ Toto jsou 3 typy cookies první strany, které používáme:
 - umožnění provozu stránky
 - shromažďování analytických údajů (o chování uživatelů při prohlížení)
 
-### Preference návštěvníků stránky
+### Nastavení návštěvníků stránky
 
 Nastavujeme je my a pouze my je také můžeme číst. Zaznamenávají:
 

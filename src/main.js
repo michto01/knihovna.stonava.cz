@@ -29,23 +29,22 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     class: 'bg-indigo-900',
     id: 'main-theme'
   };
-  head.bodyAttrs = {
-    class: ''
-  };
 
-  head.meta?.push({
-    name: 'keywords',
-    content: 'Knihovna,Stonava,Místní knihovna,KAG515,Dolany,Půjčování knih,OPAC,Regionální knihovna Karviná',
-  })
-
-  head.meta?.push({
-    name: 'description',
-    content: 'Webové stránky knihovny ve Stonavě',
-  })
-
-  head.meta?.push({
-    name: 'author',
-    content: 'Místní knihovna Stonava',
-  })
+  [
+    {
+      name: 'keywords',
+      content: 'Knihovna,Stonava,Místní knihovna,KAG515,Dolany,Půjčování knih,OPAC,Regionální knihovna Karviná',
+    },
+    {
+      name: 'description',
+      content: 'Webové stránky knihovny ve Stonavě',
+    },
+    {
+      name: 'author',
+      content: 'Místní knihovna Stonava',
+    }
+  ].forEach(meta => {
+    head.meta?.push(meta)
+  });
 };
 

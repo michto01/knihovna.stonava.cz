@@ -51,6 +51,20 @@ export default {
             type: String,
             default:  'web'
         }
+    },
+    methods: {
+        search () {
+            if (this.$isServer) return;
+            document.getElementById('search-input').focus();
+            console.log("mamlas");
+        }
+    },
+    computed: {
+        keymap () {
+            return {
+                'ctrl+k': this.search
+            }
+        }
     }
 }
 </script>

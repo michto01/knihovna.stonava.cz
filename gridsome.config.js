@@ -2,6 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   siteName: 'Místní knihovna Stonava',
+  siteUrl: 'knihovna.stonava.cz',
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
@@ -30,12 +31,26 @@ module.exports = {
     {
       use: 'gridsome-plugin-typescript',
     },
-    // {
-    //   use: '@gridsome/plugin-sitemap',
-    //   options: {
-    //     exclude: ['/to-exclude', '/es/*']
-    //   }
-    // },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/pl/*'],
+        output: '/cs/sitemap.xml',
+        include: [
+          '/cs/info', '/cs/info/**'
+        ]
+      },
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/cs/*'],
+        output: '/pl/sitemap.xml',
+        include: [
+          '/pl/info', '/pl/info/**'
+        ]
+      },
+    },
     {
       use: "gridsome-plugin-i18n",
       options: {
@@ -48,11 +63,11 @@ module.exports = {
           'cs-CZ': 'cs',
           'pl-CZ': 'pl'
         },
-        fallbackLocale: 'cs-CZ',
         defaultLocale: 'cs-CZ',
-        enablePathRewrite: true, //true, // rewrite path with locale prefix, default: true
+        fallbackLocale: 'cs-CZ',
+        enablePathRewrite: true, // rewrite path with locale prefix, default: true
         enablePathGeneration: false,
-        rewriteDefaultLanguage: false, // default: true
+        rewriteDefaultLanguage: true, // default: true
         messages: /*process.env.NODE_ENV === 'production' &&*/ {
           'cs-CZ': require('./src/locales/cs.json'),
           'pl-CZ': require('./src/locales/pl.json'),
@@ -92,7 +107,7 @@ module.exports = {
   templates: {
     Info: [
       {
-        path: '/:lang/:slug',
+        path: '/:lang/info/:slug',
         component: './src/templates/InfoPage.vue'
       }
     ]
