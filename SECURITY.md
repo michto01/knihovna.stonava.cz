@@ -9,7 +9,7 @@ should not be severe...
 
 ## [CS] Hlášení chyb a bezpečnostních děr
 
-V případě nalezení chyb prosím využijtě github `issues`. Případně,
-pokud to závažnost nebo povaha vyžaduje, kontaktujte prosím majitele 
+V případě nalezení chyb prosím využijtě Github `Issues`. Případně,
+pokud to závažnost nebo povaha vyžaduje, kontaktujte prosím majitele
 repozitáře přímo. V současné době web nepřechovává žádná uživatelká
 data - proto byl risk ohodnocen jako nevyžadující další opatření.
