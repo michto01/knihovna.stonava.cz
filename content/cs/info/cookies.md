@@ -12,24 +12,40 @@ translations:
     - pl-CZ : "wykorzystywanie-cookies" 
 ---
 
-Cookies jsou malé datové soubory nezbytné pro správnou funkci stránek Komise, a proto je někdy umísťujeme na váš počítač či mobilní zařízení.
+Cookies jsou malé datové soubory nezbytné pro správnou funkci stránek Komise, 
+a proto je někdy umísťujeme na váš počítač či mobilní zařízení.
 
 ## Co jsou cookies?
 
-Textové soubory, které internetové stránky ukládají na váš počítač nebo mobilní zařízení v okamžiku, kdy tyto stránky začnete využívat.
+Textové soubory, které internetové stránky ukládají na váš počítač nebo mobilní
+zařízení v okamžiku, kdy tyto stránky začnete využívat.
 
-- **Soubory cookies první strany** jsou takové cookies, které se ukládají při navštívení nějaké internetové stránky. Číst je pak může pouze daná internetová stránka. Kromě toho mohou internetové stránky potenciálně využívat externích služeb, které také ukládají vlastní soubory cookies – tzv. **cookies třetích stran**.
-- Trvalé cookies jsou takové cookies, které byly uloženy na vašem počítači a nejsou automaticky vymazány poté, co zavřete prohlížeč – narozdíl od dočasných cookies, která se po zavření prohlížeče vždy smažou.
+- **Soubory cookies první strany** jsou takové cookies, které se ukládají při 
+navštívení nějaké internetové stránky. Číst je pak může pouze daná internetová 
+stránka. Kromě toho mohou internetové stránky potenciálně využívat externích 
+služeb, které také ukládají vlastní soubory cookies – tzv. 
+**cookies třetích stran**.
+- Trvalé cookies jsou takové cookies, které byly uloženy na vašem počítači 
+a nejsou automaticky vymazány poté, co zavřete prohlížeč – narozdíl od dočasných
+cookies, která se po zavření prohlížeče vždy smažou.
 
-Při každé návštěvě internetových stránek knihovny budete muset cookies buď **přijmout nebo odmítnout**.
+Při každé návštěvě internetových stránek knihovny budete muset cookies buď 
+**přijmout nebo odmítnout**.
 
-Účelem je umožnit dané stránce, aby si na určitou dobu zapamatovala vaše preference (např. uživatelské jméno, preferovaný jazyk atd.). Během prohlížení různých částí daných stránek v rámci jedné návštěvy je pak nebudete muset znovu zadávat.
+Účelem je umožnit dané stránce, aby si na určitou dobu zapamatovala vaše 
+preference (např. uživatelské jméno, preferovaný jazyk atd.). Během prohlížení
+různých částí daných stránek v rámci jedné návštěvy je pak nebudete muset
+znovu zadávat.
 
-Cookies lze rovněž použít k pořizování anonymizovaných různých statistik týkajících se prohlížení našich stránek uživateli.
+Cookies lze rovněž použít k pořizování anonymizovaných různých statistik
+týkajících se prohlížení našich stránek uživateli.
 
 ## Jak se cookies používají?
 
-Internetové stránky Místní knihovny Stonava většinou používají cookies první strany. Jedná se o cookies vytvořené a řízené knihovnou, nikoli žádnou externí organizací. Na některých našich stránkách však budete muset přijímat soubory cookies od externích organizací.
+Internetové stránky Místní knihovny Stonava většinou používají cookies první
+strany. Jedná se o cookies vytvořené a řízené knihovnou, nikoli žádnou externí
+organizací. Na některých našich stránkách však budete muset přijímat soubory
+cookies od externích organizací.
 
 Toto jsou 3 typy cookies první strany, které používáme:
 
