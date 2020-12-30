@@ -5,7 +5,7 @@ title: "Používání cookies"
 description: "Cookies jsou malé datové soubory nezbytné pro správnou funkci stránek knihovny, a proto je někdy umísťujeme na váš počítač či mobilní zařízení."
 keywords: ['Cookies', 'nastavení', 'informace', 'knihovna', 'Místní knihovna Stonava']
 createdAt: "2020-11-25"
-modified: "2020-11-26"
+modified: "2020-12-30"
 lang: 'cs'
 locale: 'cs-CZ'
 translations:
@@ -61,6 +61,10 @@ Nastavujeme je my a pouze my je také můžeme číst. Zaznamenávají:
 - nastavení režimu zobrazení
 - zvolený jazyk a lokalizace
 
-| Název | Služba | Účel         | Typ cookies a délka uložení |
-| cookies_consent | Souhlas s cookies | Ukládá vaše preference týkající se cookies (aby se vás stránky neptaly znovu a znovu) | Cookies první strany vymazány po zavření prohlížeče |
+|         Název       |       Služba      |   Účel   | Typ cookies a délka uložení |
+| ------------------- | ----------------- | -------- | --------------------------- |
+| cookies_consent     | Souhlas s cookies | Ukládá vaše preference týkající se cookies (aby se vás stránky neptaly znovu a znovu) | Cookies první strany vymazány po zavření prohlížeče |
 | cookies_consent_3rd | Souhlas s cookies | Ukládá vaše preference týkající se cookies třetí strany (aby se vás stránky neptaly znovu a znovu) | Cookies první strany vymazány po zavření prohlížeče |
+| theme               | Vzhled            | Nastavení vzhledu stránky (noční, denní režim) | Trvalé (mazáno uživatelem) |
+| locale              | Jazyk             | Uložení preferované jazykové mutace            | Trvalé (mazáno uživatelem) |
+

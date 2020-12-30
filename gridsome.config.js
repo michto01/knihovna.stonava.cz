@@ -20,7 +20,7 @@ module.exports = {
         fieldName: 'prismicio',
         typeName: 'prismicio',
 
-        headers: { 
+        headers: {
           'Prismic-Ref': ``, // useMasterRef will overload this line
           'Authorization': `Token ${process.env.PRISMIC_TOKEN}`,
         },
@@ -34,7 +34,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/pl/*'],
+        exclude: ['/pl/**'],
         output: '/cs/sitemap.xml',
         include: [
           '/cs/info', '/cs/info/**'
@@ -44,7 +44,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/cs/*'],
+        exclude: ['/cs/**'],
         output: '/pl/sitemap.xml',
         include: [
           '/pl/info', '/pl/info/**'
@@ -73,7 +73,7 @@ module.exports = {
           'pl-CZ': require('./src/locales/pl.json'),
         },
         routes: require('./routes.js')
-      } 
+      }
     },
     {
       use: '@gridsome/source-filesystem',
@@ -88,15 +88,13 @@ module.exports = {
         path: 'content/*/project/**/*.md',
         typeName: 'Project',
       }
-    }, 
+    },
   ],
   transformers: {
     remark: {
       plugins: [
         'remark-slug',
         require('remark-gfm'),
-        /*require('remark-rehype'),
-        require('rehype-raw'),*/
       ],
       config: {
         gfm : true,
