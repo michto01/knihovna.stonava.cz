@@ -121,7 +121,6 @@ Ministerstva vnitra:
 </blockquote>
 <!-- markdownlint-enable -->
 
-
 ## Přizpůsobení velikosti textu a klávesové zkratky na webových stránkách
 
 Pokud je pro vás text obtížně čitelný, k jeho zvětšení můžete použít nástroje
