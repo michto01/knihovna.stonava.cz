@@ -113,11 +113,14 @@ subjekt dodržuje povinnosti přístupnosti. Každý se může obrátit tedy i n
 Ministerstvo vnitra. Gestorem za tuto oblast je Odbor eGovernmentu
 Ministerstva vnitra:
 
+<!-- markdownlint-disable -->
 <blockquote>
     <div>Ministerstvo vnitra, odbor eGovernmentu</div>
     <div>náměstí Hrdinů 1634/3, 140 21 Praha 4</div>
-    <div>email: pristupnost@mvcr.cz</div>
+    <div>email: <a href="mailto:pristupnost@mvcr.cz">pristupnost@mvcr.cz</a></div>
 </blockquote>
+<!-- markdownlint-enable -->
+
 
 ## Přizpůsobení velikosti textu a klávesové zkratky na webových stránkách
 
