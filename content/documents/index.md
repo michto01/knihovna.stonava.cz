@@ -8,5 +8,5 @@ createdAt: '2020-11-01'
 ---
 # Seznam dostupných dokumentů na webových stránkách Místní knihovny Stonava
 
-### Grafické materiály knihovny
+## Grafické materiály knihovny
 - [Logo](/assets/logo.png)

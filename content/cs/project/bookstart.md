@@ -12,9 +12,19 @@ external:
 
 # S knížkou do života
 
-> Projekt `Bookstart`, v českém prostředí pojmenovaný `S knížkou do života`, je mezinárodní iniciativa, do níž se zapojují všechny typy knihoven na daném územním celku, aby plnily jednu z nejdůležitějších, ale v dnešní době zatím velice málo rozšířených funkcí – knihovny se zde snaží o to, aby zapojily aktivní rodiče a seznamovaly společně s rodiči ty nejmenší čtenáře s knihou a nepřeberným množstvím příběhů (a informací) v ní.
+> Projekt `Bookstart`, v českém prostředí pojmenovaný `S knížkou do života`, je
+mezinárodní iniciativa, do níž se zapojují všechny typy knihoven na daném
+územním celku, aby plnily jednu z nejdůležitějších, ale v dnešní době zatím
+velice málo rozšířených funkcí – knihovny se zde snaží o to, aby zapojily
+aktivní rodiče a seznamovaly společně s rodiči ty nejmenší čtenáře s knihou
+a nepřeberným množstvím příběhů (a informací) v ní.
 
-Česká republika se do projektu připojila v roce 2018. Hlavním, a pro českou společnost nesmírně důležitým, cílem je rozvíjení čtenářské gramotnosti již u nejmenších dětí, podpora čtenářství a verbálních schopností dětí, podpora jejich imaginace a vytváření pozitivního vztahu ke knize. Prvním krokem k úspěchu je pochopení významu čtenářských dovedností pro vývin dítěte a následný rozvoj ze strany rodičů.
+Česká republika se do projektu připojila v roce 2018. Hlavním, a pro českou
+společnost nesmírně důležitým, cílem je rozvíjení čtenářské gramotnosti již
+u nejmenších dětí, podpora čtenářství a verbálních schopností dětí, podpora
+jejich imaginace a vytváření pozitivního vztahu ke knize. Prvním krokem
+k úspěchu je pochopení významu čtenářských dovedností pro vývin dítěte
+a následný rozvoj ze strany rodičů.
 
 ## Desatero cesty ke čtení
 

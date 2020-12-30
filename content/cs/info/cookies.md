@@ -9,10 +9,10 @@ modified: "2020-11-26"
 lang: 'cs'
 locale: 'cs-CZ'
 translations:
-    - pl-CZ : "wykorzystywanie-cookies" 
+    - pl-CZ : "wykorzystywanie-cookies"
 ---
 
-Cookies jsou malé datové soubory nezbytné pro správnou funkci stránek Komise, 
+Cookies jsou malé datové soubory nezbytné pro správnou funkci stránek Komise,
 a proto je někdy umísťujeme na váš počítač či mobilní zařízení.
 
 ## Co jsou cookies?
@@ -20,19 +20,19 @@ a proto je někdy umísťujeme na váš počítač či mobilní zařízení.
 Textové soubory, které internetové stránky ukládají na váš počítač nebo mobilní
 zařízení v okamžiku, kdy tyto stránky začnete využívat.
 
-- **Soubory cookies první strany** jsou takové cookies, které se ukládají při 
-navštívení nějaké internetové stránky. Číst je pak může pouze daná internetová 
-stránka. Kromě toho mohou internetové stránky potenciálně využívat externích 
-služeb, které také ukládají vlastní soubory cookies – tzv. 
+- **Soubory cookies první strany** jsou takové cookies, které se ukládají při
+navštívení nějaké internetové stránky. Číst je pak může pouze daná internetová
+stránka. Kromě toho mohou internetové stránky potenciálně využívat externích
+služeb, které také ukládají vlastní soubory cookies – tzv.
 **cookies třetích stran**.
-- Trvalé cookies jsou takové cookies, které byly uloženy na vašem počítači 
+- Trvalé cookies jsou takové cookies, které byly uloženy na vašem počítači
 a nejsou automaticky vymazány poté, co zavřete prohlížeč – narozdíl od dočasných
 cookies, která se po zavření prohlížeče vždy smažou.
 
-Při každé návštěvě internetových stránek knihovny budete muset cookies buď 
+Při každé návštěvě internetových stránek knihovny budete muset cookies buď
 **přijmout nebo odmítnout**.
 
-Účelem je umožnit dané stránce, aby si na určitou dobu zapamatovala vaše 
+Účelem je umožnit dané stránce, aby si na určitou dobu zapamatovala vaše
 preference (např. uživatelské jméno, preferovaný jazyk atd.). Během prohlížení
 různých částí daných stránek v rámci jedné návštěvy je pak nebudete muset
 znovu zadávat.

@@ -12,7 +12,7 @@ translations:
     - pl-CZ : "politika-jezykowa"
 ---
 
-Cílem Místní knihovy Stonava je zajistit, aby návštěvníci těchto stránek měli 
+Cílem Místní knihovy Stonava je zajistit, aby návštěvníci těchto stránek měli
 přístup k informacím, které potřebují, v jazyce, jemuž rozumí.
 
 ## Informace v mnoha jazycích
@@ -22,19 +22,19 @@ různými jazyky, a praktickými otázkami, jako jsou náklady na překlad.
 
 Některé typy obsahu jsou vždy k dispozici ve všech podporovaných jazycích.
 Další informace mohou být k dispozici pouze v jednom jazyce - zejména pak
-textové dokumenty a směrnice. Tyto stránky jsou neustále doplňovány o nový 
+textové dokumenty a směrnice. Tyto stránky jsou neustále doplňovány o nový
 a aktualizovaný obsah. Znamená to tedy, že na překladu internetových stránek,
-které nejsou k dispozici v jazyce Vašeho výběru, se ještě stále pracuje. 
+které nejsou k dispozici v jazyce Vašeho výběru, se ještě stále pracuje.
 Přeložené stránky zveřejňujeme průběžně.
 
 ## Jak zobrazit text v požadovaném jazyce
 
-Tyto stránky, zéjména kvůli povaze uživatelů knihovny, jsou k dispozici 
+Tyto stránky, zéjména kvůli povaze uživatelů knihovny, jsou k dispozici
 ve dvou jazycích:
 
 - češtině
 - polštině
 
-Jazyk, ve kterém se internetové stránky aktuálně zobrazují, je uveden v horní 
-části obrazovky. Pokud chcete přejít na jiný jazyk, klikněte na příslušnou 
+Jazyk, ve kterém se internetové stránky aktuálně zobrazují, je uveden v horní
+části obrazovky. Pokud chcete přejít na jiný jazyk, klikněte na příslušnou
 ikonu. Zobrazí se jazyky, ve kterých jsou stránky k dispozici.
