@@ -7,7 +7,7 @@ tags: ['dokumenty', 'info']
 createdAt: '2020-11-01'
 ---
 
-# Seznam dostupných dokumentů na webových stránkách Místní knihovny Stonava
+# Seznam dostupných dokumentů
 
 Na této stánce jsou zpřístupněny dokumenty určené pro veřejnost jako grafické
 materiály knihovny, letáky, loga a podobně.
