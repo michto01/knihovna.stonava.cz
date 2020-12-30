@@ -15,7 +15,7 @@ translations:
 Cookies jsou malé datové soubory nezbytné pro správnou funkci stránek Komise,
 a proto je někdy umísťujeme na váš počítač či mobilní zařízení.
 
-## Co jsou cookies?
+## Co jsou cookies
 
 Textové soubory, které internetové stránky ukládají na váš počítač nebo mobilní
 zařízení v okamžiku, kdy tyto stránky začnete využívat.
@@ -40,7 +40,7 @@ znovu zadávat.
 Cookies lze rovněž použít k pořizování anonymizovaných různých statistik
 týkajících se prohlížení našich stránek uživateli.
 
-## Jak se cookies používají?
+## Jak se cookies používají
 
 Internetové stránky Místní knihovny Stonava většinou používají cookies první
 strany. Jedná se o cookies vytvořené a řízené knihovnou, nikoli žádnou externí
