@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   siteName: 'Místní knihovna Stonava',
-  siteUrl: 'knihovna.stonava.cz',
+  siteUrl: 'http://localhost:8080',
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",

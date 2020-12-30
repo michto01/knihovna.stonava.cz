@@ -61,6 +61,8 @@ Nastavujeme je my a pouze my je také můžeme číst. Zaznamenávají:
 - nastavení režimu zobrazení
 - zvolený jazyk a lokalizace
 
+<!-- markdownlint-disable -->
+
 |         Název       |       Služba      |   Účel   | Typ cookies a délka uložení |
 | ------------------- | ----------------- | -------- | --------------------------- |
 | cookies_consent     | Souhlas s cookies | Ukládá vaše preference týkající se cookies (aby se vás stránky neptaly znovu a znovu) | Cookies první strany vymazány po zavření prohlížeče |
@@ -68,3 +70,4 @@ Nastavujeme je my a pouze my je také můžeme číst. Zaznamenávají:
 | theme               | Vzhled            | Nastavení vzhledu stránky (noční, denní režim) | Trvalé (mazáno uživatelem) |
 | locale              | Jazyk             | Uložení preferované jazykové mutace            | Trvalé (mazáno uživatelem) |
 
+<!-- markdownlint-enable -->
