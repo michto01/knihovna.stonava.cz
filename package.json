@@ -43,6 +43,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "autoprefixer": "^10.1.0",
     "dayjs": "^1.9.8",
+    "gridsome-plugin-ogp": "^0.0.14",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-rss": "^1.2.0",
     "gridsome-plugin-tailwindcss": "^4.1.1",
@@ -54,9 +55,9 @@
     "rehype-raw": "^5.0.0",
     "remark-gfm": "^1.0.0",
     "remark-rehype": "^8.0.0",
-    "tailwindcss": "^2.0.2",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
+    "tailwindcss": "^2.0.2",
     "ts-loader": "^8.0.12",
     "typescript": "^4.1.3"
   }

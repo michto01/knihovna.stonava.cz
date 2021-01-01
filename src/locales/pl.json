@@ -1,6 +1,6 @@
 {
     "lang" : "Polski",
-    "label" : {        
+    "label" : {
         "siteName" : {
             "org" : "Miejscowa Biblioteka",
             "loc" : "Stonawa"
@@ -26,6 +26,12 @@
             "page": "Ustawienia stronicy",
             "apperance": "Ustawienia wizualne",
             "language": "Język"
+        },
+
+        "404": {
+            "title": "Uuppss.. Zgubiona stronica.",
+            "claim": "Może jest źle wpisany adres albo stronica została przesunięta.",
+            "home": "Głowna stronica"
         }
     },
 

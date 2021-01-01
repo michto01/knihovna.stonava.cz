@@ -2,8 +2,8 @@
 <ClientOnly>
      <div x-on:click.away="open=false" class="relative" x-data="{ open:false }">
         <span class="sr-only">Výběr jazyka: </span>
-        <button 
-          x-on:click="open=!open" 
+        <button
+          x-on:click="open=!open"
           class="flex flex-row items-center w-full px-4 py-2 text-sm font-semibold text-left bg-transparent dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
         >
           <svg class="inline w-5 h-5 mr-2" width=".7em" height=".7em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@
             <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
           </svg>
         </button>
-        <div 
+        <div
           class="absolute right-0 z-30 w-full mt-1 origin-top-right"
           x-transition:enter="motion-safe:transition ease-out duration-100"
           x-transition:enter-start="motion-safe:transform opacity-0 scale-95"
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-    </div>   
+    </div>
 </ClientOnly>
 </template>
 

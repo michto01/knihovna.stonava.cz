@@ -32,6 +32,9 @@ module.exports = {
       use: 'gridsome-plugin-typescript',
     },
     {
+      use: 'gridsome-plugin-ogp'
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
         exclude: ['/pl/**'],

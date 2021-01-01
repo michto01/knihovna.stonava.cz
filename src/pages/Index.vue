@@ -31,9 +31,17 @@
               <h2 class="py-4 text-2xl font-semibold text-indigo-900">Události</h2>
               <div>
                   <ul class="flex flex-col justify-center w-full space-y-2">
-                    <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="block p-4 rounded shadow-sm bg-coal-50">
-                      <h2 class='font-extrabold text-md'>{{ edge.node.title[0].text }}</h2>
-                      <div>{{ edge.node.short }}</div>
+                    <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 rounded shadow-sm bg-coal-50">
+                      <span class="flex h-full p-2 m-2 my-auto bg-indigo-800 rounded-lg">
+                          <!-- Heroicon name: speakerphone -->
+                          <svg role="img" width="1em" height="1em" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                          </svg>
+                      </span>
+                      <div>
+                        <h2 class='font-extrabold text-md'>{{ edge.node.title[0].text }}</h2>
+                        <div>{{ edge.node.short }}</div>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -202,6 +210,7 @@ export default {
   metaInfo() {
     const title = 'Knihovna Stonava';
     const description = 'Půjčování knih, periodik, pořádání kulturních akcí.';
+
     return {
       title: title,
       meta: [
@@ -229,7 +238,13 @@ export default {
           name: 'twitter:description',
           content: description,
         },
-      ]
+      ],
+      ...this.$ogp({
+        title: title,
+        description: description,
+        image: 'your-image-url',
+        //appId: 'someFacebookAppID' // Facebook-only
+      })
     }
   }
 }

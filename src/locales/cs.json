@@ -27,6 +27,12 @@
             "page": "Nastavení stránky",
             "apperance": "Nastavení vizuálu",
             "language": "Jazyk"
+        },
+
+        "404": {
+            "title": "Ejhle.. Nějak se nám ztratila stránka.",
+            "claim": "Možná je chyba v adrese nebo stránka byla přesunuta.",
+            "home": "Zpět domů"
         }
     },
 

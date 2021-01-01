@@ -12,8 +12,8 @@ external:
 
 # S knížkou do života
 
-> Projekt `Bookstart`, v českém prostředí pojmenovaný `S knížkou do života`, je
-mezinárodní iniciativa, do níž se zapojují všechny typy knihoven na daném
+> Projekt `Bookstart`, v českém prostředí pojmenovaný `S knížkou do života`,
+je mezinárodní iniciativa, do níž se zapojují všechny typy knihoven na daném
 územním celku, aby plnily jednu z nejdůležitějších, ale v dnešní době zatím
 velice málo rozšířených funkcí – knihovny se zde snaží o to, aby zapojily
 aktivní rodiče a seznamovaly společně s rodiči ty nejmenší čtenáře s knihou
