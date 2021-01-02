@@ -17,10 +17,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   router.options.linkExactActiveClass = 'is-exact';
 
   if (isClient) {
-    appOptions.i18n.setLocaleMessage('cs-CZ', require('./locales/cs.json'));
-    appOptions.i18n.setLocaleMessage('pl-CZ', require('./locales/pl.json'));
+    appOptions.i18n.setLocaleMessage('cs-CZ', require('./locales/cs'));
+    appOptions.i18n.setLocaleMessage('pl-CZ', require('./locales/pl'));
   }
-  
+
   head.bodyAttrs = {
     class: 'leading-normal antialiased overflow-x-hidden overflow-y-scroll',
     style: 'overscroll-behavior-x: none;'

@@ -6,8 +6,8 @@
         </div>
         <div class="flex flex-col">
             <div
-                v-for="info in localizedInfo" 
-                :key="info.node.slug" 
+                v-for="info in localizedInfo"
+                :key="info.node.slug"
                 class="m-2 space-x-4 space-y-4 rounded-lg"
             >
                 <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl">
@@ -18,22 +18,11 @@
             </div>
         </div>
       </div>
-  </Layout> 
+  </Layout>
 </template>
 
 <style scoped>
-
 </style>
-
-<script>
-export default {
-    computed: {
-        localizedInfo() {
-            return this.$static.info.edges.filter(x => x.node.locale == this.$i18n.locale)
-        }
-    }
-}
-</script>
 
 <static-query>
 query {
@@ -45,8 +34,26 @@ query {
                 title
                 slug
                 description
+                keywords
             }
         }
     }
 }
 </static-query>
+
+<script>
+export default {
+    computed: {
+        localizedInfo() {
+            return this.$static.info.edges.filter(x => x.node.locale == this.$i18n.locale)
+        }
+    },
+    metaInfo() {
+        return {
+            title: this.$static.info.title,
+            description: this.$static.info.description,
+            keywords: this.$static.info.keywords
+        }
+    }
+}
+</script>

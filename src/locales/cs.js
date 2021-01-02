@@ -1,4 +1,4 @@
-{
+module.exports = {
     "lang" : "Čeština",
     "label" : {
         "siteName" : {

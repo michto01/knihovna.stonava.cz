@@ -1,4 +1,5 @@
 require("dotenv").config();
+const i18n_routes = require('./src/locales/routes');
 
 module.exports = {
   siteName: 'Místní knihovna Stonava',
@@ -57,25 +58,14 @@ module.exports = {
     {
       use: "gridsome-plugin-i18n",
       options: {
-        locales: [
-          // Languages follow the spec: language{2}-COUNTRY{2}
-          'cs-CZ',
-          'pl-CZ'
-        ],
-        pathAliases: {
-          'cs-CZ': 'cs',
-          'pl-CZ': 'pl'
-        },
-        defaultLocale: 'cs-CZ',
-        fallbackLocale: 'cs-CZ',
         enablePathRewrite: true, // rewrite path with locale prefix, default: true
         enablePathGeneration: false,
         rewriteDefaultLanguage: true, // default: true
         messages: /*process.env.NODE_ENV === 'production' &&*/ {
-          'cs-CZ': require('./src/locales/cs.json'),
-          'pl-CZ': require('./src/locales/pl.json'),
+          'cs-CZ': require('./src/locales/cs'),
+          'pl-CZ': require('./src/locales/pl'),
         },
-        routes: require('./routes.js')
+        ...i18n_routes
       }
     },
     {
