@@ -33,7 +33,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   [
     {
       name: 'keywords',
-      content: 'Knihovna,Stonava,Místní knihovna,KAG515,Dolany,Půjčování knih,OPAC,Regionální knihovna Karviná',
+      content: 'Knihovna, Stonava, Místní knihovna, KAG515, Dolany, Půjčování knih, OPAC, Regionální knihovna Karviná',
     },
     {
       name: 'description',

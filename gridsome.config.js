@@ -102,6 +102,7 @@ module.exports = {
         component: './src/templates/InfoPage.vue'
       }
     ],
+    /*
     Events: [
       {
         path: (event) => {
@@ -110,5 +111,6 @@ module.exports = {
         component: './src/templates/Event.vue'
       }
     ]
+    */
   }
 }

@@ -129,13 +129,14 @@
         </div>
       </div>
     </div>
-
-    <div class="w-full py-4 mx-auto -mb-4 text-xs text-center bg-indigo-900 dark:bg-navy-800">
+    <br class="sr-only" />
+    <div class="w-full p-4 mx-auto -mb-4 text-xs text-center bg-indigo-900 dark:bg-navy-800">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs" class="block py-1">
-        <g-image
-          alt="Licence Creative Commons"
-          class="inline w-auto h-6"
-          src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+        <div class="flex flex-row justify-center sm:space-x-1">
+          <g-image alt="Licence Creative Commons" class="w-6 h-6" width="1rem" height="1rem" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" />
+          <g-image alt="Licence Creative Commons - Atribute" class="w-6 h-6" width="1rem" height="1rem" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" />
+          <g-image alt="Licence Creative Commons - Share Alike" class="w-6 h-6" width="1rem" height="1rem" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" />
+        </div>
       </a>
       <p>
         <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Webové stránky</span>, jejiž autorem je

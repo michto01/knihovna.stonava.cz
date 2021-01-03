@@ -2,15 +2,16 @@
   <Layout>
     <div>
       <article class="flex flex-col w-full">
+        <!-- MAIN section -->
         <section class="py-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36 lg:pt-16">
-            <h1 class="text-4xl font-black">Ze života knihovny</h1>
+            <h1 class="text-4xl font-black text-center sm:text-left">Ze života knihovny</h1>
             <div class="flex flex-col px-4 space-y-4 lg:flex-row lg:p-10 lg:space-x-8 lg:space-y-8">
               <main class="flex-grow">
                 <h2 class="pb-2 text-2xl font-extrabold text-indigo-900">Blog</h2>
                 <!-- Blog carousel -->
                 <div class="relative">
-                  <ul class="flex flex-col justify-center space-x-4 sm:flex-row">
-                    <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="relative items-center flex-grow block w-full p-4 overflow-hidden bg-white rounded-t-lg shadow-lg md:w-2/5 rounded-2xl" style="min-height: 19rem;">
+                  <div class="flex flex-col justify-center space-x-4 sm:flex-row">
+                    <div v-for="edge in $static.projects.edges" :key="edge.node.id" class="relative items-center flex-grow block w-full p-4 overflow-hidden bg-white rounded-t-lg shadow-lg md:w-2/5 rounded-2xl" style="min-height: 19rem;">
                       <div class="absolute inset-0 w-full h-full bg-red-200 rounded">
                         <g-image :src="edge.node.image" class="fit-cover" width="5rem" height="5rem" aria-hidden="true" alt></g-image>
                       </div>
@@ -18,8 +19,8 @@
                         <h2 class='text-xl font-extrabold text-coal-50'>{{ edge.node.name }}</h2>
                         <div>{{ edge.node.path }}</div>
                       </div>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                   <button class="absolute top-0 left-0 w-12 h-12 mt-32 -ml-6 text-2xl text-indigo-600 bg-white rounded-full shadow-md hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
                     <span class="block" style="transform: scale(-1);">&#x279c;</span>
                   </button>
@@ -30,8 +31,8 @@
                 <!-- Top news carousel -->
                 <h2 class="py-4 text-2xl font-extrabold text-indigo-900">Události</h2>
                 <div>
-                  <ol class="flex flex-col justify-center w-full space-y-2">
-                    <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 space-x-2 rounded shadow-sm bg-coal-50">
+                  <div class="flex flex-col justify-center w-full space-y-2">
+                    <div v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 space-x-2 rounded shadow-sm bg-coal-50">
                       <span class="flex h-full p-2 m-2 my-auto bg-indigo-800 rounded-lg">
                           <!-- Heroicon name: speakerphone -->
                           <svg role="img" width="1em" height="1em" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -39,15 +40,15 @@
                           </svg>
                       </span>
                       <div>
-                        <h2 class='text-xl font-extrabold'>{{ edge.node.title[0].text }}</h2>
+                        <h3 class='text-xl font-extrabold'>{{ edge.node.title[0].text }}</h3>
                         <p class='text-md'>{{ edge.node.short }}</p>
                         <div class="flex flex-row">
                           <span class="flex-grow block"></span>
                           <a class="p-2 font-extrabold text-right bg-indigo-500 rounded text-indigo-50" href="#">čti více</a>
                         </div>
                       </div>
-                    </li>
-                  </ol>
+                    </div>
+                  </div>
                 </div>
               </main>
               <aside id="library-quick-access" class="flex flex-col space-y-4">
@@ -80,6 +81,7 @@
               </aside>
             </div>
         </section>
+        <!-- NEWS section -->
         <section id="news" class="py-4">
           <h1 class="pb-4 text-2xl font-bold text-center">Vyvěska</h1>
           <div>
@@ -91,20 +93,27 @@
             </ul>
           </div>
         </section>
-         <section id="library" class="py-4 bg-green-200">
-          <h1 class="pb-4 text-2xl font-bold text-center">Knihovna Stonava</h1>
-          <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
-            <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 bg-white rounded shadow-sm">
-              <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
-              <p>{{ edge.node.path }}</p>
-              <a href="#">celá zpráva</a>
-            </li>
-          </ul>
+        <!-- LIBRARY section -->
+         <section id="library" class="py-4 bg-green-200 bg-paralex-library">
+          <h1 class="text-2xl font-extrabold text-center text-indigo-800">Knihovna</h1>
+          <h2 class="pb-4 text-sm font-semibold text-center text-indigo-50">Přehled zajímavých čísel z místní knihovny</h2>
+          <div class="flex flex-col flex-wrap justify-center p-2 space-y-2 sm:flex-nowrap sm:space-y-0 sm:space-x-2 sm: lg:space-x-8 sm:flex-row">
+            <div v-for="edge in $page.statistics.edges" :key="edge.node.model" class="flex flex-row p-4 duration-150 ease-in-out transform bg-white border rounded shadow-sm h-max sm:flex-col hover:-translate-y-2 hover:shadow-md">
+              <g-image :src="assets_image(edge.node.model)" alt="" aria-hidden="true" width="5rem" height="5rem" class="sm:mx-auto h-36 w-36"/>
+              <div class="p-4 text-center">
+                <p v-for="val in edge.node.values" :key="val.id" >
+                  <span>{{ val.value }}&nbsp;</span>
+                  <span>{{ val.label[$i18n.locale.split('-')[0]] }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
+        <!-- RECOMENDATION section -->
         <section id="recomendations" class="py-4">
-          <h1 class="pb-4 text-2xl font-bold text-center">Doporučujeme</h1>
+          <h1 class="pb-4 text-2xl font-bold text-center shadow-sm">Doporučujeme</h1>
           <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
-            <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 rounded shadow-sm bg-coal-50">
+            <li v-for="edge in $static.projects.edges" :key="edge.node.model" class="block p-4 rounded shadow-sm bg-coal-50">
               <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
               <div>{{ edge.node.path }}</div>
             </li>
@@ -155,6 +164,21 @@ query {
 
 <page-query>
 query Events {
+  statistics: allStatistics {
+    edges {
+      node {
+        model
+        values {
+          id
+          label {
+            cs
+            pl
+          }
+          value
+        }
+      }
+    }
+  }
   prismicio {
     events: allEvents(sortBy: meta_lastPublicationDate_DESC, first: 2) {
       edges {
@@ -175,6 +199,30 @@ query Events {
 </page-query>
 
 <style scoped>
+.bg-paralex-library:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  background-image: url('/assets/images/book-pattern.svg');
+}
+
+.bg-paralex-library > * {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+}
+
+.bg-paralex-library {
+  position: relative;
+  overflow: hidden;
+  @apply bg-indigo-700;
+}
 
 .home-links {
   @apply text-indigo-700;
@@ -208,6 +256,11 @@ export default {
   data() {
     return {
       locale: 'cs-cz'
+    }
+  },
+  methods: {
+    assets_image (item) {
+      return `/assets/images/${item}.svg`;
     }
   },
   metaInfo() {

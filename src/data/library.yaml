@@ -1,0 +1,44 @@
+library:
+    - model: users
+      values:
+        - id: users
+          label:
+            cs: registrovaných čtenářů
+            pl: zaregistrowanych czytelników
+          value: 300
+    - model: staff
+      values:
+        - id : staff
+          label:
+            cs: "nadšení knihovníci"
+            pl: "zapaleni bibliotekarze"
+          value: 2
+    - model: books
+      values:
+        - id: czech
+          label:
+            cs: "knih v češtině"
+            pl: "książek po czesku"
+          value: 8657
+        - id: slovak
+          label:
+            cs: "knih ve slovenštině"
+            pl: "książek po słowacku"
+          value: 1
+        - id: polish
+          label:
+            cs: "knih v polštině"
+            pl: "książek po polsku"
+          value: 4529
+    - model:  periodics
+      values:
+        - id: czech
+          label:
+            cs: "periodik v češtině"
+            pl: "periodyków po czesku"
+          value: 8657
+        - id: polish
+          label:
+            cs: "periodik v polštině"
+            pl: "periodyków po polsku"
+          value: 4529
