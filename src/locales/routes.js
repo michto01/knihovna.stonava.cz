@@ -1,13 +1,21 @@
 const routes = {
     '/': {
         component: './src/pages/Index.vue',
+        names: {
+            'cs-CZ': 'Domů',
+            'pl-CZ': 'Główna strona'
+        },
         paths: {
             'cs-CZ': '/',
             'pl-CZ': '/'
         }
     },
-     '/about': {
+    '/about': {
         component: './src/pages/About.vue',
+        names: {
+            'cs-CZ': 'O knihovně',
+            'pl-CZ': 'O bibliotece'
+        },
         paths: {
             'cs-CZ': '/o-knihovne',
             'pl-CZ': '/o-bibliotece'
@@ -15,6 +23,10 @@ const routes = {
     },
     '/info': {
         component: './src/pages/Info.vue',
+        names: {
+            'cs-CZ': 'Právní náležitosti',
+            'pl-CZ': 'Wymogi prawne'
+        },
         paths: {
             'cs-CZ': '/info',
             'pl-CZ': '/info'
@@ -74,8 +86,18 @@ const routableLinks = (() => {
     }).flat();
 })();
 
+const menuLinks = (() => {
+    return Object.entries(routes).map((r, _) => {
+        return {
+            canonical: r[0],
+            ...r[1].names
+        }
+    })
+})();
+
 module.exports = {
     routes: computedRoutes,
+    namedRoutes: menuLinks,
     routableLinks: routableLinks,
     locales: Object.keys(pathAliases),
     defaultLocale: defaultLanguage,

@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full shadow-lg dark:bg-coal-900 hero">
+  <header class="z-10 w-full shadow-md dark:bg-coal-900 hero">
     <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-2">
       <div class="flex flex-col items-center sm:flex-row justify-items-center">
         <div class="content-center rounded focus:outline-none wrapper-logo focus-within:ring-4 focus-within:ring-yellow-600 focus-within:ring-opacity-75 focus-within:ring-offest-2">
@@ -41,23 +41,6 @@
 </template>
 
 <style scoped>
-/*
-.hero {
-  position: relative;
-  /*background: transparent;* /
-}
-.hero::before {
-  width: 100vw; height: 100%;
-  position: absolute;
-  content: "";
-  background-image: 
-    url('~@/@assets/images/bookshelf.svg'),
-    url('~@/@assets/images/bookshelf-element.svg'),
-    url('~@/@assets/images/bookshelf.svg');
-  background-repeat: no-repeat, space, no-repeat;
-  z-index: 2;
-}
-*/
 </style>
 
 <script>

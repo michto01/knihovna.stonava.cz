@@ -4,5 +4,6 @@
     "scss.validate": false,
     "editor.rulers": [
         80, 120
-    ]
+    ],
+    "explorer.autoReveal": false
 }

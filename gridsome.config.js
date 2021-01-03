@@ -101,6 +101,14 @@ module.exports = {
         path: '/:lang/info/:slug',
         component: './src/templates/InfoPage.vue'
       }
+    ],
+    Events: [
+      {
+        path: (event) => {
+          `/:lang/event/:uid`
+        },
+        component: './src/templates/Event.vue'
+      }
     ]
   }
 }

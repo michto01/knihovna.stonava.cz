@@ -143,7 +143,7 @@
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.cs">Creative Commons Uveďte původ 4.0 Mezinárodní</a>.
       </p>
       <p>
-        {{ $static.prismicio.footer.edges[0].node.org[0].fn }} &copy; 2020.
+        {{ $static.prismicio.footer.edges[0].node.org[0].fn }} &copy; 2020-{{new Date().getFullYear()}}.
         Některá práva vyhrazena.
       </p>
     </div>

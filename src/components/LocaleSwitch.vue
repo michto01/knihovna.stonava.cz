@@ -1,6 +1,6 @@
 <template>
 <ClientOnly>
-     <div x-on:click.away="open=false" class="relative" x-data="{ open:false }">
+     <div x-on:click.away="open=false" class="relative z-40" x-data="{ open:false }">
         <span class="sr-only">Výběr jazyka: </span>
         <button
           x-on:click="open=!open"

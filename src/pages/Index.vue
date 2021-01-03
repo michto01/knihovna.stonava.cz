@@ -3,35 +3,35 @@
     <div>
       <article class="flex flex-col w-full">
         <section class="py-2 bg-gray-200 md:p-16 sm:p-24 lg:p-36 lg:pt-16">
-            <h1 class="text-4xl font-bold">Ze života knihovny</h1>
-            <div class="flex flex-col px-4 space-x-4 space-y-4 lg:flex-row lg:p-10 lg:space-x-8 lg:space-y-8">
-              <main class="md:flex-grow lg:max-w-2/3">
-              <h2 class="pb-2 text-2xl font-semibold text-indigo-900">Blog</h2>
-              <!-- Blog carousel -->
-              <div class="relative">
-                <ul class="flex flex-col justify-center space-x-4 sm:flex-row">
-                  <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="relative items-center flex-grow block w-full p-4 overflow-hidden bg-white rounded-t-lg shadow-lg md:w-2/5 rounded-2xl" style="min-height: 19rem;">
-                    <div class="absolute inset-0 w-full h-full bg-red-200 rounded">
-                      <g-image :src="edge.node.image" class="fit-cover" width="5rem" height="5rem" aria-hidden="true" alt></g-image>
-                    </div>
-                    <div class="absolute inset-0 flex flex-col justify-end w-full p-4 bg-gradient-to-b from-transparent to-indigo-500">
-                      <h2 class='text-xl font-extrabold text-coal-50'>{{ edge.node.name }}</h2>
-                      <div>{{ edge.node.path }}</div>
-                    </div>
-                  </li>
-                </ul>
-                <button class="absolute top-0 left-0 w-12 h-12 mt-32 -ml-6 text-2xl text-indigo-600 bg-white rounded-full shadow-md hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
-                  <span class="block" style="transform: scale(-1);">&#x279c;</span>
-                </button>
-                <button class="absolute top-0 right-0 w-12 h-12 mt-32 -mr-6 text-2xl text-indigo-600 bg-white rounded-full shadow-md hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
-                  <span class="block" style="transform: scale(1);">&#x279c;</span>
-                </button>
-              </div>
-              <!-- Top news carousel -->
-              <h2 class="py-4 text-2xl font-semibold text-indigo-900">Události</h2>
-              <div>
-                  <ul class="flex flex-col justify-center w-full space-y-2">
-                    <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 rounded shadow-sm bg-coal-50">
+            <h1 class="text-4xl font-black">Ze života knihovny</h1>
+            <div class="flex flex-col px-4 space-y-4 lg:flex-row lg:p-10 lg:space-x-8 lg:space-y-8">
+              <main class="flex-grow">
+                <h2 class="pb-2 text-2xl font-extrabold text-indigo-900">Blog</h2>
+                <!-- Blog carousel -->
+                <div class="relative">
+                  <ul class="flex flex-col justify-center space-x-4 sm:flex-row">
+                    <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="relative items-center flex-grow block w-full p-4 overflow-hidden bg-white rounded-t-lg shadow-lg md:w-2/5 rounded-2xl" style="min-height: 19rem;">
+                      <div class="absolute inset-0 w-full h-full bg-red-200 rounded">
+                        <g-image :src="edge.node.image" class="fit-cover" width="5rem" height="5rem" aria-hidden="true" alt></g-image>
+                      </div>
+                      <div class="absolute inset-0 flex flex-col justify-end w-full p-4 bg-gradient-to-b from-transparent to-indigo-500">
+                        <h2 class='text-xl font-extrabold text-coal-50'>{{ edge.node.name }}</h2>
+                        <div>{{ edge.node.path }}</div>
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="absolute top-0 left-0 w-12 h-12 mt-32 -ml-6 text-2xl text-indigo-600 bg-white rounded-full shadow-md hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
+                    <span class="block" style="transform: scale(-1);">&#x279c;</span>
+                  </button>
+                  <button class="absolute top-0 right-0 w-12 h-12 mt-32 -mr-6 text-2xl text-indigo-600 bg-white rounded-full shadow-md hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
+                    <span class="block" style="transform: scale(1);">&#x279c;</span>
+                  </button>
+                </div>
+                <!-- Top news carousel -->
+                <h2 class="py-4 text-2xl font-extrabold text-indigo-900">Události</h2>
+                <div>
+                  <ol class="flex flex-col justify-center w-full space-y-2">
+                    <li v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 space-x-2 rounded shadow-sm bg-coal-50">
                       <span class="flex h-full p-2 m-2 my-auto bg-indigo-800 rounded-lg">
                           <!-- Heroicon name: speakerphone -->
                           <svg role="img" width="1em" height="1em" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -39,14 +39,16 @@
                           </svg>
                       </span>
                       <div>
-                        <h2 class='font-extrabold text-md'>{{ edge.node.title[0].text }}</h2>
-                        <div>{{ edge.node.short }}</div>
+                        <h2 class='text-xl font-extrabold'>{{ edge.node.title[0].text }}</h2>
+                        <p class='text-md'>{{ edge.node.short }}</p>
+                        <div class="flex flex-row">
+                          <span class="flex-grow block"></span>
+                          <a class="p-2 font-extrabold text-right bg-indigo-500 rounded text-indigo-50" href="#">čti více</a>
+                        </div>
                       </div>
                     </li>
-                  </ul>
+                  </ol>
                 </div>
-              <div>
-              </div>
               </main>
               <aside id="library-quick-access" class="flex flex-col space-y-4">
                 <div class="p-4 bg-indigo-100 rounded-lg shadow-lg">
@@ -94,7 +96,8 @@
           <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
             <li v-for="edge in $static.projects.edges" :key="edge.node.id" class="block p-4 bg-white rounded shadow-sm">
               <h2 class='font-extrabold text-md'>{{ edge.node.name }}</h2>
-              <div>{{ edge.node.path }}</div>
+              <p>{{ edge.node.path }}</p>
+              <a href="#">celá zpráva</a>
             </li>
           </ul>
         </section>

@@ -1,19 +1,20 @@
 <template>
   <Layout class="">
-      <div class="max-w-4xl p-4 mx-auto md:p-8">
-        <div class="prose">
-            <h1 class="article-title">Právní náležitosti</h1>
-        </div>
-        <div class="flex flex-col">
-            <div
-                v-for="info in localizedInfo"
-                :key="info.node.slug"
-                class="m-2 space-x-4 space-y-4 rounded-lg"
-            >
-                <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl">
-                    <a class="pb-4 font-bold hover:underline" :href="'/' + info.node.lang + '/info/' + info.node.slug">{{info.node.title}}</a>
-                    <div class="pt-2">{{info.node.description}}</div>
-                    <br class="sr-only" />
+      <div class="bg-coal-100 -z-10">
+        <div class="max-w-4xl p-4 mx-auto lg:p-16">
+            <h1 class="pt-4 text-2xl font-black md:text-3xl lg:text-5xl">Právní náležitosti</h1>
+            <h2 class="pb-4 text-xl font-semibold md:text-2xl lg:text-2xl">Směrnice, kterými se řídí tyto webové stránky.</h2>
+            <div class="flex flex-col">
+                <div
+                    v-for="info in localizedInfo"
+                    :key="info.node.slug"
+                    class="m-2 space-x-4 space-y-4 duration-200 ease-in-out rounded-lg motion-safe:transform hover:-translate-y-1"
+                >
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl">
+                        <a class="pb-4 font-bold hover:underline" :href="'/' + info.node.lang + '/info/' + info.node.slug">{{info.node.title}}</a>
+                        <div class="pt-2">{{info.node.description}}</div>
+                        <br class="sr-only" />
+                    </div>
                 </div>
             </div>
         </div>

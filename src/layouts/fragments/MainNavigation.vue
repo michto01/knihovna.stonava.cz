@@ -1,15 +1,12 @@
 
 <template>
   <div class="w-full">
-    <!-- MAIN navigation content>=> will jump to correct location on DOM load -->
     <portal :to="navigationStyle">
       <!-- items-stretch sm:place-content-evenly -->
-      <ul class="flex flex-col w-full h-full space-y-1 sm:space-y-0 sm:space-x-4 place-items-end justify-items-end sm:flex-row">
-        <li class="menu-item"><g-link :to="$tp('/')" class="block w-full h-full" exact>Domů</g-link></li>
-        <li class="menu-item"><g-link :to="$tp('/about/')" class="block w-full h-full">Knihovna</g-link></li>
-        <li class="menu-item"><g-link :to="$tp('/cs/info/pravni-upozorneni/')" class="block w-full h-full">Projekty</g-link></li>
-        <li class="menu-item"><a href="#" class="block w-full h-full">Události</a></li>
-        <li class="menu-item"><a href="#" class="block w-full h-full">Kontakty</a></li>
+      <ul class="flex flex-col w-full h-full space-y-1 sm:space-y-0 sm:flex-row">
+        <li v-for="item in menuItems" :key="item.name" class="menu-item">
+          <g-link :to="item.link" class="block w-full h-full">{{item.name}}</g-link>
+        </li>
         <li class="menu-item"><a href="#" class="block w-full h-full">Další</a></li>
       </ul>
     </portal>
@@ -35,7 +32,7 @@
             <div class="flex items-center justify-center flex-1 h-full sm:items-stretch sm:justify-start">
               <div class="w-full sm:ml-6">
                 <div class="hidden w-full h-full space-x-4 sm:block">
-                  <portal-target class="w-full h-full" name="normal" :disabled="isOpen"/>  
+                  <portal-target class="w-full h-full" name="normal" :disabled="isOpen"/>
                 </div>
                 <div v-if="isOpen" class="sm:hidden">
                   <div class="p-2 pb-3 space-y-1 shadow-md">
@@ -53,10 +50,12 @@
 
 <script>
 import breakpointHelper from 'breakpoint-helper';
-import resolveConfig from 'tailwindcss/resolveConfig'
-import config from '@/../tailwind.config.js';
+import resolveConfig from 'tailwindcss/resolveConfig';
+import config from '@/../tailwind.config';
 const fullConfig = resolveConfig(config);
-const bph = breakpointHelper(fullConfig.theme.screens)
+const bph = breakpointHelper(fullConfig.theme.screens);
+
+import {routableLinks, namedRoutes} from '@/locales/routes';
 
 export default {
   created() {
@@ -71,19 +70,39 @@ export default {
       navigationStyle: "normal",
     }
   },
+  computed: {
+    menuItems () {
+      return [
+        '/',
+        '/about',
+        '/events',
+        '/projects',
+        '/blog',
+        '/info',
+        '/contacts'
+      ].map(a => {
+        const locale = this.$i18n.locale.toString();
+        const names = namedRoutes.filter(r => {return r.canonical == a})
+        const links = routableLinks.filter(r => {return r.canonical == a})
+        return {
+          name: names.length ? names[0][locale] : a.substring(1),
+          link: links.length ? links[0][locale] : '#'
+        }
+      })
+    }
+  },
   watch: {
       isOpen: function() {
          this.navigationStyle = this.isOpen ? "mobile" : "normal";
       }
   },
   methods: {
-    subIsActiveExact(input) {
+    subIsActiveExact (input) {
       console.log(input, this.$route.path, input == this.$route.path)
       this.$route.path == input;
     },
-    subIsActive(input) {
+    subIsActive (input) {
       const paths = Array.isArray(input) ? input : [input];
-    
       return paths.some(path => {
     	  return this.$route.path.indexOf(path) === 0 // current path starts with this path string
     	})
@@ -99,8 +118,6 @@ export default {
   @apply focus-within:ring-4;
 }
 .menu-item:hover {
-  @apply box-border;
-  /*@apply border-b-4 border-yellow-900 border-opacity-20;*/
   @apply bg-opacity-80;
 }
 
@@ -114,6 +131,6 @@ export default {
   @apply h-full w-full focus:outline-none;
   @apply border-b-4 border-indigo-600;
   @apply text-indigo-600 font-bold;
-  @apply box-border bg-opacity-80 
+  @apply box-border bg-opacity-80
 }
 </style>
