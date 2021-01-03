@@ -22,8 +22,8 @@ library:
           value: 8657
         - id: slovak
           label:
-            cs: "knih ve slovenštině"
-            pl: "książek po słowacku"
+            cs: "kniha ve slovenštině"
+            pl: "książka po słowacku"
           value: 1
         - id: polish
           label:
@@ -36,9 +36,9 @@ library:
           label:
             cs: "periodik v češtině"
             pl: "periodyków po czesku"
-          value: 8657
+          value: 29
         - id: polish
           label:
             cs: "periodik v polštině"
             pl: "periodyków po polsku"
-          value: 4529
+          value: 8

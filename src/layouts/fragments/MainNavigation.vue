@@ -3,7 +3,7 @@
   <div class="w-full">
     <portal :to="navigationStyle">
       <!-- items-stretch sm:place-content-evenly -->
-      <ul class="flex flex-col w-full h-full space-y-1 sm:space-y-0 sm:flex-row">
+      <ul class="flex flex-col justify-center w-full h-full space-y-1 sm:space-y-0 sm:flex-row">
         <li v-for="item in menuItems" :key="item.name" class="menu-item">
           <g-link :to="item.link" class="block w-full h-full">{{item.name}}</g-link>
         </li>

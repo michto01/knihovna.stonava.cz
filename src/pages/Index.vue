@@ -32,7 +32,7 @@
                 <h2 class="py-4 text-2xl font-extrabold text-indigo-900">Události</h2>
                 <div>
                   <div class="flex flex-col justify-center w-full space-y-2">
-                    <div v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 space-x-2 rounded shadow-sm bg-coal-50">
+                    <div v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 space-x-2 duration-150 ease-in-out transform rounded shadow-sm bg-coal-50 sm:transform-gpu motion-reduce:transform-none hover:shadow-md hover:-translate-y-1">
                       <span class="flex h-full p-2 m-2 my-auto bg-indigo-800 rounded-lg">
                           <!-- Heroicon name: speakerphone -->
                           <svg role="img" width="1em" height="1em" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -81,34 +81,6 @@
               </aside>
             </div>
         </section>
-        <!-- NEWS section -->
-        <section id="news" class="py-4">
-          <h1 class="pb-4 text-2xl font-bold text-center">Vyvěska</h1>
-          <div>
-            <ul class="flex flex-col justify-center w-full space-y-2 sm:space-x-4 sm:space-y-0 sm:flex-row">
-              <li v-for="edge in $static.projects.edges" :key="edge.node.title" class="block p-4 rounded shadow-sm bg-coal-50">
-                <h2 class='font-extrabold text-md'>{{ edge.node.title }}</h2>
-                <div>{{ edge.node.short }}</div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <!-- LIBRARY section -->
-         <section id="library" class="py-4 bg-green-200 bg-paralex-library">
-          <h1 class="text-2xl font-extrabold text-center text-indigo-800">Knihovna</h1>
-          <h2 class="pb-4 text-sm font-semibold text-center text-indigo-50">Přehled zajímavých čísel z místní knihovny</h2>
-          <div class="flex flex-col flex-wrap justify-center p-2 space-y-2 sm:flex-nowrap sm:space-y-0 sm:space-x-2 sm: lg:space-x-8 sm:flex-row">
-            <div v-for="edge in $page.statistics.edges" :key="edge.node.model" class="flex flex-row p-4 duration-150 ease-in-out transform bg-white border rounded shadow-sm h-max sm:flex-col hover:-translate-y-2 hover:shadow-md">
-              <g-image :src="assets_image(edge.node.model)" alt="" aria-hidden="true" width="5rem" height="5rem" class="sm:mx-auto h-36 w-36"/>
-              <div class="p-4 text-center">
-                <p v-for="val in edge.node.values" :key="val.id" >
-                  <span>{{ val.value }}&nbsp;</span>
-                  <span>{{ val.label[$i18n.locale.split('-')[0]] }}</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
         <!-- RECOMENDATION section -->
         <section id="recomendations" class="py-4">
           <h1 class="pb-4 text-2xl font-bold text-center shadow-sm">Doporučujeme</h1>
@@ -118,6 +90,30 @@
               <div>{{ edge.node.path }}</div>
             </li>
           </ul>
+        </section>
+        <!-- LIBRARY section -->
+         <section id="library" class="bg-paralex-library">
+           <div class="p-4 md:p-8">
+            <h1 class="text-2xl font-extrabold text-center text-indigo-800">Knihovna</h1>
+            <h2 class="pb-4 text-sm font-semibold text-center text-indigo-50">Přehled zajímavých čísel z místní knihovny</h2>
+            <div class="flex flex-col flex-wrap justify-center p-2 space-y-2 sm:flex-nowrap sm:space-y-0 sm:space-x-2 sm: lg:space-x-8 sm:flex-row">
+              <div v-for="edge in $page.statistics.edges" :key="edge.node.model" class="flex flex-row w-full p-2 duration-150 ease-in-out transform bg-white border rounded shadow-sm sm:transform-gpu motion-reduce:transform-none h-max sm:flex-col hover:-translate-y-2 hover:shadow-md">
+                <g-image :src="assets_image(edge.node.model)" alt="" aria-hidden="true" width="2em" height="2em" class="sm:mx-auto h-36 w-36"/>
+                <div class="p-4 text-center">
+                  <p v-for="val in edge.node.values" :key="val.id" >
+                    <span class="font-semibold">{{ val.value }}&nbsp;</span>
+                    <span>{{ val.label[$i18n.locale.split('-')[0]] }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="text-center ">
+              <a href="#library-info" class="p-2 font-semibold text-center bg-indigo-700 rounded text-indigo-50 hover:bg-indigo-500 hover:text-white transform-gpu motion-reduce:transform-none hover:scale-150">
+                Více o knihovně
+              </a>
+            </div>
+           </div>
         </section>
         <section id="projects" class="py-4 bg-green-200 sm:px-4">
           <h1 class="pb-4 text-2xl font-bold text-center">Projekty</h1>
@@ -212,10 +208,11 @@ query Events {
   background-image: url('/assets/images/book-pattern.svg');
 }
 
-.bg-paralex-library > * {
+.bg-paralex-library div {
   position: relative;
   z-index: 2;
   opacity: 1;
+  backdrop-filter: blur(2px);
 }
 
 .bg-paralex-library {
