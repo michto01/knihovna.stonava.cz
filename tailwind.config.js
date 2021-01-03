@@ -2,10 +2,19 @@ const colors = require('tailwindcss/colors');
 
 
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.vue',
-  ],
+  purge: {
+    content: [
+      './src/**/*.html',
+      './src/**/*.vue',
+    ],
+    options: {
+      whitelistPatterns: [/hooper-*/],
+      whitelistPatternsChildren: [/hooper-*/],
+      safelist: {
+        deep: [/^hooper-/]
+      }
+    }
+  },
   darkMode: 'class',
   theme: {
     extend: {

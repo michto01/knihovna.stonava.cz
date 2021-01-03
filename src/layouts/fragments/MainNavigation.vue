@@ -2,7 +2,6 @@
 <template>
   <div class="w-full">
     <portal :to="navigationStyle">
-      <!-- items-stretch sm:place-content-evenly -->
       <ul class="flex flex-col justify-center w-full h-full space-y-1 sm:space-y-0 sm:flex-row">
         <li v-for="item in menuItems" :key="item.name" class="menu-item">
           <g-link :to="item.link" class="block w-full h-full">{{item.name}}</g-link>
@@ -11,7 +10,6 @@
       </ul>
     </portal>
     <!-- MAIN navigation content -->
-
     <div class="w-full">
       <nav class="">
         <h3 class="sr-only">Hlavní menu</h3>
