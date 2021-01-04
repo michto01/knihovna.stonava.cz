@@ -8,7 +8,7 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 
 const fileContents = fs.readFileSync('./src/data/library.yaml', 'utf8');
-const stats = yaml.safeLoad(fileContents);
+const stats = yaml.load(fileContents);
 // console.log(JSON.stringify(stats, null, 2))
 
 module.exports = (api) => {
