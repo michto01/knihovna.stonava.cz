@@ -1,0 +1,7 @@
+- id: home
+  link: /
+- id: other
+  link: "#"
+  items:
+    - id: contacts
+      link: /contacts

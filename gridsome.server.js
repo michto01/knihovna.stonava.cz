@@ -25,4 +25,37 @@ module.exports = (api) => {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
+
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      prismicio {
+        events: allEvents {
+          edges {
+            node {
+              title
+              short
+              meta: _meta {
+                lang
+                uid
+                lastPublicationDate
+              }
+              created
+            }
+          }
+        }
+      }
+    }`)
+
+    data.prismicio.events.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.meta.lang.split('-')[0]}/event/${node.meta.uid}/`,
+        component: './src/templates/Event.vue',
+        context: {
+          uid: node.meta.uid,
+          lang: node.meta.lang
+        }
+      })
+    })
+  })
+
 };

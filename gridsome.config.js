@@ -102,15 +102,5 @@ module.exports = {
         component: './src/templates/InfoPage.vue'
       }
     ],
-    /*
-    Events: [
-      {
-        path: (event) => {
-          `/:lang/event/:uid`
-        },
-        component: './src/templates/Event.vue'
-      }
-    ]
-    */
   }
 }
