@@ -48,7 +48,6 @@ module.exports = (api) => {
     }`)
 
     const eventsPathPrefix = require('./src/mixins/eventLink').eventLink
-
     data.prismicio.events.edges.forEach(({ node }) => {
       createPage({
         path: `${ eventsPathPrefix(node.meta.lang, node.meta.uid) }`,
