@@ -49,7 +49,7 @@
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "gridsome-plugin-typescript": "^0.4.0",
     "gridsome-source-graphql-prismic": "^0.1.6",
-    "js-yaml": "^3.14.1",
+    "js-yaml": "^4.0.0",
     "postcss": "^8.2.2",
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
