@@ -6,9 +6,8 @@
             <div>
               <div class="max-w-4xl p-2 mt-8 prose bg-white shadow-sm dark:bg-coal-700 dark:prose-dark lg:prose-lg md:p-16 sm:p-24 lg:px-36 lg:py-16">
                 <div>
-                  <div class="p-2 bg-green-700 rounded-lg sr-hidden">
-                     Event
-                  </div>
+                  <button @click.prevent="$router.back()">&larr; Zpět</button>
+                  <div class="p-2 bg-green-700 rounded-lg sr-hidden">Event</div>
                 </div>
                 <div v-html="asHtml($page.prismicio.event.title)" />
                 <div v-html="asHtml($page.prismicio.event.body)" />

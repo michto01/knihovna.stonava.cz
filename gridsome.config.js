@@ -3,7 +3,7 @@ const i18n_routes = require('./src/locales/routes');
 
 module.exports = {
   siteName: 'Místní knihovna Stonava',
-  siteUrl: 'http://localhost:8080',
+  siteUrl: 'knihovna.stonava.cz',
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
@@ -41,7 +41,7 @@ module.exports = {
         exclude: ['/pl/**'],
         output: '/cs/sitemap.xml',
         include: [
-          '/cs/info', '/cs/info/**'
+          '/cs/info', '/cs/info/**', '/cs/**'
         ]
       },
     },
@@ -51,7 +51,7 @@ module.exports = {
         exclude: ['/cs/**'],
         output: '/pl/sitemap.xml',
         include: [
-          '/pl/info', '/pl/info/**'
+          '/pl/info', '/pl/info/**', '/pl/**'
         ]
       },
     },

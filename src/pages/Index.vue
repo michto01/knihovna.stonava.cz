@@ -3,26 +3,14 @@
     <article class="flex flex-col w-full">
       <!-- MAIN section -->
       <section class="py-2 bg-coal-100 md:p-16 sm:p-24 lg:px-36 lg:py-16">
-        <h1 class="text-4xl font-black text-center sm:text-left">
-          Ze života knihovny
-        </h1>
-        <div
-          class="flex flex-col px-4 space-y-4 lg:flex-row lg:p-10 lg:space-x-8 lg:space-y-8"
-          >
+        <h1 class="text-4xl font-black text-center sm:text-left">Ze života knihovny</h1>
+        <div class="flex flex-col px-4 space-y-4 lg:flex-row lg:p-10 lg:space-x-8 lg:space-y-8">
           <main class="flex-grow">
-            <h2 class="py-4 text-2xl font-extrabold text-indigo-900">
-              Události
-            </h2>
+            <h2 class="py-4 text-2xl font-extrabold text-indigo-900">Události</h2>
             <div>
               <div class="flex flex-col justify-center w-full space-y-2">
-                <div
-                  v-for="edge in $page.prismicio.events.edges"
-                  :key="edge.node.id"
-                  class="flex flex-row p-4 space-x-2 duration-150 ease-in-out transform rounded shadow-sm bg-coal-50 sm:transform-gpu motion-reduce:transform-none hover:shadow-md hover:-translate-y-1"
-                  >
-                  <span
-                    class="flex h-full p-2 m-2 my-auto bg-indigo-800 rounded-lg"
-                    >
+                <div v-for="edge in $page.prismicio.events.edges" :key="edge.node.id" class="flex flex-row p-4 space-x-2 duration-150 ease-in-out transform rounded shadow-sm bg-coal-50 sm:transform-gpu motion-reduce:transform-none hover:shadow-md hover:-translate-y-1">
+                  <span class="flex h-full p-2 m-2 my-auto bg-indigo-800 rounded-lg">
                     <!-- Heroicon name: speakerphone -->
                     <svg
                       role="img"
@@ -50,11 +38,7 @@
                     <p class="text-md">{{ edge.node.short }}</p>
                     <div class="flex flex-row">
                       <span class="flex-grow block"></span>
-                      <a
-                        class="p-2 font-extrabold text-right bg-indigo-500 rounded text-indigo-50"
-                        href="#"
-                        >čti více</a
-                        >
+                      <a class="p-2 font-extrabold text-right bg-indigo-500 rounded text-indigo-50" :href="event_link(edge.node.meta.lang, edge.node.meta.uid)">čti více &rarr;</a>
                     </div>
                   </div>
                 </div>
@@ -492,6 +476,8 @@
   import PatronLoginDawinci from "../components/PatronLoginDawinci.vue";
   import About from "./About.vue";
 
+  import { eventLink } from '@/mixins/eventLink';
+
   export default {
     components: {
       PatronLoginDawinci,
@@ -510,6 +496,9 @@
       assets_image (item) {
         return `/assets/images/${item}.svg`;
       },
+      event_link (lang, uid) {
+        return eventLink(lang, uid);
+      }
     },
     metaInfo () {
       const title = "Knihovna Stonava";

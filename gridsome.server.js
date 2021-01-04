@@ -7,6 +7,7 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
 
+
 const fileContents = fs.readFileSync('./src/data/library.yaml', 'utf8');
 const stats = yaml.safeLoad(fileContents);
 // console.log(JSON.stringify(stats, null, 2))
@@ -46,9 +47,11 @@ module.exports = (api) => {
       }
     }`)
 
+    const eventsPathPrefix = require('./src/mixins/eventLink').eventLink
+
     data.prismicio.events.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.meta.lang.split('-')[0]}/event/${node.meta.uid}/`,
+        path: `${ eventsPathPrefix(node.meta.lang, node.meta.uid) }`,
         component: './src/templates/Event.vue',
         context: {
           uid: node.meta.uid,
