@@ -16,7 +16,7 @@
               <footer class="p-4">
                   <!--p>Editor: </p-->
                   <!--p>Vytvořeno: <time :datetime="$page.info.createdAt">{{ dateCreated }}</time></p-->
-                  <p>Poslení aktualizace: <time :datetime="$page.prismicio.event.meta.lastPublicationDate">{{ $page.prismicio.event.meta.lastPublicationDate }}</time></p>
+                  <p>Poslední aktualizace: <time :datetime="$page.prismicio.event.meta.lastPublicationDate">{{ $page.prismicio.event.meta.lastPublicationDate }}</time></p>
               </footer>
             </div>
           </div>

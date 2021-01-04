@@ -19,7 +19,7 @@
               <footer class="p-4">
                   <!--p>Editor: </p-->
                   <p>Vytvořeno: <time :datetime="$page.info.createdAt">{{ dateCreated }}</time></p>
-                  <p>Poslení aktualizace: <time :datetime="$page.info.modified">{{ dateUpdated }}</time></p>
+                  <p>Poslední aktualizace: <time :datetime="$page.info.modified">{{ dateUpdated }}</time></p>
               </footer>
             </div>
           </div>

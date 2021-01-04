@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div v-for="(edge, index) in $page.prismicio.events" :key="index">
+      <div v-for="(edge, index) in $page.prismicio.events.edges" :key="index">
          {{edge.node.title}}
       </div>
   </div>
