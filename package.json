@@ -42,7 +42,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "autoprefixer": "^10.1.0",
-    "dayjs": "^1.9.8",
+    "dayjs": "^1.10.1",
     "gridsome-plugin-ogp": "^0.0.14",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-rss": "^1.2.0",
