@@ -1,10 +1,10 @@
+const routes = require('../locales/routes').routableLinks
+
 const eventsPathPrefix = ((lang, uid) => {
-    const prefixLang = `${lang.split('-')[0]}`;
-    const pathFragments = {
-    'cs-cz': 'udalosti',
-    'pl-cz': 'wydarzenia'
-    }
-    return `/${prefixLang}/${pathFragments[lang]}/${ uid }`
+    const lp = lang.split('-');
+    const eventRoute = routes.filter(x => x.canonical == '/events')[0]
+    const pathPrefix = eventRoute[`${lp[0]}-${lp[1].toUpperCase()}`]
+    return `${pathPrefix}/${ uid }`
 });
 
 module.exports = {

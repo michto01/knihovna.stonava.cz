@@ -32,7 +32,12 @@ module.exports = {
             "title": "Uuppss.. Zgubiona stronica.",
             "claim": "Może jest źle wpisany adres albo stronica została przesunięta.",
             "home": "Głowna stronica"
-        }
+        },
+
+        "life-of-library": "Z życia biblioteki",
+        "events": "Wydarzenia",
+        "more-events": "Wszystkie wydarzenia",
+        "read-more": "więcej",
     },
 
     "link": {

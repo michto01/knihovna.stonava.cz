@@ -31,6 +31,17 @@ const routes = {
             'cs-CZ': '/info',
             'pl-CZ': '/info'
         }
+    },
+    '/events': {
+        component: './src/pages/Events.vue',
+        names: {
+            'cs-CZ': 'Události',
+            'pl-CZ': 'Wydarzenia'
+        },
+        paths: {
+            'cs-CZ': '/udalosti',
+            'pl-CZ': '/wydarzenia'
+        }
     }
 };
 

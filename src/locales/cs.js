@@ -33,7 +33,12 @@ module.exports = {
             "title": "Ejhle.. Nějak se nám ztratila stránka.",
             "claim": "Možná je chyba v adrese nebo stránka byla přesunuta.",
             "home": "Zpět domů"
-        }
+        },
+
+        "life-of-library": "Z života knihovy",
+        "events": "Události",
+        "more-events": "Všechny události",
+        "read-more": "číst dál",
     },
 
     "link": {

@@ -48,7 +48,7 @@
                 href="https://mapy.cz/s/kabumehudo"
                 aria-label="Otevřít mapu na mapy.cz"
                 target="_blank"
-                rel="nofollow">
+                rel="noopener noreferrer nofollow">
                 <span class="flex-1 p-geo geo">
                   <abbr class="block pr-2 font-mono text-blue-600 no-underline p-latitude latitude"
                     title="49.81706686002181">N 49° 49'01.4"</abbr>
@@ -151,7 +151,7 @@
   </footer>
 </template>
 
-<style>
+<style scoped>
 .geo abbr {
   @apply block text-teal-400 font-mono pr-2;
   @apply no-underline !important;

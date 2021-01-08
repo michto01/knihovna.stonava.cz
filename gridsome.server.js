@@ -23,10 +23,6 @@ module.exports = (api) => {
     }
   })
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
       prismicio {

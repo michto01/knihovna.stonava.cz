@@ -109,26 +109,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .menu-item {
-  @apply box-border text-base text-navy-800 font-medium h-full;
-  @apply block pt-1 ; /*hover:bg-coal-200;*/
-  @apply focus-within:ring-4;
-}
-.menu-item:hover {
-  @apply bg-opacity-80;
-}
+  @apply box-border text-base text-navy-800 font-medium h-full block pt-1 focus-within:ring-4;
 
-.menu-item a {
-  @apply h-full w-full focus:outline-none;
-  @apply hover:border-indigo-600 hover:border-opacity-70;
-  @apply border-b-4 border-transparent md:px-2 lg:px-4;
-}
+  &:hover {
+    @apply bg-opacity-80;
+  }
 
-.menu-item .is-exact.is-active {
-  @apply h-full w-full focus:outline-none;
-  @apply border-b-4 border-indigo-600;
-  @apply text-indigo-600 font-bold;
-  @apply box-border bg-opacity-80
+  a {
+    @apply h-full w-full focus:outline-none;
+    @apply hover:border-indigo-600 hover:border-opacity-70;
+    @apply border-b-4 border-transparent md:px-2 lg:px-4;
+  }
+
+  .is-exact.is-active {
+    @apply h-full w-full focus:outline-none;
+    @apply border-b-4 border-indigo-600;
+    @apply text-indigo-600 font-bold;
+    @apply box-border bg-opacity-80
+  }
 }
 </style>
