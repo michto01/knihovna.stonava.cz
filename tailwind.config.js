@@ -8,10 +8,10 @@ module.exports = {
       './src/**/*.vue',
     ],
     options: {
-      whitelistPatterns: [/hooper-*/],
-      whitelistPatternsChildren: [/hooper-*/],
+      whitelistPatterns: [/hooper-*/,/^swiper-/],
+      whitelistPatternsChildren: [/hooper-*/,/^swiper-/],
       safelist: {
-        deep: [/^hooper-/]
+        deep: [/^hooper-/, /^swiper-/]
       }
     }
   },

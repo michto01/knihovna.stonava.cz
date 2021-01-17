@@ -71,6 +71,9 @@
         </div>
       </section>
       <!-- BLOG section -->
+      <section>
+        <posts-carousel />
+      </section>
       <section id="blog" class="bg-indigo-50">
         <div class="p-4 md:p-8">
           <h1 class="pb-4 text-2xl font-extrabold text-center text-indigo-800">
@@ -178,7 +181,7 @@
                         <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                       <div class="w-40 ml-4 font-semibold tracking-wide text-md">
-                        mkston@rkka.cz
+                        mkston@stonava.cz
                       </div>
                     </div>
                   </div>
@@ -237,6 +240,7 @@
         }
       }
     }
+
     statistics: allStatistics {
       edges {
         node {
@@ -252,6 +256,7 @@
         }
       }
     }
+
     prismicio {
       pl_events: allEvents(sortBy: created_DESC, first: 4, lang: "pl-cz") {
         edges {
@@ -269,7 +274,7 @@
 
 <style lang="scss" scoped>
   .btn {
-    @apply p-2 font-extrabold text-right bg-indigo-700 rounded hover:bg-indigo-500 hover:text-white text-indigo-50;
+    @apply p-2 font-extrabold text-right text-sm bg-indigo-700 rounded hover:bg-indigo-500 hover:text-white text-indigo-50;
   }
 
   .bg-paralex-library {
@@ -323,6 +328,7 @@
 
   import { eventLink } from '@/mixins/eventLink';
   import { routableLinks, namedRoutes } from '@/locales/routes';
+  import PostsCarousel from '~/components/PostsCarousel';
 
   export default {
     components: {
@@ -330,6 +336,7 @@
       OpacNewRecordsExternal,
       About,
       EventCard,
+      PostsCarousel
     },
     created() {
       //console.log(this.$page.prismicio.events.edges);

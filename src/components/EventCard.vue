@@ -11,7 +11,7 @@
         <article class="flex flex-col p-4 sm:w-3/4">
             <header>
                 <div v-if="date" class="pb-1">
-                    <div class='p-1 text-xs font-semibold text-white bg-indigo-400 rounded-sm w-min'><time :datetime="date">{{ dateCreated }}</time></div>
+                    <div class='p-1 text-xs font-semibold text-white bg-indigo-400 border rounded w-min'><time :datetime="date">{{ dateCreated }}</time></div>
                 </div>
                 <g-link :to="link">
                     <h1 class="pb-2 text-xl font-extrabold">{{ title }}</h1>
@@ -19,7 +19,7 @@
             </header>
             <p class="pb-2 text-md">{{ abstract }}</p>
             <footer class="self-end">
-                <g-link class="p-2 font-extrabold text-right bg-indigo-700 rounded hover:bg-indigo-500 hover:text-white text-indigo-50" :to="link">{{ $t('label.read-more') }} &rarr;</g-link>
+                <g-link class="p-2 text-sm font-extrabold text-right bg-indigo-700 rounded hover:bg-indigo-500 hover:text-white text-indigo-50" :to="link">{{ $t('label.read-more') }} &rarr;</g-link>
             </footer>
         </article>
     </div>
