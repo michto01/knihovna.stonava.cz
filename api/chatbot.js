@@ -147,7 +147,7 @@ module.exports = (req, res) => {
                 "type": "text",
                 "value": `Běžná výpujční doba:\nV pondělí: ${opening[0].hours[0].s} - ${opening[0].hours[1].e}\nVe čtvrtek: ${opening[1].hours[0].s} - ${opening[1].hours[0].e}`,
             },
-            /*{
+            /* {
                 "type": "text",
                 "value": "Test Text Card",
                 "buttons": [
@@ -188,11 +188,11 @@ module.exports = (req, res) => {
                                 "name": "Change Module"
                             }
                         ]
-            }
-            ]*/
+                    }
+                ]
+            }*/
         ]
-        }
-    }
+    };
 
     res.json(botAnswer);
 }
