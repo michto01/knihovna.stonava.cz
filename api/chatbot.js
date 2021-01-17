@@ -137,7 +137,7 @@ module.exports = (req, res) => {
         user_id: req.body.user_id,
         bot_id: req.body.bot_id,
         module_id: req.body.module_id,
-        message: "Otevírací doba knihovny",
+        message: "Informace o otevíracích hodinách knihovny:",
         cards: [
             {
                 "type": "text",
