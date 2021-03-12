@@ -1,3 +1,5 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..900&display=swap');*/
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,800,900&subset=latin,latin-ext&display=swap');
 
 .header-logo a {
   @apply text-black;
@@ -25,7 +27,6 @@
   @apply text-indigo-900;
   @apply font-bold;
 }
-
 
 .icon-link {
   content: '\0026';

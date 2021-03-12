@@ -1,18 +1,18 @@
 <template>
-  <div :class="darkModeClass" @keydown.tab="a11yMenuVisible">
-    <div class>
-      <Alert />
-    </div>
-
-    <nav id="a11y-quickmenu" class="fixed sr-only" :aria-label="$t('label.a11y.quick_access')" @keydown.18.prevent="">
-      <h3>{{$t('label.a11y.quick_access')}}</h3>
-      <ul>
+  <div :class="darkModeClass" @keyup.tab="a11yMenuVisible">
+    <nav id="a11y-quickmenu" class="p-2 sr-only" :aria-label="$t('label.a11y.quick_access')" @keydown.18.prevent="">
+      <h3 class="font-bold text-white font-2xl">{{$t('label.a11y.quick_access')}}</h3>
+      <ul class="text-gray-50" id="a11y-quicknav-list">
         <li><a href="#navigation">{{$t('label.a11y.jump_navigation')}}</a></li>
         <li><a href="#content">{{$t('label.a11y.jump_content')}}</a></li>
         <li><a href="#footer">{{$t('label.a11y.jump_footer')}}</a></li>
       </ul>
       <hr role=separator class="sr-only">
     </nav>
+
+    <div class>
+      <Alert />
+    </div>
 
     <div class="flex flex-col w-full min-h-screen bg-coal-50 text-coal-800 dark:bg-coal-900 dark:bg-opacity-75">
       <TopbarNavigation @themeChanged="themeChanged" :darkMode="isDark" />
@@ -48,7 +48,8 @@ export default {
   },
   data() {
       return {
-        isDark : "native"
+        isDark : "native",
+        a11yMenuIsVisible: false,
       }
   },
   computed: {
@@ -68,9 +69,12 @@ export default {
       this.isDark = dark;
     },
     a11yMenuVisible() {
-    var menu = document.querySelector('#a11y-quickmenu')
-    menu.classList.toggle('sr-only')
-      console.log(menu)
+      const wasVisible = this.a11yMenuIsVisible;
+      this.a11yMenuIsVisible = (document.activeElement.parentElement.parentElement.id === 'a11y-quicknav-list');
+      if (wasVisible !== this.a11yMenuIsVisible) {
+        var menu = document.querySelector('#a11y-quickmenu')
+        menu.classList.toggle('sr-only')
+      }
     }
   },
   created() {

@@ -32,6 +32,17 @@ const routes = {
             'pl-CZ': '/info'
         }
     },
+    '/contacts': {
+        component: './src/pages/Contacts.vue',
+        names: {
+            'cs-CZ': 'Kontakty',
+            'pl-CZ': 'Kontakt'
+        },
+        paths: {
+            'cs-CZ': '/kontakty',
+            'pl-CZ': '/kontakt'
+        }
+    },
     '/events': {
         component: './src/pages/Events.vue',
         names: {

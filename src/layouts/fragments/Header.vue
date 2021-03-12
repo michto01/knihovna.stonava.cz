@@ -33,10 +33,12 @@
             </div>
         </div>
       </div>
+      <div>
+        <hr role=separator class="sr-only">
+          <MainNavigation />
+        <hr role=separator class="sr-only">
+      </div>
     </div>
-    <hr role=separator class="sr-only">
-      <MainNavigation />
-    <hr role=separator class="sr-only">
   </header>
 </template>
 

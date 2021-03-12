@@ -274,7 +274,15 @@
 
 <style lang="scss" scoped>
   .btn {
-    @apply p-2 font-extrabold text-right text-sm bg-indigo-700 rounded hover:bg-indigo-500 hover:text-white text-indigo-50;
+    @apply p-2;
+    @apply rounded;
+    @apply text-sm;
+    @apply text-right;
+    @apply text-indigo-50;
+    @apply font-extrabold;
+    @apply bg-indigo-700;
+    @apply hover:bg-indigo-500;
+    @apply hover:text-white;
   }
 
   .bg-paralex-library {

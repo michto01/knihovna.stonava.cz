@@ -2,27 +2,30 @@ const colors = require('tailwindcss/colors');
 
 
 module.exports = {
+  darkMode: 'class',
   purge: {
     content: [
       './src/**/*.html',
       './src/**/*.vue',
     ],
     options: {
-      whitelistPatterns: [/hooper-*/,/^swiper-/],
-      whitelistPatternsChildren: [/hooper-*/,/^swiper-/],
+      whitelistPatterns: [/^swiper-/],
+      whitelistPatternsChildren: [/^swiper-/],
       safelist: {
-        deep: [/^hooper-/, /^swiper-/]
+        deep: [/^swiper-/]
       }
     }
   },
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         navy: colors.blueGray,
         coal: colors.gray,
         teal: colors.teal,
-      }
+      },
+      fontFamily: {
+        'sans': ['Nunito', "ui-sans-serif", 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
+      },
     },
   },
   variants: {

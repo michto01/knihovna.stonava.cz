@@ -82,6 +82,13 @@ module.exports = {
         typeName: 'Project',
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/*/service/**/*.md',
+        typeName: 'Service',
+      }
+    },
   ],
   transformers: {
     remark: {
