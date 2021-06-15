@@ -52,7 +52,7 @@
     "gridsome-source-graphql-prismic": "^0.1.6",
     "js-yaml": "^4.0.0",
     "node-sass": "^5.0.0",
-    "postcss": "^8.2.14",
+    "postcss": "^8.3.4",
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
     "prismic-dom": "^2.2.5",
