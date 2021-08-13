@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
-    "alpinejs": "^2.8.2",
+    "alpinejs": "^3.2.3",
     "breakpoint-helper": "^1.0.2",
     "gridsome": "^0.7.0",
     "gridsome-plugin-algolia": "^2.1.4",
