@@ -98,7 +98,7 @@
                 <path d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"></path>
               </svg>
             </span>
-            <span class="value"><a href="mailto:mkston@rkka.cz" class="font-mono text-white">mkston@rkka.cz</a></span>
+            <span class="value"><a href="mailto:knihovna@stonava.cz" class="font-mono text-white">knihovna@stonava.cz</a></span>
           </div>
         </div>
         <div class="pt-4 text-sm footer-library-info">
@@ -131,22 +131,7 @@
     </div>
     <br class="sr-only" />
     <div class="w-full p-4 mx-auto -mb-4 text-xs text-center bg-indigo-900 dark:bg-navy-800">
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.cs" class="block py-1">
-        <div class="flex flex-row justify-center sm:space-x-1">
-          <g-image alt="Licence Creative Commons" class="w-6 h-6" width="1rem" height="1rem" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" />
-          <g-image alt="Licence Creative Commons - Atribute" class="w-6 h-6" width="1rem" height="1rem" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" />
-          <g-image alt="Licence Creative Commons - Share Alike" class="w-6 h-6" width="1rem" height="1rem" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" />
-        </div>
-      </a>
-      <p>
-        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Webové stránky</span>, jejiž autorem je
-        <a xmlns:cc="http://creativecommons.org/ns#" href="https://knihovna.stonava.cz" property="cc:attributionName" rel="cc:attributionURL">{{ $static.prismicio.footer.edges[0].node.org[0].fn }}</a>, podléhají licenci
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.cs">Creative Commons Uveďte původ 4.0 Mezinárodní</a>.
-      </p>
-      <p>
-        {{ $static.prismicio.footer.edges[0].node.org[0].fn }} &copy; 2020-{{new Date().getFullYear()}}.
-        Některá práva vyhrazena.
-      </p>
+      <license-stamp :organisation="$static.prismicio.footer.edges[0].node.org[0].fn" lang="pl" />
     </div>
   </footer>
 </template>
@@ -184,9 +169,13 @@ query {
 </static-query>
 
 <script>
+import CreativeCommonsIcons from '@/components/icons/CreativeCommonsIcons';
+import LicenseStamp from '@/components/page-fragments/LicenseStamp';
+
 export default {
-  mounted() {
-    //console.log(this.$static.info.edges)
+  components : {
+    CreativeCommonsIcons,
+    LicenseStamp
   }
 };
 </script>

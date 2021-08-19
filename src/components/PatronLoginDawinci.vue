@@ -1,6 +1,6 @@
 <template>
     <div class="w-full px-6 pt-2 pb-4 bg-red-500 rounded-md">
-      <form class="flex flex-col items-end w-full mx-auto space-y-2" method="POST" action="https://opacnew.rkka.cz/?fn=*login_userPswd&btnResName=ERR">
+      <form class="flex flex-col items-end w-full mx-auto space-y-2" method="POST" action="https://katalog.stonava.knihovna.info/?fn=*login_userPswd">
         <input type="hidden" name="cmblbLocation" value="S#_LOC">
         <input type="hidden" name="fo">
         <input type="hidden" name='fc' value="00000040">
@@ -14,7 +14,7 @@
                 <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
               </svg>
             </div>
-            <input id="library-card-id" type="text" name="editID" 
+            <input id="library-card-id" type="text" name="editID"
                 class="w-full py-2 pl-10 pr-4 text-sm text-red-100 placeholder-red-500 placeholder-opacity-50 bg-red-900 border-yellow-800 rounded focus:text-red-700 focus:border-2 focus:bg-red-100 sm:text-base focus:outline-none focus:border-yellow-400" placeholder="Číslo průkazu (např. 1234)" />
           </div>
         </div>
@@ -26,7 +26,7 @@
                 <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
               </svg>
             </div>
-            <input id="library-card-password" type="password" name="editPassword" 
+            <input id="library-card-password" type="password" name="editPassword"
                 class="w-full py-2 pl-10 pr-4 text-sm text-red-100 placeholder-red-500 placeholder-opacity-50 bg-red-900 border-yellow-800 rounded focus:text-red-700 focus:border-2 focus:bg-red-100 sm:text-base focus:outline-none focus:border-yellow-400" placeholder="Heslo" />
           </div>
         </div>
