@@ -1273,11 +1273,15 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/reactivity@^3.0.2":
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.2.4.tgz#a020ad7e50f674219a07764b105b5922e61597ea"
+"@vue/reactivity@~3.1.1":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.1.5.tgz#dbec4d9557f7c8f25c2635db1e23a78a729eb991"
   dependencies:
-    "@vue/shared" "3.2.4"
+    "@vue/shared" "3.1.5"
+
+"@vue/shared@3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.1.5.tgz#74ee3aad995d0a3996a6bb9533d4d280514ede03"
 
 "@vue/shared@3.2.4":
   version "3.2.4"
@@ -1627,11 +1631,11 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
 
-alpinejs@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.2.3.tgz#577f9d8721fdfc2f70c4aeb1c28db6a15a65e1d6"
+alpinejs@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.7.1.tgz#72e10a27641fc4d14eabca65268f776da8f3fc96"
   dependencies:
-    "@vue/reactivity" "^3.0.2"
+    "@vue/reactivity" "~3.1.1"
 
 amdefine@>=0.0.4:
   version "1.0.1"
