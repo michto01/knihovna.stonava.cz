@@ -44,7 +44,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "@vue/compiler-sfc": "^3.2.2",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.2",
     "css-loader": "^6.2.0",
     "dayjs": "^1.10.6",
     "gridsome-plugin-ogp": "^0.0.14",
