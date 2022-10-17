@@ -43,7 +43,7 @@
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "@vue/compiler-sfc": "^3.2.2",
+    "@vue/compiler-sfc": "^3.2.41",
     "autoprefixer": "^10.3.1",
     "css-loader": "^6.2.0",
     "dayjs": "^1.10.6",
